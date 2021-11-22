@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--#========== PAGE ENCODING ==========#-->
+    <meta charset="UTF-8">
+    <!--#========== SETTING PAGE RESPONSIVENESS ==========#-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!--#========== PAGE TITLE IN BROWSER ==========#-->
+    <title>TITLE SITE</title>
+    <!--#========== PRE-LOADING FONTS ==========#-->
+    <link rel="preload" href="fonts/" as="font" crossorigin>
+    <link rel="preload" href="fonts/" as="font" crossorigin>
+    <link rel="preload" href="fonts/" as="font" crossorigin>
+    <!--#========== CONNECTING READY-MADE JAVASCRIPT SOLUTIONS ==========#-->
+    <link rel="stylesheet" href="css/modules.min.css?ver=1" media="screen">
+    <!--#========== INCLUDING STYLE FILES ==========#-->
+    <link rel="stylesheet" href="css/styles.min.css?ver=1" media="screen">
+    <!--#========== PROVIDES INFORMATION ABOUT THE AUTHOR ==========#-->
+    <link rel="me" href="https://sineylo-dev.ru">
+    <link rel="me" href="mailto:contact@sineylo-dev.ru">
+    <!--#========== CONNECT COMMON FAVICONS ==========#-->
+    <link rel="icon" href="img/global/favicons/favicon.svg" sizes="any" type="image/svg+xml">
+    <link rel="icon" href="img/global/favicons/favicon@1x.png" sizes="16x16" type="image/png">
+    <link rel="icon" href="img/global/favicons/favicon@2x.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="img/global/favicons/favicon@3x.png" sizes="48x48" type="image/png">
+    <link rel="icon" href="img/global/favicons/favicon@4x.png" sizes="64x64" type="image/png">
+    <link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48 64x64" type="image/vnd.microsoft.icon">
+    <!--#========== CONNECT FAVICONS FOR APPLE AS WELL AS SOME OF THEIR SETTINGS ==========#-->
+    <link rel="apple-touch-icon" href="img/global/favicons/favicon-180x180.png">
+    <link rel="mask-icon" href="img/global/favicons/mask-desktop.svg" color="#00а0ff">
+    <meta name="apple-mobile-web-app-title" content="Name of the site">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--#========== CONNECT FAVICONS FOR WINDOWS AND BROWSERCONFIG ==========#-->
+    <meta name="msapplication-tooltip" content="Name of the site">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <!--#========== CONNECT THE MANIFEST WITH THE REST OF THE ICONS AND SETTINGS ==========#-->
+    <link rel="manifest" href="main.webmanifest">
+    <meta name="application-name" content="Name of the WA or Site">
+    <!--#========== DISABLING LINK FORMATION ON IOS DEVICES ==========#-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+    <!--#========== SEO ==========#-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!--#========== BRIEF DESCRIPTION OF THE TOPIC OF THE PAGE ==========#-->
+    <meta name="subject" content="">
+    <!--#========== CONTROLLING SEARCH ROBOTS ACCESS TO THE PAGE ==========#-->
+    <meta name="robots" content="none">
+    <meta name="googlebot" content="none">
+    <!--#========== PAGE AUTHOR ==========#-->
+    <meta name="author" content="">
+    <!--#========== COPYRIGHT ==========#-->
+    <meta name="copyright" content="">
+    <!--#========== AUTHOR'S ADDRESS ==========#-->
+    <meta name="address" content="">
+    <!--#========== SETS THE COLOR OF THE BROWSER TAB ==========#-->
+    <meta name="theme-color" content="hsl(0 0% 100%)">
+    <!--#========== THEMES TO BE USED ON THE SITE ==========#-->
+    <meta name="color-scheme" content="light">
+    <!--#========== ADDS THE SITE TO THE HOME SCREEN AS AN ANDROID APP ==========#-->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!--#========== ESTABLISHES AGE RESTRICTION ==========#-->
+    <meta name="rating" content="general">
+    <!--#========== CUSTOMIZING THE SHARE FACEBOOK BUTTON ==========#-->
+    <meta property="og:locale" content="ru_RU">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="my site">
+    <meta property="og:description" content="some page description">
+    <meta property="og:image" content="url">
+    <meta property="og:image:alt" content="photo description">
+    <meta property="og:url" content="http://localhost:3000/index.html">
+    <meta property="og:site_name" content="training ground">
+    <!--#========== CUSTOMIZING THE SHARE TWITTER BUTTON ==========#-->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="site account">
+    <meta name="twitter:creator" content="SineYlo">
+    <meta name="twitter:url" content="url">
+    <meta name="twitter:title" content="my site">
+    <meta name="twitter:description" content="some page description">
+    <meta name="twitter:image" content="url">
+    <meta name="twitter:image:alt" content="photo description">
+  </head>
+  <body class="body">
+    <!--#========== CONNECT THE SITE HEADER ==========#-->
+    @@include("kit/templates/_header.html")
+    <!--#========== THE MAIN PART OF THE SITE ==========#-->
+    <main class="site-main">
+      <!--#========== CONNECT THE SECTION | ==========#-->
+      <!-- @@include("kit/components/home") -->
+      <!--#========== CONNECT THE SECTION | ==========#-->
+      <!-- @@include("kit/components/home") -->
+      <!--#========== CONNECT THE SECTION | ==========#-->
+      <!-- @@include("kit/components/home") -->
+    </main>
+    <!--#========== CONNECT THE SITE FOOTER ==========#-->
+    @@include("kit/templates/_footer.html")
+    <!--#========== CONNECT SCRIPTS ==========#-->
+    <!--PS: Connecting external libraries and tools -->
+    <!--PS: Including our script files -->
+    <script defer src="js/main.min.js"></script>
+  </body>
+</html>

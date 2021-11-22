@@ -1,0 +1,21 @@
+// |=============== CONFIGURING A MIXIN TO CONNECT A CONTAINER ===============>
+// |CM| We indicate the initial indents if we suddenly forget to specify them
+$initialIndents: 1.5rem;
+
+// |CM| Setting up a mixin for the main container
+@mixin containerBase($widthContainer, $indentsContainer: $initialIndents) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: #{$indentsContainer};
+  padding-left: #{$indentsContainer};
+  max-width: #{$widthContainer};
+}
+
+// |CM| Setting up a full-width container mixin
+@mixin containerFluid($indentsContainer: $initialIndents) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: #{$indentsContainer};
+  padding-left: #{$indentsContainer};
+  width: 100%;
+}

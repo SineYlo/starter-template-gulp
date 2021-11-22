@@ -1,0 +1,34 @@
+// |=============== SETTING UP COMMON MIXINS FOR DIFFERENT TASKS ===============>
+// |CM| Used to hide an element without breaking accessibility
+@mixin visually-hidden {
+  position: absolute;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+}
+
+// |CM| Used to trim part of a single line of text
+@mixin oneLineOverflow {
+  overflow: hidden;
+  white-space: nowrap;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+
+// |CM| Used to cut off a portion of multiline text
+@mixin multilineOverflow($numberOfLines: 2) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-line-clamp: #{$numberOfLines};
+  line-clamp: #{$numberOfLines};
+}

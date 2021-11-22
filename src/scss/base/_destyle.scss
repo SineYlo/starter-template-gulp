@@ -1,0 +1,334 @@
+// |=============== RESET BOX-MODEL AND SET BORDERS ===============>
+*,
+::before,
+::after {
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+}
+
+// |=============== DOCUMENT ===============>
+// |CM| 1. Correct the line height in all browsers.
+// |CM| 2. Prevent adjustments of font size after orientation changes in iOS.
+// |CM| 3. Remove gray overlay on links for iOS.
+html {
+  line-height: 1.15; // 1
+  -webkit-text-size-adjust: 100%; // 2
+  -webkit-tap-highlight-color: transparent; // 3
+}
+
+// |=============== SECTIONS ===============>
+// |CM| Remove the margin in all browsers.
+body {
+  margin: 0;
+}
+
+// |CM| Render the `main` element consistently in IE.
+main {
+  display: block;
+}
+
+// |=============== VERTICAL RHYTHM ===============>
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+// |=============== HEADINGS ===============>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+// |=============== LISTS (ENUMERATION) ===============>
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// |=============== LISTS (DEFINITION) ===============>
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+// |=============== GROUPING CONTENT ===============>
+// |CM| 1. Add the correct box sizing in Firefox.
+// |CM| 2. Show the overflow in Edge and IE.
+hr {
+  clear: both;
+  overflow: visible; // 2
+  margin: 0;
+  border-top-width: 1px;
+  height: 0; // 1
+  box-sizing: content-box; // 1
+  color: inherit;
+}
+
+// |CM| 1. Correct the inheritance and scaling of font size in all browsers.
+// |CM| 2. Correct the odd `em` font sizing in all browsers.
+pre {
+  font-family: monospace, monospace; // 1
+  font-size: inherit; // 2
+}
+
+address {
+  font-style: inherit;
+}
+
+// |=============== TEXT-LEVEL SEMANTICS ===============>
+// |CM| Remove the gray background on active links in IE 10. */
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+// |CM| 1. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+abbr[title] {
+  text-decoration: underline dotted; // 1
+}
+
+// |CM| Add the correct font weight in Chrome, Edge, and Safari.
+b,
+strong {
+  font-weight: bolder;
+}
+
+// |CM| 1. Correct the inheritance and scaling of font size in all browsers.
+// |CM| 2. Correct the odd `em` font sizing in all browsers.
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; // 1
+  font-size: inherit; // 2
+}
+
+// |CM| Add the correct font size in all browsers.
+small {
+  font-size: 80%;
+}
+
+// |CM| Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+// |=============== EMBEDDED CONTENT ===============>
+// |CM| Prevent vertical alignment issues.
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+// |CM| These properties will proportionally change the image, and also will not allow it to be larger than its parent.
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+// |=============== FORMS ===============>
+// |CM| Reset form fields to make them styleable.
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  font: inherit;
+  text-align: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+// |CM| Reset radio and checkbox appearance to preserve their look in iOS.
+[type="checkbox"] {
+  -webkit-appearance: checkbox;
+  appearance: checkbox;
+}
+
+[type="radio"] {
+  -webkit-appearance: radio;
+  appearance: radio;
+}
+
+// |CM| Correct cursors for clickable elements.
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type="button"]:disabled,
+[type="reset"]:disabled,
+[type="submit"]:disabled {
+  cursor: default;
+}
+
+// |CM| Improve outlines for Firefox and unify style with input elements & buttons.
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+// |CM| Remove padding
+option {
+  padding: 0;
+}
+
+// |CM| Reset to invisible
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+// |CM| Add the correct vertical alignment in Chrome, Firefox, and Opera.
+progress {
+  vertical-align: baseline;
+}
+
+// |CM| 1. Returns the "white-space" property for the textarea element in the safari browser.
+// |CM| 2. Remove the default vertical scrollbar in IE 10+.
+textarea {
+  overflow: auto; // 2
+  white-space: revert; // 1
+}
+
+// |CM| Correct the cursor style of increment and decrement buttons in Chrome.
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+// |CM| Correct the outline style in Safari.
+[type="search"] {
+  outline-offset: -2px;
+}
+
+// |CM| Remove the inner padding in Chrome and Safari on macOS.
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+// |CM| 1. Correct the inability to style clickable types in iOS and Safari.
+// |CM| 2. Change font properties to `inherit` in Safari.
+::-webkit-file-upload-button {
+  -webkit-appearance: button; // 1
+  font: inherit; // 2
+}
+
+// |CM| Clickable labels
+label[for] {
+  cursor: pointer;
+}
+
+// |CM| Remove cross in `search` field in all browsers
+input[type="text"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="text"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+// |CM| Fix placeholder color in Firefox
+::-moz-placeholder,
+:-moz-placeholder {
+  opacity: 1;
+}
+
+// |=============== INTERACTIVE ===============>
+// |CM| Add the correct display in Edge, IE 10+, and Firefox.
+details {
+  display: block;
+}
+
+// |CM| Add the correct display in all browsers.
+summary {
+  display: list-item;
+}
+
+// |CM| Remove outline for editable content.
+[contenteditable]:focus {
+  outline: none;
+}
+
+// |=============== TABLE ===============>
+table {
+  border-color: inherit;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  font-weight: bold;
+  text-align: left;
+}

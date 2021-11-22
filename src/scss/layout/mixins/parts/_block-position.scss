@@ -1,0 +1,63 @@
+// |=============== CONFIGURING DIFFERENT OPTIONS FOR POSITIONING THE BLOCK ===============>
+// |CM| Flex
+@mixin flex {
+  display: flex;
+}
+
+@mixin f-jc-center {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin f-ai-center {
+  display: flex;
+  align-items: center;
+}
+
+@mixin f-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin f-jc-sb {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin f-center-sb {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// |CM| Grid
+@mixin grid {
+  display: grid;
+}
+
+@mixin g-center {
+  display: grid;
+  place-items: center;
+}
+
+@mixin p-h-center {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin p-v-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+// |CM| Text-align
+@mixin ta-c {
+  text-align: center;
+}
+
+@mixin ta-r {
+  text-align: right;
+}

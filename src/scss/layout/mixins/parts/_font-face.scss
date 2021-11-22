@@ -1,0 +1,10 @@
+// |=============== SETTING UP A MIXIN FOR CONNECTING FONTS ===============>
+@mixin addFont($nameFontFamily, $pathToWoff2, $pathToWoff, $fw, $fs) {
+  @font-face {
+    src: url("../fonts/#{$pathToWoff2}.woff2") format("woff2"), url("../fonts/#{$pathToWoff}.woff") format("woff");
+    font-family: "#{$nameFontFamily}";
+    font-weight: #{$fw};
+    font-style: #{$fs};
+    font-display: swap;
+  }
+}

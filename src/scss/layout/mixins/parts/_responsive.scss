@@ -1,0 +1,243 @@
+// |=============== DECREASE ===============>
+// |CM| Example - 2000, 1000px, 1000, 80, 80px, 30, 30px
+@mixin d-gap($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopGap1, $desktopGap2, $mobileGap1, $mobileGap2) {
+  gap: clamp(#{$mobileGap2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopGap1} - #{$mobileGap1})) + #{$mobileGap2}, #{$desktopGap2});
+}
+
+@mixin d-row-gap($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopRowGap1, $desktopRowGap2, $mobileRowGap1, $mobileRowGap2) {
+  row-gap: clamp(#{$mobileRowGap2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopRowGap1} - #{$mobileRowGap1})) + #{$mobileRowGap2}, #{$desktopRowGap2});
+}
+
+@mixin d-column-gap($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopRowColumnGap1, $desktopRowColumnGap2, $mobileRowColumnGap1, $mobileRowColumnGap2) {
+  column-gap: clamp(#{$mobileRowColumnGap2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopRowColumnGap1} - #{$mobileRowColumnGap1})) + #{$mobileRowColumnGap2}, #{$desktopRowColumnGap2});
+}
+
+@mixin d-top($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopTop1, $desktopTop2, $mobileTop1, $mobileTop2) {
+  top: clamp(#{$mobileTop2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopTop1} - #{$mobileTop1})) + #{$mobileTop2}, #{$desktopTop2});
+}
+
+@mixin d-right($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopRight1, $desktopRight2, $mobileRight1, $mobileRight2) {
+  right: clamp(#{$mobileRight2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopRight1} - #{$mobileRight1})) + #{$mobileRight2}, #{$desktopRight2});
+}
+
+@mixin d-bottom($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopBottom1, $desktopBottom2, $mobileBottom1, $mobileBottom2) {
+  bottom: clamp(#{$mobileBottom2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopBottom1} - #{$mobileBottom1})) + #{$mobileBottom2}, #{$desktopBottom2});
+}
+
+@mixin d-left($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopLeft1, $desktopLeft2, $mobileLeft1, $mobileLeft2) {
+  left: clamp(#{$mobileLeft2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopLeft1} - #{$mobileLeft1})) + #{$mobileLeft2}, #{$desktopLeft2});
+}
+
+@mixin d-min-width($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMinW1, $desktopMinW2, $mobileMinW1, $mobileMinW2) {
+  min-width: clamp(#{$mobileMinW2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMinW1} - #{$mobileMinW1})) + #{$mobileMinW2}, #{$desktopMinW2});
+}
+
+@mixin d-width($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopW1, $desktopW2, $mobileW1, $mobileW2) {
+  width: clamp(#{$mobileW2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopW1} - #{$mobileW1})) + #{$mobileW2}, #{$desktopW2});
+}
+
+@mixin d-max-width($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMaxW1, $desktopMaxW2, $mobileMaxW1, $mobileMaxW2) {
+  max-width: clamp(#{$mobileMaxW2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMaxW1} - #{$mobileMaxW1})) + #{$mobileMaxW2}, #{$desktopMaxW2});
+}
+
+@mixin d-min-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMinH1, $desktopMinH2, $mobileMinH1, $mobileMinH2) {
+  min-height: clamp(#{$mobileMinH2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMinH1} - #{$mobileMinH1})) + #{$mobileMinH2}, #{$desktopMinH2});
+}
+
+@mixin d-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopH1, $desktopH2, $mobileH1, $mobileH2) {
+  height: clamp(#{$mobileH2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopH1} - #{$mobileH1})) + #{$mobileH2}, #{$desktopH2});
+}
+
+@mixin d-max-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMaxH1, $desktopMaxH2, $mobileMaxH1, $mobileMaxH2) {
+  max-height: clamp(#{$mobileMaxH2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMaxH1} - #{$mobileMaxH1})) + #{$mobileMaxH2}, #{$desktopMaxH2});
+}
+
+@mixin d-margin-bottom($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMb1, $desktopMb2, $mobileMb1, $mobileMb2) {
+  margin-bottom: clamp(#{$mobileMb2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMb1} - #{$mobileMb1})) + #{$mobileMb2}, #{$desktopMb2});
+}
+
+@mixin d-margin-right($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMr1, $desktopMr2, $mobileMr1, $mobileMr2) {
+  margin-right: clamp(#{$mobileMr2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMr1} - #{$mobileMr1})) + #{$mobileMr2}, #{$desktopMr2});
+}
+
+@mixin d-margin($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopM1, $desktopM2, $mobileM1, $mobileM2) {
+  margin: clamp(#{$mobileM2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopM1} - #{$mobileM1})) + #{$mobileM2}, #{$desktopM2});
+}
+
+@mixin d-margin-2($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMtb1, $desktopMtb2, $mobileMtb1, $mobileMtb2, $desktopMrl1, $desktopMrl2, $mobileMrl1, $mobileMrl2) {
+  margin: clamp(#{$mobileMtb2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMtb1} - #{$mobileMtb1})) + #{$mobileMtb2}, #{$desktopMtb2}) clamp(#{$mobileMrl2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMrl1} - #{$mobileMrl1})) + #{$mobileMrl2}, #{$desktopMrl2});
+}
+
+@mixin d-margin-3($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMt1, $desktopMt2, $mobileMt1, $mobileMt2, $desktopMrtLt1, $desktopMrtLt2, $mobileMrtLt1, $mobileMrtLt2, $desktopMbt1, $desktopMbt2, $mobileMbt1, $mobileMbt2) {
+  margin: clamp(#{$mobileMt2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMt1} - #{$mobileMt1})) + #{$mobileMt2}, #{$desktopMt2}) clamp(#{$mobileMrtLt2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMrtLt1} - #{$mobileMrtLt1})) + #{$mobileMrtLt2}, #{$desktopMrtLt2}) clamp(#{$mobileMbt2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMbt1} - #{$mobileMbt1})) + #{$mobileMbt2}, #{$desktopMbt2});
+}
+
+@mixin d-margin-4($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMtp1, $desktopMtp2, $mobileMtp1, $mobileMtp2, $desktopMrt1, $desktopMrt2, $mobileMrt1, $mobileMrt2, $desktopMbtm1, $desktopMbtm2, $mobileMbtm1, $mobileMbtm2, $desktopMl1, $desktopMl2, $mobileMl1, $mobileMl2) {
+  margin: clamp(#{$mobileMtp2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMtp1} - #{$mobileMtp1})) + #{$mobileMtp2}, #{$desktopMtp2}) clamp(#{$mobileMrt2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMrt1} - #{$mobileMrt1})) + #{$mobileMrt2}, #{$desktopMrt2}) clamp(#{$mobileMbtm2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMbtm1} - #{$mobileMbtm1})) + #{$mobileMbtm2}, #{$desktopMbtm2}), clamp(#{$mobileMl2} (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopMl1} - #{$mobileMl1})) + #{$mobileMl2}, #{$desktopMl2});
+}
+
+@mixin d-padding-top($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPt1, $desktopPt2, $mobilePt1, $mobilePt2) {
+  padding-top: clamp(#{$mobilePt2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPt1} - #{$mobilePt1})) + #{$mobilePt2}, #{$desktopPt2});
+}
+
+@mixin d-padding-right($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPr1, $desktopPr2, $mobilePr1, $mobilePr2) {
+  padding-right: clamp(#{$mobilePr2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPr1} - #{$mobilePr1})) + #{$mobilePr2}, #{$desktopPr2});
+}
+
+@mixin d-padding-bottom($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPb1, $desktopPb2, $mobilePb1, $mobilePb2) {
+  padding-bottom: clamp(#{$mobilePb2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPb1} - #{$mobilePb1})) + #{$mobilePb2}, #{$desktopPb2});
+}
+
+@mixin d-padding-left($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPl1, $desktopPl2, $mobilePl1, $mobilePl2) {
+  padding-left: clamp(#{$mobilePl2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPl1} - #{$mobilePl1})) + #{$mobilePl2}, #{$desktopPl2});
+}
+
+@mixin d-padding($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopP1, $desktopP2, $mobileP1, $mobileP2) {
+  padding: clamp(#{$mobileP2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopP1} - #{$mobileP1})) + #{$mobileP2}, #{$desktopP2});
+}
+
+@mixin d-padding-2($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPtb1, $desktopPtb2, $mobilePtb1, $mobilePtb2, $desktopPrl1, $desktopPrl2, $mobilePrl1, $mobilePrl2) {
+  padding: clamp(#{$mobilePtb2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPtb1} - #{$mobilePtb1})) + #{$mobilePtb2}, #{$desktopPtb2}) clamp(#{$mobilePrl2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPrl1} - #{$mobilePrl1})) + #{$mobilePrl2}, #{$desktopPrl2});
+}
+
+@mixin d-padding-3($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPtp1, $desktopPtp2, $mobilePtp1, $mobilePtp2, $desktopPrtlt1, $desktopPrtlt2, $mobilePrtlt1, $mobilePrtlt2, $desktopPbt1, $desktopPbt2, $mobilePbt1, $mobilePbt2) {
+  padding: clamp(#{$mobilePtp2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPtp1} - #{$mobilePtp1})) + #{$mobilePtp2}, #{$desktopPtp2}) clamp(#{$mobilePrtlt2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPrtlt1} - #{$mobilePrtlt1})) + #{$mobilePrtlt2}, #{$desktopPrtlt2}) clamp(#{$mobilePbt2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPbt1} - #{$mobilePbt1})) + #{$mobilePbt2}, #{$desktopPbt2});
+}
+
+@mixin d-padding-4($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPtop1, $desktopPtop2, $mobilePtop1, $mobilePtop2, $desktopPright1, $desktopPright2, $mobilePright1, $mobilePright2, $desktopPbottom1, $desktopPbottom2, $mobilePbottom1, $mobilePbottom2, $desktopPleft1, $desktopPleft2, $mobilePleft1, $mobilePleft2) {
+  padding: clamp(#{$mobilePtop2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPtop1} - #{$mobilePtop1})) + #{$mobilePtop2}, #{$desktopPtop2}) clamp(#{$mobilePright2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPright1} - #{$mobilePright1})) + #{$mobilePright2}, #{$desktopPright2}) clamp(#{$mobilePbottom2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPbottom1} - #{$mobilePbottom1})) + #{$mobilePbottom2}, #{$desktopPbottom2}) clamp(#{$mobilePleft2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopPleft1} - #{$mobilePleft1})) + #{$mobilePleft2}, #{$desktopPleft2});
+}
+
+@mixin d-font-size($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopFz1, $desktopFz2, $mobileFz1, $mobileFz2) {
+  font-size: clamp(#{$mobileFz2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopFz1} - #{$mobileFz1})) + #{$mobileFz2}, #{$desktopFz2});
+}
+
+@mixin d-line-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopLh1, $desktopLh2, $mobileLh1, $mobileLh2) {
+  line-height: clamp(#{$mobileLh2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopLh1} - #{$mobileLh1})) + #{$mobileLh2}, #{$desktopLh2});
+}
+
+@mixin d-background-size($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopBsW1, $desktopBsW2, $mobileBsW1, $mobileBsW2, $desktopBsH1, $desktopBsH2, $mobileBsH1, $mobileBsH2) {
+  background-size: clamp(#{$mobileBsW2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopBsW1} - #{$mobileBsW1})) + #{$mobileBsW2}, #{$desktopBsW2}) clamp(#{$mobileBsH2}, (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$desktopBsH1} - #{$mobileBsH1})) + #{$mobileBsH2}, #{$desktopBsH2});
+}
+
+// |=============== INCREASE ===============>
+// |CM| Example - 2000, 1000px, 1000, 30, 30px, 80, 80px
+@mixin i-gap($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopGap1, $desktopGap2, $mobileGap1, $mobileGap2) {
+  gap: clamp(#{$desktopGap2}, #{$mobileGap2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileGap1} - #{$desktopGap1})), #{$mobileGap2});
+}
+
+@mixin i-row-gap($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopRowGap1, $desktopRowGap2, $mobileRowGap1, $mobileRowGap2) {
+  row-gap: clamp(#{$desktopRowGap2}, #{$mobileRowGap2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileRowGap1} - #{$desktopRowGap1})), #{$mobileRowGap2});
+}
+
+@mixin i-column-gap($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopColumnGap1, $desktopColumnGap2, $mobileColumnGap1, $mobileColumnGap2) {
+  column-gap: clamp(#{$desktopColumnGap2}, #{$mobileColumnGap2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileColumnGap1} - #{$desktopColumnGap1})), #{$mobileColumnGap2});
+}
+
+@mixin i-top($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopTop1, $desktopTop2, $mobileTop1, $mobileTop2) {
+  top: clamp(#{$desktopTop2}, #{$mobileTop2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileTop1} - #{$desktopTop1})), #{$mobileTop2});
+}
+
+@mixin i-right($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopRight1, $desktopRight2, $mobileRight1, $mobileRight2) {
+  right: clamp(#{$desktopRight2}, #{$mobileRight2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileRight1} - #{$desktopRight1})), #{$mobileRight2});
+}
+
+@mixin i-bottom($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopBottom1, $desktopBottom2, $mobileBottom1, $mobileBottom2) {
+  bottom: clamp(#{$desktopBottom2}, #{$mobileBottom2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileBottom1} - #{$desktopBottom1})), #{$mobileBottom2});
+}
+
+@mixin i-left($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopLeft1, $desktopLeft2, $mobileLeft1, $mobileLeft2) {
+  left: clamp(#{$desktopLeft2}, #{$mobileLeft2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileLeft1} - #{$desktopLeft1})), #{$mobileLeft2});
+}
+
+@mixin i-min-width($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMinW1, $desktopMinW2, $mobileMinW1, $mobileMinW2) {
+  min-width: clamp(#{$desktopMinW2}, #{$mobileMinW2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMinW1} - #{$desktopMinW1})), #{$mobileMinW2});
+}
+
+@mixin i-width($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopW1, $desktopW2, $mobileW1, $mobileW2) {
+  width: clamp(#{$desktopW2}, #{$mobileW2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileW1} - #{$desktopW1})), #{$mobileW2});
+}
+
+@mixin i-max-width($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMaxW1, $desktopMaxW2, $mobileMaxW1, $mobileMaxW2) {
+  max-width: clamp(#{$desktopMaxW2}, #{$mobileMaxW2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMaxW1} - #{$desktopMaxW1})), #{$mobileMaxW2});
+}
+
+@mixin i-min-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMinH1, $desktopMinH2, $mobileMinH1, $mobileMinH2) {
+  min-height: clamp(#{$desktopMinH2}, #{$mobileMinH2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMinH1} - #{$desktopMinH1})), #{$mobileMinH2});
+}
+
+@mixin i-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopH1, $desktopH2, $mobileH1, $mobileH2) {
+  height: clamp(#{$desktopH2}, #{$mobileH2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileH1} - #{$desktopH1})), #{$mobileH2});
+}
+
+@mixin i-max-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMaxH1, $desktopMaxH2, $mobileMaxH1, $mobileMaxH2) {
+  max-height: clamp(#{$desktopMaxH2}, #{$mobileMaxH2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMaxH1} - #{$desktopMaxH1})), #{$mobileMaxH2});
+}
+
+@mixin i-margin-bottom($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMb1, $desktopMb2, $mobileMb1, $mobileMb2) {
+  margin-bottom: clamp(#{$desktopMb2}, #{$mobileMb2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMb1} - #{$desktopMb1})), #{$mobileMb2});
+}
+
+@mixin i-margin-right($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMr1, $desktopMr2, $mobileMr1, $mobileMr2) {
+  margin-right: clamp(#{$desktopMr2}, #{$mobileMr2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMr1} - #{$desktopMr1})), #{$mobileMr2});
+}
+
+@mixin i-margin($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopM1, $desktopM2, $mobileM1, $mobileM2) {
+  margin: clamp(#{$desktopM2}, #{$mobileM2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileM1} - #{$desktopM1})), #{$mobileM2});
+}
+
+@mixin i-margin-2($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMtb1, $desktopMtb2, $mobileMtb1, $mobileMtb2, $desktopMrl1, $desktopMrl2, $mobileMrl1, $mobileMrl2) {
+  margin: clamp(#{$desktopMtb2}, #{$mobileMtb2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMtb1} - #{$desktopMtb1})), #{$mobileMtb2}) clamp(#{$desktopMrl2}, #{$mobileMrl2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMrl1} - #{$desktopMrl1})), #{$mobileMrl2});
+}
+
+@mixin i-margin-3($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMt1, $desktopMt2, $mobileMt1, $mobileMt2, $desktopMrtLt1, $desktopMrtLt2, $mobileMrtLt1, $mobileMrtLt2, $desktopMbt1, $desktopMbt2, $mobileMbt1, $mobileMbt2) {
+  margin: clamp(#{$desktopMt2}, #{$mobileMt2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMt1} - #{$desktopMt1})), #{$mobileMt2}) clamp(#{$desktopMrtLt2}, #{$mobileMrtLt2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMrtLt1} - #{$desktopMrtLt1})), #{$mobileMrtLt2}) clamp(#{$desktopMbt2}, #{$mobileMbt2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMbt1} - #{$desktopMbt1})), #{$mobileMbt2});
+}
+
+@mixin i-margin-4($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopMtp1, $desktopMtp2, $mobileMtp1, $mobileMtp2, $desktopMrt1, $desktopMrt2, $mobileMrt1, $mobileMrt2, $desktopMbtm1, $desktopMbtm2, $mobileMbtm1, $mobileMbtm2, $desktopMl1, $desktopMl2, $mobileMl1, $mobileMl2) {
+  margin: clamp(#{$desktopMtp2}, #{$mobileMtp2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMtp1} - #{$desktopMtp1})), #{$mobileMtp2}) clamp(#{$desktopMrt2}, #{$mobileMrt2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMrt1} - #{$desktopMrt1})), #{$mobileMrt2}) clamp(#{$desktopMbtm2}, #{$mobileMbtm2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMbtm1} - #{$desktopMbtm1})), #{$mobileMbtm2}) clamp(#{$desktopMl2}, #{$mobileMl2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileMl1} - #{$desktopMl1})), #{$mobileMl2});
+}
+
+@mixin i-padding-top($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPt1, $desktopPt2, $mobilePt1, $mobilePt2) {
+  padding-top: clamp(#{$desktopPt2}, #{$mobilePt2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePt1} - #{$desktopPt1})), #{$mobilePt2});
+}
+
+@mixin i-padding-right($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPr1, $desktopPr2, $mobilePr1, $mobilePr2) {
+  padding-right: clamp(#{$desktopPr2}, #{$mobilePr2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePr1} - #{$desktopPr1})), #{$mobilePr2});
+}
+
+@mixin i-padding-bottom($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPb1, $desktopPb2, $mobilePb1, $mobilePb2) {
+  padding-bottom: clamp(#{$desktopPb2}, #{$mobilePb2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePb1} - #{$desktopPb1})), #{$mobilePb2});
+}
+
+@mixin i-padding-left($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPl1, $desktopPl2, $mobilePl1, $mobilePl2) {
+  padding-left: clamp(#{$desktopPl2}, #{$mobilePl2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePl1} - #{$desktopPl1})), #{$mobilePl2});
+}
+
+@mixin i-padding($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopP1, $desktopP2, $mobileP1, $mobileP2) {
+  padding: clamp(#{$desktopP2}, #{$mobileP2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileP1} - #{$desktopP1})), #{$mobileFz2});
+}
+
+@mixin i-padding-2($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPtb1, $desktopPtb2, $mobilePtb1, $mobilePtb2, $desktopPrl1, $desktopPrl2, $mobilePrl1, $mobilePrl2) {
+  padding: clamp(#{$desktopPtb2}, #{$mobilePtb2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePtb1} - #{$desktopPtb1})), #{$mobilePtb2}) clamp(#{$desktopPrl2}, #{$mobilePrl2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePrl1} - #{$desktopPrl1})), #{$mobilePrl2});
+}
+
+@mixin i-padding-3($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPtp1, $desktopPtp2, $mobilePtp1, $mobilePtp2, $desktopPrtlt1, $desktopPrtlt2, $mobilePrtlt1, $mobilePrtlt2, $desktopPbt1, $desktopPbt2, $mobilePbt1, $mobilePbt2) {
+  padding: clamp(#{$desktopPtp2}, #{$mobilePtp2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePtp1} - #{$desktopPtp1})), #{$mobilePtp2}) clamp(#{$desktopPrtlt2}, #{$mobilePrtlt2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePrtlt1} - #{$desktopPrtlt1})), #{$mobilePrtlt2}) clamp(#{$desktopPbt2}, #{$mobilePbt2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePbt1} - #{$desktopPbt1})), #{$mobilePbt2});
+}
+
+@mixin i-padding-4($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopPtop1, $desktopPtop2, $mobilePtop1, $mobilePtop2, $desktopPright1, $desktopPright2, $mobilePright1, $mobilePright2, $desktopPbottom1, $desktopPbottom2, $mobilePbottom1, $mobilePbottom2, $desktopPleft1, $desktopPleft2, $mobilePleft1, $mobilePleft2) {
+  padding: clamp(#{$desktopPtop2}, #{$mobilePtop2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePtop1} - #{$desktopPtop1})), #{$mobilePtop2}) clamp(#{$desktopPright2}, #{$mobilePright2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePright1} - #{$desktopPright1})), #{$mobilePright2}) clamp(#{$desktopPbottom2}, #{$mobilePbottom2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePbottom1} - #{$desktopPbottom1})), #{$mobilePbottom2}) clamp(#{$desktopPleft2}, #{$mobilePleft2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobilePleft1} - #{$desktopPleft1})), #{$mobilePleft2});
+}
+
+@mixin i-font-size($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopFz1, $desktopFz2, $mobileFz1, $mobileFz2) {
+  font-size: clamp(#{$desktopFz2}, #{$mobileFz2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileFz1} - #{$desktopFz1})), #{$mobileFz2});
+}
+
+@mixin i-line-height($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopLh1, $desktopLh2, $mobileLh1, $mobileLh2) {
+  line-height: clamp(#{$desktopLh2}, #{$mobileLh2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileLh1} - #{$desktopLh1})), #{$mobileLh2});
+}
+
+@mixin i-background-size($desktopLayout, $responsiveLayout1, $responsiveLayout2, $desktopBsW1, $desktopBsW2, $mobileBsW1, $mobileBsW2, $desktopBsH1, $desktopBsH2, $mobileBsH1, $mobileBsH2) {
+  background-size: clamp(#{$desktopBsW2}, #{$mobileBsW2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileBsW1} - #{$desktopBsW1})), #{$mobileBsW2}) clamp(#{$desktopBsH2}, #{$mobileBsH2} - (100vw - #{$responsiveLayout1}) / ((#{$desktopLayout} - #{$responsiveLayout2}) / (#{$mobileBsH1} - #{$desktopBsH1})), #{$mobileBsH2});
+}

@@ -1,0 +1,13 @@
+// |=============== CONFIGURING THE DISABLING OF ALL ANIMATIONS AND EFFECTS FOR PEOPLE WITH DISABILITIES ===============>
+@media (prefers-reduced-motion: reduce), (update: slow) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.001ms !important;
+    transition-delay: 0s !important;
+    animation-duration: 0.001ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}

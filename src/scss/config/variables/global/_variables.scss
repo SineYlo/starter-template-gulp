@@ -1,0 +1,204 @@
+// |=============== FONT-FAMILY ===============>
+// |CM| Main font-family
+$primary-font-family: null;
+// |CM| Additional font-families
+$second-font-family: null;
+$third-font-family: null;
+$fourth-font-family: null;
+
+// |=============== COLOR ===============>
+// |CM| Change favorite color (Color name - )
+$hue-color: null;
+// |CM| HSL color mode
+$primary-color: null;
+$second-color: null;
+$third-color: null;
+$fourth-color: null;
+$fifth-color: null;
+$sixth-color: null;
+$seventh-color: null;
+$eighth-color: null;
+$ninth-color: null;
+$tenth-color: null;
+$eleventh-color: null;
+$twelfth-color: null;
+$thirteenth-color: null;
+$fourteenth-color: null;
+$fifteenth-color: null;
+$sixteenth-color: null;
+$seventeenth-color: null;
+$eighteenth-color: null;
+$nineteenth-color: null;
+$twentieth-color: null;
+$twenty-first-color: null;
+$twenty-second-color: null;
+$twenty-third-color: null;
+$twenty-fourth-color: null;
+$twenty-fifth-color: null;
+$twenty-sixth-color: null;
+$twenty-seventh-color: null;
+$twenty-eighth-color: null;
+$twenty-ninth-color: null;
+$thirtieth-color: null;
+// |CM| Colors for effects
+$primary-color-effects: null;
+$second-color-effects: null;
+$third-color-effects: null;
+$fourth-color-effects: null;
+$fifth-color-effects: null;
+$sixth-color-effects: null;
+$seventh-color-effects: null;
+$eighth-color-effects: null;
+$ninth-color-effects: null;
+$tenth-color-effects: null;
+// |CM| Universal colors
+$white-color: null;
+$black-color: null;
+
+// |=============== FONT-WEIGHT ===============>
+// |CM| Main font-weight
+$primary-font-weight: null;
+// |CM| Additional font-weights
+$second-font-weight: null;
+$third-font-weight: null;
+$fourth-font-weight: null;
+$fifth-font-weight: null;
+
+// |=============== FONT-SIZE ===============>
+// |CM| Base font-size ( .5rem = 8px, 1rem = 16px, 1.5rem = 24px ...)
+$text-size-base: null;
+// |CM| Different font-size options
+$text-size-min-tiny: $text-size-base - null;
+$text-size-min-small: $text-size-base - null;
+$text-size-min-medium: $text-size-base - null;
+$text-size-min-big: $text-size-base - null;
+$text-size-min-large: $text-size-base - null;
+$text-size-min-huge: $text-size-base - null;
+$text-size-tiny: $text-size-base - null;
+$text-size-small: $text-size-base - null;
+$text-size-medium: $text-size-base + null;
+$text-size-big: $text-size-base + null;
+$text-size-large: $text-size-base + null;
+$text-size-huge: $text-size-base + null;
+$text-size-max-tiny: $text-size-base + null;
+$text-size-max-small: $text-size-base + null;
+$text-size-max-medium: $text-size-base + null;
+$text-size-max-big: $text-size-base + null;
+$text-size-max-large: $text-size-base + null;
+$text-size-max-huge: $text-size-base + null;
+
+// |=============== LINE-HEIGHT ===============>
+// |CM| Main line-height
+$primary-lh: null;
+// |CM| Additional lines-heights
+$second-lh: null;
+$third-lh: null;
+$fourth-lh: null;
+$fifth-lh: null;
+$sixth-lh: null;
+$seventh-lh: null;
+$eighth-lh: null;
+$ninth-lh: null;
+$tenth-lh: null;
+
+// |=============== BORDER-RADIUS ===============>
+// |CM| Main border-radius
+$primary-br: null;
+// |CM| Additional border-radiuses
+$second-br: null;
+$third-br: null;
+$fourth-br: null;
+$fifth-br: null;
+$sixth-br: null;
+$seventh-br: null;
+$eighth-br: null;
+$ninth-br: null;
+$tenth-br: null;
+
+// |=============== BACKGROUND-IMAGE ===============>
+// |CM| All background pictures are located here
+$primary-bgi: null;
+$second-bgi: null;
+$third-bgi: null;
+$fourth-bgi: null;
+$fifth-bgi: null;
+$sixth-bgi: null;
+$seventh-bgi: null;
+$eighth-bgi: null;
+$ninth-bgi: null;
+$tenth-bgi: null;
+$eleventh-bgi: null;
+$twelfth-bgi: null;
+$thirteenth-bgi: null;
+$fourteenth-bgi: null;
+$fifteenth-bgi: null;
+$sixteenth-bgi: null;
+$seventeenth-bgi: null;
+$eighteenth-bgi: null;
+$nineteenth-bgi: null;
+$twentieth-bgi: null;
+
+// |=============== BACKGROUND-COLOR ===============>
+// |CM| Specifying a fallback color for background images
+$primary-fb-color: null;
+$second-fb-color: null;
+$third-fb-color: null;
+$fourth-fb-color: null;
+$fifth-fb-color: null;
+$sixth-fb-color: null;
+$seventh-fb-color: null;
+$eighth-fb-color: null;
+$ninth-fb-color: null;
+$tenth-fb-color: null;
+$eleventh-fb-color: null;
+$twelfth-fb-color: null;
+$thirteenth-fb-color: null;
+$fourteenth-fb-color: null;
+$fifteenth-fb-color: null;
+$sixteenth-fb-color: null;
+$seventeenth-fb-color: null;
+$eighteenth-fb-color: null;
+$nineteenth-fb-color: null;
+$twentieth-fb-color: null;
+
+// |=============== GAP ===============>
+// |CM| Specifying a fallback color for background images
+$primary-gap: null;
+$second-gap: null;
+$third-gap: null;
+$fourth-gap: null;
+$fifth-gap: null;
+$sixth-gap: null;
+$seventh-gap: null;
+$eighth-gap: null;
+$ninth-gap: null;
+$tenth-gap: null;
+
+// |=============== TRANSITION ===============>
+// |CM| Duration of effects (most effective 0.2 to 0.4s)
+$fast-transition-duration: 0.2s;
+$medium-transition-duration: 0.3s;
+$slow-transition-duration: 0.4s;
+
+// |=============== ANIMATIONS ===============>
+// |CM| Duration of animations (most effective 0.2 to 0.5s)
+$fast-animation-duration: 0.2s;
+$medium-animation-duration: 0.3s;
+$slow-animation-duration: 0.4s;
+$very-slow-animation-duration: 0.5s;
+
+// |=============== Z-INDEX ===============>
+// |CM| Different z-index values for ease of selection
+$primary-z: 2;
+$second-z: 3;
+$third-z: 4;
+$fourth-z: 5;
+$fifth-z: 6;
+$sixth-z: 7;
+$seventh-z: 8;
+$eighth-z: 9;
+$ninth-z: 10;
+// |CM| Ready z-index values for different components
+$z-tooltip: 20;
+$z-fixed: 100;
+$z-modal: 1000;
