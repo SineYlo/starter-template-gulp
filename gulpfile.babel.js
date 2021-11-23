@@ -18,8 +18,12 @@ const postcssSystemUiFont = require('postcss-font-family-system-ui');
 const cleanCSS = require('gulp-clean-css');
 const sass = require('gulp-sass')(require('sass'));
 const rename = require('gulp-rename');
+const browserify = require('browserify');
+// const babelify = require('babelify');
+const vinylStream = require('vinyl-source-stream');
+const vinylBuffer = require('vinyl-buffer');
 const uglify = require('gulp-uglify-es').default;
-const babel = require('gulp-babel');
+// const babel = require('gulp-babel');
 const notify = require('gulp-notify');
 const svgSprite = require('gulp-svg-sprite');
 const browserSync = require('browser-sync').create();
@@ -188,9 +192,13 @@ const changingStyles = () => {
 
 // |=============== WE CREATE A TASK THAT OPTIMIZED SCRIPT FILES ===============>
 const changingScripts = () => {
-  return src(path.source.scripts)
-    .pipe(babel())
-    .pipe(fileinclude())
+  return browserify(`${sourceFolder}/js/main.js`)
+    .transform('babelify', {
+      presets: ['@babel/preset-env'],
+    })
+    .bundle()
+    .pipe(vinylStream('main.js'))
+    .pipe(vinylBuffer())
     .pipe(dest(path.build.scripts))
     .pipe(uglify({
       toplevel: true,
