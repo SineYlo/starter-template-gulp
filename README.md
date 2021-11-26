@@ -34,7 +34,10 @@ This is all necessary in order to make it easier to find files that are used on 
 `Answer:` It's simple. The template has the husky package installed, which should be installed after git.  
 *  
 `Question:` Are there plans to migrate to Webpack in the future?   
-`Answer:` Yes, there will definitely be migration, but I can't say exactly when.
+`Answer:` Yes, there will definitely be migration, but I can't say exactly when.  
+*  
+`Question:` Many folders have a .gitkeep file what is it for?   
+`Answer:` This file is a dummy and is needed in order for the correct template structure to be uploaded to GitHub.
 
 ## 📑 Changelog
 ####  v1.0.0 / 2021-11-26
