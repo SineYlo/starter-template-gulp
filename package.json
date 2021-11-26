@@ -8,6 +8,15 @@
     "type": "git",
     "url": "git+https://github.com/SineYlo/Starter-Template.git"
   },
+  "lint-staged": {
+    "*.js": "eslint",
+    "*.scss": "stylelint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [
     "keyword_1",
     "keyword_2",
@@ -29,21 +38,28 @@
     "babelify": "^10.0.0",
     "browser-sync": "^2.27.7",
     "browserify": "^17.0.0",
-    "eslint": "^8.2.0",
+    "del": "^6.0.0",
+    "eslint": "^8.3.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
+    "event-stream": "^4.0.1",
+    "glob": "^7.2.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-libsquoosh": "^1.0.12",
     "gulp-notify": "^4.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
     "postcss-aspect-ratio-property": "^1.0.0",
     "postcss-clip-path-polyfill": "^1.1.0",
     "postcss-color-rebeccapurple": "^7.0.0",
@@ -51,13 +67,12 @@
     "postcss-lab-function": "^4.0.1",
     "postcss-pxtorem": "^6.0.0",
     "postcss-will-change": "^4.0.1",
-    "sass": "^1.43.4",
+    "sass": "^1.43.5",
     "stylelint": "^14.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.0.0",
     "vinyl-buffer": "^1.0.1",
-    "vinyl-source-stream": "^2.0.0",
-    "webp-in-css": "^0.7.0"
+    "vinyl-source-stream": "^2.0.0"
   }
 }
