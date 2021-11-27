@@ -92,6 +92,7 @@ const changingStyles = () => {
     }))
     .pipe(sourcemaps.write())
     .pipe(dest(path.build.styles))
+    .pipe(browserSync.stream())
     .pipe(cleanCSS({
       level: 2,
     }))
