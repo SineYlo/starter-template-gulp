@@ -16,6 +16,7 @@ const path = {
       `${sourceFolder}/main.webmanifest`,
       `${sourceFolder}/favicon.ico`,
       `${sourceFolder}/favicon.svg`,
+      `${sourceFolder}/mask-desktop.svg`,
     ],
     htmlHome: `${sourceFolder}/index.html`,
     htmlPages: `${sourceFolder}/kit/pages/**/*.html`,
