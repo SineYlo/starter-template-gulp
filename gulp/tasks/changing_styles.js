@@ -23,9 +23,6 @@ import postcssWillChange from 'postcss-will-change';
 // |=============== WE CONNECT | POSTCSS-CLIP-PATH-POLYFILL MODULE ===============>
 import postcssClipPath from 'postcss-clip-path-polyfill';
 
-// |=============== WE CONNECT | POSTCSS-ASPECT-RATIO-PROPERTY MODULE ===============>
-import postcssAspectRatio from 'postcss-aspect-ratio-property';
-
 // |=============== WE CONNECT | POSTCSS-PXTOREM MODULE ===============>
 import postcssPxToRem from 'postcss-pxtorem';
 
@@ -69,9 +66,6 @@ const changingStyles = () => {
       }),
       postcssWillChange(),
       postcssClipPath(),
-      postcssAspectRatio({
-        mainSelector: '.aspect-pic',
-      }),
       postcssPxToRem({
         rootValue: 16,
         unitPrecision: 5,
