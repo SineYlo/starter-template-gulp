@@ -44,6 +44,8 @@
 # 20140407 Initially Published
 #
 # -----------------------------------------------------------------
+# Slightly improved this file: SineYlo
+# -----------------------------------------------------------------
 
 # ignore all files starting with . or ~
 .*
@@ -54,6 +56,9 @@ dist/
 
 # ignore node/grunt dependency directories
 node_modules/
+
+#ignore the file with dependency locking
+package-lock.json
 
 # ignore composer vendor directory
 /vendor
