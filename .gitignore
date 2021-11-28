@@ -69,6 +69,10 @@ package-lock.json
 # ignore jekyll build directory
 /_site
 
+# ignoring operating system files
+.DS_Store
+desktop.ini
+
 # ignore OS generated files
 ehthumbs.db
 Thumbs.db
