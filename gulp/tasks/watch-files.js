@@ -6,22 +6,22 @@ import { watch } from 'gulp';
 import browserSync from 'browser-sync';
 
 // |=============== WE CONNECT | TASK (CHANGING-MARKUP-HOME) ===============>
-import changingMarkupHome from './markup_home';
+import changingMarkupHome from './markup-home';
 
 // |=============== WE CONNECT | TASK (CHANGING-MARKUP-PAGES) ===============>
-import changingMarkupPages from './markup_pages';
+import changingMarkupPages from './markup-pages';
 
 // |=============== WE CONNECT | TASK (CHANGING-STYLES) ===============>
-import changingStyles from './changing_styles';
+import changingStyles from './changing-styles';
 
 // |=============== WE CONNECT | TASK (CHANGING-SCRIPTS) ===============>
-import changingScripts from './changing_scripts';
+import changingScripts from './changing-scripts';
 
 // |=============== WE CONNECT | TASK (FILE-TRANSFER-PICTURES) ===============>
-import fileTransferPictures from './transfer_pictures';
+import fileTransferPictures from './transfer-pictures';
 
 // |=============== WE CONNECT | TASK (SVG-OPTIMIZATION) ===============>
-import svgOptimization from './svg_optimization';
+import svgOptimization from './svg-optimization';
 
 // |=============== WE CONNECT | PATHS TO THE MAIN FOLDERS ===============>
 import { path, projectFolder } from '../paths';
