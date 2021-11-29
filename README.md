@@ -39,12 +39,5 @@ This is all necessary in order to make it easier to find files that are used on 
 `Question:` Many folders have a .gitkeep file what is it for?   
 `Answer:` This file is a dummy and is needed in order for the correct template structure to be uploaded to GitHub.
 
-## 📑 Changelog
-####  v1.0.0 / 2021-11-26
-- Added template. 
-####  v1.1.0 / 2021-11-27
-- Fixed a bug in the task related to SCSS + browser-sync.
-- Removed aspect-ratio module because it was not working.
-- Added avif format for favicons, and corrected paths in the paths task.
 ***
 If you have any questions or suggestions, you can write to the `issues` section or email me - `contact@sineylo-dev.ru`
