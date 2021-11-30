@@ -8,15 +8,6 @@
     "type": "git",
     "url": "git+https://github.com/SineYlo/Starter-Template.git"
   },
-  "lint-staged": {
-    "*.js": "eslint",
-    "*.scss": "stylelint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "keywords": [
     "keyword-1",
     "keyword-2",
@@ -58,8 +49,6 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.1.2",
     "postcss-clip-path-polyfill": "^1.1.0",
     "postcss-color-rebeccapurple": "^7.0.0",
     "postcss-font-family-system-ui": "^5.0.0",
