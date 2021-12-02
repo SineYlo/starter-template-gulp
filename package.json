@@ -55,7 +55,7 @@
     "postcss-lab-function": "^4.0.1",
     "postcss-pxtorem": "^6.0.0",
     "postcss-will-change": "^4.0.1",
-    "sass": "^1.43.5",
+    "sass": "^1.44.0",
     "stylelint": "^14.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
     "stylelint-order": "^5.0.0",
