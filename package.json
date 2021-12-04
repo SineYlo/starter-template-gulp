@@ -9,7 +9,7 @@
   },
   "lint-staged": {
     "*.js": "eslint",
-    ".scss": "stylelint"
+    "*.scss": "stylelint"
   },
   "repository": {
     "type": "git",
