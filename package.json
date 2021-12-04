@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "prepare": "husky install",
-    "pre-commit": "eslint"
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": "eslint",
+    ".scss": "stylelint"
   },
   "repository": {
     "type": "git",
@@ -53,6 +57,7 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
     "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
     "postcss-clip-path-polyfill": "^1.1.0",
     "postcss-color-rebeccapurple": "^7.0.0",
     "postcss-font-family-system-ui": "^5.0.0",
