@@ -50,7 +50,7 @@ exports.imageOptimizationJpg = imageOptimizationJpg;
 exports.imageOptimizationPng = imageOptimizationPng;
 
 // |=============== SETTING UP THE ORDER OF TASKS TO RUN THE PROJECT BUILDER ===============>
-exports.default = series(
+const build = series(
   fileTransferAudio,
   fileTransferVideo,
   fileTransferFonts,
@@ -63,5 +63,11 @@ exports.default = series(
     changingScripts,
   ),
   svgOptimization,
+);
+
+exports.build = build;
+
+exports.default = series(
+  build,
   watchFiles,
 );
