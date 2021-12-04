@@ -94,8 +94,7 @@ const changingStyles = () => {
       extname: '.min.css',
       dirname: '',
     }))
-    .pipe(dest(path.build.styles))
-    .pipe(browserSync.stream());
+    .pipe(dest(path.build.styles));
 };
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
