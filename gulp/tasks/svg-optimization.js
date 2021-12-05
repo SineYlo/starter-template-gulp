@@ -1,15 +1,9 @@
 /* eslint-disable arrow-body-style */
-// |=============== WE CONNECT | GULP MODULE ===============>
+// |=============== CONNECTING ALL MODULES ===============>
 import { src, dest } from 'gulp';
-
-// |=============== WE CONNECT | GULP-SVG-SPRITE MODULE ===============>
 import svgSprite from 'gulp-svg-sprite';
-
-// |=============== WE CONNECT | GULP-RENAME MODULE ===============>
 import rename from 'gulp-rename';
-
-// |=============== WE CONNECT | PATHS TO THE MAIN FOLDERS ===============>
-import { path } from '../paths';
+import { path } from '../config';
 
 // |=============== SETTING UP THE TASK OF CREATING A SPRITE FROM SVG IMAGES ===============>
 const svgOptimization = () => {

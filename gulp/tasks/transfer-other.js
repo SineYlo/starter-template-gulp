@@ -1,9 +1,7 @@
 /* eslint-disable arrow-body-style */
-// |=============== WE CONNECT | GULP MODULE ===============>
+// |=============== CONNECTING ALL MODULES ===============>
 import { src, dest } from 'gulp';
-
-// |=============== WE CONNECT | PATHS TO THE MAIN FOLDERS ===============>
-import { path } from '../paths';
+import { path } from '../config';
 
 // |=============== SETTING UP A TASK TO TRANSFER ALL OTHER FILES ===============>
 const fileTransferOther = () => {

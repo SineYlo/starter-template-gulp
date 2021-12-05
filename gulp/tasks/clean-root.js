@@ -1,9 +1,7 @@
 /* eslint-disable arrow-body-style */
-// |=============== WE CONNECT | DEL MODULE ===============>
+// |=============== CONNECTING ALL MODULES ===============>
 import del from 'del';
-
-// |=============== WE CONNECT | PATHS TO THE MAIN FOLDERS ===============>
-import { projectFolder } from '../paths';
+import { projectFolder } from '../config';
 
 // |=============== DELETING THE MAIN FOLDER OF THE PROJECT - DIST ===============>
 const cleanRoot = () => {

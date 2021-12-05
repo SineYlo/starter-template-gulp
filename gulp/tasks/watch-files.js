@@ -1,30 +1,14 @@
 /* eslint-disable arrow-body-style */
-// |=============== WE CONNECT | GULP MODULE ===============>
+// |=============== CONNECTING ALL MODULES ===============>
 import { watch } from 'gulp';
-
-// |=============== WE CONNECT | BROWSER-SYNC MODULE ===============>
 import browserSync from 'browser-sync';
-
-// |=============== WE CONNECT | TASK (CHANGING-MARKUP-HOME) ===============>
 import changingMarkupHome from './markup-home';
-
-// |=============== WE CONNECT | TASK (CHANGING-MARKUP-PAGES) ===============>
 import changingMarkupPages from './markup-pages';
-
-// |=============== WE CONNECT | TASK (CHANGING-STYLES) ===============>
 import changingStyles from './changing-styles';
-
-// |=============== WE CONNECT | TASK (CHANGING-SCRIPTS) ===============>
 import changingScripts from './changing-scripts';
-
-// |=============== WE CONNECT | TASK (FILE-TRANSFER-PICTURES) ===============>
 import fileTransferPictures from './transfer-pictures';
-
-// |=============== WE CONNECT | TASK (SVG-OPTIMIZATION) ===============>
 import svgOptimization from './svg-optimization';
-
-// |=============== WE CONNECT | PATHS TO THE MAIN FOLDERS ===============>
-import { path, projectFolder } from '../paths';
+import { path, projectFolder } from '../config';
 
 // |=============== CREATING A TASK AND ALSO SETTING UP A LOCAL SERVER ===============>
 const watchFiles = (callback) => {

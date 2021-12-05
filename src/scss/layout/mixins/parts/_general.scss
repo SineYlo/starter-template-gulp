@@ -32,3 +32,9 @@
   -webkit-line-clamp: #{$numberOfLines};
   line-clamp: #{$numberOfLines};
 }
+
+// |CM| Hiding the element from the screen reader
+@mixin hiddenElement {
+  opacity: 0;
+  visibility: hidden;
+}

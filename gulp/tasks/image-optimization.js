@@ -1,12 +1,8 @@
 /* eslint-disable arrow-body-style */
-// |=============== WE CONNECT | GULP MODULE ===============>
+// |=============== CONNECTING ALL MODULES ===============>
 import { src, dest } from 'gulp';
-
-// |=============== WE CONNECT | SQUOOSH MODULE ===============>
 import squoosh from 'gulp-libsquoosh';
-
-// |=============== WE CONNECT | PATHS TO THE MAIN FOLDERS ===============>
-import { path } from '../paths';
+import { path } from '../config';
 
 // |=============== SETTING UP AN IMAGE OPTIMIZATION AND CONVERSION TASK - JPG ===============>
 const imageOptimizationJpg = () => {

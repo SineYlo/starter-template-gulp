@@ -14,6 +14,9 @@ const path = {
     root: [
       `${sourceFolder}/browserconfig.xml`,
       `${sourceFolder}/main.webmanifest`,
+      `${sourceFolder}/favicon.ico`,
+      `${sourceFolder}/favicon.svg`,
+      `${sourceFolder}/mask-desktop.svg`,
     ],
     htmlHome: `${sourceFolder}/index.html`,
     htmlPages: `${sourceFolder}/kit/pages/**/*.html`,
@@ -60,6 +63,10 @@ const path = {
     ],
     pictures: `${sourceFolder}/img/**/*.{jpg,jpeg,png,webp,avif,gif}`,
     sprites: `${sourceFolder}/img/global/sprites/*.svg`,
+  },
+  setEnv() {
+    this.isProd = process.argv.includes('--prod');
+    this.isDev = !this.isProd;
   },
 };
 

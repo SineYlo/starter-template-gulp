@@ -2,16 +2,23 @@
   "name": "project-name",
   "version": "1.0.0",
   "description": "Some description of the project.",
-  "main": "app.js",
+  "main": "gulpfile.babel.js",
   "scripts": {
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "dev": "gulp --dev",
-    "build": "gulp --prod"
+    "clean": "gulp cleanRoot",
+    "image-svg": "gulp svgOptimization",
+    "image-jpg": "gulp imageOptimizationJpg",
+    "image-png": "gulp imageOptimizationPng",
+    "dev": "gulp watch",
+    "build:dev": "gulp build",
+    "build:prod": "gulp build --prod",
+    "lint:editorconfig": "editorconfig-checker"
   },
   "lint-staged": {
     "*.js": "eslint",
-    "*.scss": "stylelint"
+    "*.scss": "stylelint",
+    "*.html": "htmlhint"
   },
   "repository": {
     "type": "git",
@@ -24,7 +31,7 @@
     "keyword-4",
     "keyword-5"
   ],
-  "author": "project-author",
+  "author": "SineYlo",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/SineYlo/Starter-Template/issues"
@@ -39,7 +46,8 @@
     "browser-sync": "^2.27.7",
     "browserify": "^17.0.0",
     "del": "^6.0.0",
-    "eslint": "^8.3.0",
+    "editorconfig-checker": "^4.0.2",
+    "eslint": "^8.4.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "event-stream": "^4.0.1",
@@ -50,6 +58,7 @@
     "gulp-clean-css": "^4.3.0",
     "gulp-file-include": "^2.3.0",
     "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
     "gulp-libsquoosh": "^1.0.12",
     "gulp-notify": "^4.0.0",
     "gulp-postcss": "^9.0.1",
@@ -58,6 +67,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
+    "htmlhint": "^1.0.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.1.2",
     "postcss-clip-path-polyfill": "^1.1.0",

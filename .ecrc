@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "dist",
+    "node_modules",
+    "gulpfile.babel.js",
+    "package.json",
+    "package.lock.json",
+    ".stylelintrc",
+    ".eslintrc",
+    ".babelrc",
+    ".gitignore",
+    ".husky",
+    "LICENSE",
+    "\\.md$",
+    "\\.php$"
+  ]
+}

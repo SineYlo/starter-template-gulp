@@ -57,7 +57,7 @@ dist/
 # ignore node/grunt dependency directories
 node_modules/
 
-#ignore the file with dependency locking
+# ignore the file with dependency locking
 package-lock.json
 
 # ignore composer vendor directory
@@ -65,6 +65,12 @@ package-lock.json
 
 # ignore components loaded via Bower
 /bower_components
+
+# ignoring the ide settings folder
+.idea/
+
+# ignoring the husky module settings folder
+.husky/
 
 # ignore jekyll build directory
 /_site
@@ -124,3 +130,4 @@ Thumbs.db
 !.eslintrc
 !.npmignore
 !.gitkeep
+!.ecrc
