@@ -10,6 +10,7 @@ import notify from 'gulp-notify';
 import babelify from 'babelify';
 import glob from 'glob';
 import gulpIf from 'gulp-if';
+import sourcemaps from "gulp-sourcemaps";
 import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
 import { sourceFolder, path } from '../config';
@@ -24,7 +25,6 @@ const changingScripts = (done) => {
     return (
       browserify({
         entries: [file],
-        debug: true,
         transform: [
           babelify.configure({
             presets: ['@babel/preset-env'],
@@ -34,9 +34,13 @@ const changingScripts = (done) => {
         .bundle()
         .pipe(vinylStream(file))
         .pipe(vinylBuffer())
+        .pipe(gulpIf(path.isDev, sourcemaps.init({
+          loadMaps: true,
+        })))
         .pipe(rename({
           dirname: '',
         }))
+        .pipe(gulpIf(path.isDev, sourcemaps.write()))
         .pipe(dest(path.build.scripts))
         .pipe(gulpIf(path.isProd, uglify({
           toplevel: true,

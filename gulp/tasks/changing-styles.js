@@ -59,7 +59,6 @@ const changingStyles = () => {
     }))
     .pipe(gulpIf(path.isDev, sourcemaps.write()))
     .pipe(dest(path.build.styles))
-    .pipe(browserSync.stream())
     .pipe(gulpIf(path.isProd, cleanCSS({
       level: 2,
     })))
@@ -67,7 +66,8 @@ const changingStyles = () => {
       extname: '.min.css',
       dirname: '',
     }))
-    .pipe(dest(path.build.styles));
+    .pipe(dest(path.build.styles))
+    .pipe(browserSync.stream());
 };
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
