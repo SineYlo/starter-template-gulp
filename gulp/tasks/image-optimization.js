@@ -26,5 +26,14 @@ const imageOptimizationPng = () => {
     .pipe(dest(path.build.pictures));
 };
 
+// |=============== SETTING UP AN IMAGE OPTIMIZATION AND CONVERSION TASK - FAVICONS ===============>
+const imageOptimizationFav = () => {
+  return src(path.source.convertfav)
+    .pipe(squoosh({
+      oxipng: {},
+    }))
+    .pipe(dest(path.build.pictures));
+};
+
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
-export { imageOptimizationJpg, imageOptimizationPng };
+export { imageOptimizationJpg, imageOptimizationPng, imageOptimizationFav };

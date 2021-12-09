@@ -10,7 +10,11 @@ const path = {
     fonts: `${sourceFolder}/fonts/**/*.{woff,woff2}`,
     pictures: `${sourceFolder}/img/**/*.gif`,
     convertjpg: `${sourceFolder}/img/**/*.{jpg,jpeg}`,
-    convertpng: `${sourceFolder}/img/**/*.png`,
+    convertfav: `${sourceFolder}/img/global/favicons/**/*.png`,
+    convertpng: [
+      `${sourceFolder}/img/home/**/*.png`,
+      `${sourceFolder}/img/pages/**/*.png`,
+    ],
     root: [
       `${sourceFolder}/browserconfig.xml`,
       `${sourceFolder}/main.webmanifest`,

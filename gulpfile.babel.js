@@ -14,7 +14,7 @@ import changingStyles from './gulp/tasks/changing-styles';
 import changingScripts from './gulp/tasks/changing-scripts';
 import svgOptimization from './gulp/tasks/svg-optimization';
 import watchFiles from './gulp/tasks/watch-files';
-import { imageOptimizationJpg, imageOptimizationPng } from './gulp/tasks/image-optimization';
+import { imageOptimizationJpg, imageOptimizationPng, imageOptimizationFav } from './gulp/tasks/image-optimization';
 import { path } from './gulp/config';
 
 // |=============== INITIALIZE THE SETUP THAT SEPARATES THE ASSEMBLY ===============>
@@ -27,6 +27,7 @@ exports.cleanRoot = cleanRoot;
 exports.svgOptimization = svgOptimization;
 exports.imageOptimizationJpg = imageOptimizationJpg;
 exports.imageOptimizationPng = imageOptimizationPng;
+exports.imageOptimizationFav = imageOptimizationFav;
 
 // |=============== SETTING UP THE LAUNCH OF THE PROJECT COLLECTOR WITHOUT A SERVER ===============>
 const build = series(

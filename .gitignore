@@ -131,3 +131,4 @@ Thumbs.db
 !.npmignore
 !.gitkeep
 !.ecrc
+!.htmlhintrc

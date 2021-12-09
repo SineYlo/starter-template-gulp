@@ -11,6 +11,7 @@
     "image-svg": "gulp svgOptimization",
     "image-jpg": "gulp imageOptimizationJpg",
     "image-png": "gulp imageOptimizationPng",
+    "image-fav": "gulp imageOptimizationFav",
     "dev": "gulp watch",
     "build:dev": "gulp build",
     "build:prod": "gulp build --prod",
@@ -48,7 +49,7 @@
     "browserify": "^17.0.0",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.2",
-    "eslint": "^8.4.0",
+    "eslint": "^8.4.1",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.25.3",
     "event-stream": "^4.0.1",
@@ -82,7 +83,7 @@
     "stylelint": "^14.1.0",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
     "stylelint-order": "^5.0.0",
-    "stylelint-scss": "^4.0.0",
+    "stylelint-scss": "^4.0.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   }
