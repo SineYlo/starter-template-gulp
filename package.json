@@ -18,8 +18,6 @@
     "lint:editorconfig": "editorconfig-checker"
   },
   "lint-staged": {
-    "*.js": "eslint",
-    "*.scss": "stylelint",
     "*.html": "htmlhint"
   },
   "repository": {

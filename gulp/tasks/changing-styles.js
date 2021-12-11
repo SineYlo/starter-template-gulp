@@ -43,6 +43,7 @@ const changingStyles = () => {
         rootValue: 16,
         unitPrecision: 5,
         propList: ['*', '!border*'],
+        selectorBlackList: ['html'],
         replace: true,
         mediaQuery: false,
         minPixelValue: 0,
