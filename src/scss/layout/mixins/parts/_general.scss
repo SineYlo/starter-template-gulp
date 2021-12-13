@@ -38,3 +38,11 @@
   opacity: 0;
   visibility: hidden;
 }
+
+// |CM| Hiding scrolling in the browser when the window is open
+@mixin hiddenScroll {
+  overflow: hidden;
+  touch-action: none;
+  -webkit-overflow-scrolling: none;
+  overscroll-behavior: none;
+}
