@@ -51,6 +51,16 @@ $seventh-color-effects: null;
 $eighth-color-effects: null;
 $ninth-color-effects: null;
 $tenth-color-effects: null;
+$eleventh-color-effects: null;
+$twelfth-color-effects: null;
+$thirteenth-color-effects: null;
+$fourteenth-color-effects: null;
+$fifteenth-color-effects: null;
+$sixteenth-color-effects: null;
+$seventeenth-color-effects: null;
+$eighteenth-color-effects: null;
+$nineteenth-color-effects: null;
+$twentieth-color-effects: null;
 // |CM| Universal colors
 $white-color: null;
 $black-color: null;
@@ -115,29 +125,6 @@ $eighth-br: null;
 $ninth-br: null;
 $tenth-br: null;
 
-// |=============== BACKGROUND-IMAGE ===============>
-// |CM| All background pictures are located here
-$primary-bgi: null;
-$second-bgi: null;
-$third-bgi: null;
-$fourth-bgi: null;
-$fifth-bgi: null;
-$sixth-bgi: null;
-$seventh-bgi: null;
-$eighth-bgi: null;
-$ninth-bgi: null;
-$tenth-bgi: null;
-$eleventh-bgi: null;
-$twelfth-bgi: null;
-$thirteenth-bgi: null;
-$fourteenth-bgi: null;
-$fifteenth-bgi: null;
-$sixteenth-bgi: null;
-$seventeenth-bgi: null;
-$eighteenth-bgi: null;
-$nineteenth-bgi: null;
-$twentieth-bgi: null;
-
 // |=============== BACKGROUND-COLOR ===============>
 // |CM| Specifying a fallback color for background images
 $primary-fb-color: null;
@@ -189,15 +176,17 @@ $very-slow-animation-duration: 0.5s;
 
 // |=============== Z-INDEX ===============>
 // |CM| Different z-index values for ease of selection
-$primary-z: 2;
-$second-z: 3;
-$third-z: 4;
-$fourth-z: 5;
-$fifth-z: 6;
-$sixth-z: 7;
-$seventh-z: 8;
-$eighth-z: 9;
-$ninth-z: 10;
+$primary-z: 0;
+$second-z: 1;
+$third-z: 2;
+$fourth-z: 3;
+$fifth-z: 4;
+$sixth-z: 5;
+$seventh-z: 6;
+$eighth-z: 7;
+$ninth-z: 8;
+$tenth-z: 9;
+$eleventh-z: 10;
 // |CM| Ready z-index values for different components
 $z-tooltip: 20;
 $z-fixed: 100;
