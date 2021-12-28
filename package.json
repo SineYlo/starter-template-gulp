@@ -69,7 +69,7 @@
     "gulp-uglify-es": "^3.0.0",
     "htmlhint": "^1.0.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.1.3",
+    "lint-staged": "^12.1.4",
     "node-w3c-validator": "^2.0.2",
     "postcss-clip-path-polyfill": "^1.1.0",
     "postcss-color-rebeccapurple": "^7.0.1",
