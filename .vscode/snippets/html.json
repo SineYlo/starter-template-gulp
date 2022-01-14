@@ -1,0 +1,142 @@
+{
+  "nav-primary": {
+    "scope": "html",
+    "prefix": "s-nav",
+    "body": [
+      "<nav class=\"\" aria-label=\"\">",
+      "  <ul class=\"\">",
+      "    <li class=\"\">",
+      "      <a class=\"\" href=\"\"></a>",
+      "    </li>",
+      "    <li class=\"\">",
+      "      <a class=\"\" href=\"\"></a>",
+      "    </li>",
+      "    <li class=\"\">",
+      "      <a class=\"\" href=\"\"></a>",
+      "    </li>",
+      "  </ul>",
+      "</nav>"
+    ],
+    "description": "Creates a code snippet for the main navigation"
+  },
+  "burger-btn": {
+    "scope": "html",
+    "prefix": "s-burger",
+    "body": [
+      "<button class=\"\" type=\"button\" aria-controls=\"\" aria-expanded=\"\" aria-label=\"\">",
+      "  <span class=\"\" aria-hidden=\"true\"></span>",
+      "  <span class=\"\" aria-hidden=\"true\"></span>",
+      "  <span class=\"\" aria-hidden=\"true\"></span>",
+      "</button>"
+    ],
+    "description": "Creates a code snippet for the burger button"
+  },
+  "responsive-logo": {
+    "scope": "html",
+    "prefix": "s-logo-huge",
+    "body": [
+      "<a class=\"\" href=\"\">",
+      "  <picture>",
+      "    <source srcset=\"\" media=\"\" type=\"image/avif\">",
+      "    <source srcset=\"\" media=\"\" type=\"image/webp\">",
+      "    <img class=\"\" src=\"\" srcset=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" alt=\"\">",
+      "  </picture>",
+      "</a>"
+    ],
+    "description": "Creates a code snippet for a responsive logo"
+  },
+  "svg-logo": {
+    "scope": "html",
+    "prefix": "s-logo-small",
+    "body": [
+      "<a class=\"\" href=\"\">",
+      "  <img class=\"\" src=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" alt=\"\">",
+      "</a>"
+    ],
+    "description": "Creates a code snippet for the logo"
+  },
+  "social-network": {
+    "scope": "html",
+    "prefix": "s-social",
+    "body": [
+      "<ul class=\"\">",
+      "  <li class=\"\">",
+      "    <a class=\"\" href=\"\" target=\"_blank\" rel=\"noopener\" aria-label=\"\"></a>",
+      "  </li>",
+      "  <li class=\"\">",
+      "    <a class=\"\" href=\"\" target=\"_blank\" rel=\"noopener\" aria-label=\"\"></a>",
+      "  </li>",
+      "  <li class=\"\">",
+      "    <a class=\"\" href=\"\" target=\"_blank\" rel=\"noopener\" aria-label=\"\"></a>",
+      "  </li>",
+      "</ul>"
+    ],
+    "description": "Creates a code snippet for a list of social networks"
+  },
+  "picture-box": {
+    "scope": "html",
+    "prefix": "s-picture",
+    "body": [
+      "<picture>",
+      "  <source srcset=\"\" media=\"\" type=\"image/avif\">",
+      "  <source srcset=\"\" media=\"\" type=\"image/webp\">",
+      "  <img class=\"\" src=\"\" srcset=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" alt=\"\">",
+      "</picture>"
+    ],
+    "description": "Creates a code snippet for a box with an image"
+  },
+  "svg-sprite": {
+    "scope": "html",
+    "prefix": "s-sprite",
+    "body": [
+      "<svg class=\"\" width=\"\" height=\"\" viewBox=\"\" aria-hidden=\"true\">",
+      "  <use xlink:href=\"\" />",
+      "</svg>"
+    ],
+    "description": "Creates a code snippet for an svg sprite"
+  },
+  "basic-form": {
+    "scope": "html",
+    "prefix": "s-form",
+    "body": [
+      "<form class=\"\" name=\"\" action=\"\" method=\"\" enctype=\"\">",
+      "  <div class=\"\">",
+      "    <input class=\"\" id=\"\" type=\"\" name=\"\">",
+      "    <label class=\"\" for=\"\"></label>",
+      "  </div>",
+      "  <button class=\"\"></button>",
+      "</form>"
+    ],
+    "description": "Creates a code snippet for the form"
+  },
+  "modal-box": {
+    "scope": "html",
+    "prefix": "s-modal",
+    "body": [
+      "<div class=\"modal\">",
+      "  <div class=\"modal__overlay\">",
+      "    <div class=\"modal__window\" role=\"dialog\" aria-modal=\"true\"></div>",
+      "  </div>",
+      "</div>"
+    ],
+    "description": "Creates a code snippet for a modal window"
+  },
+  "accordion-box": {
+    "scope": "html",
+    "prefix": "s-accordion",
+    "body": [
+      "<ul class=\"accordion\">",
+      "  <li class=\"accordion__item\">",
+      "    <button class=\"accordion__btn\" type=\"button\" aria-controls=\"\" aria-expanded=\"\">",
+      "      <span class=\"accordion__title\"></span>",
+      "      <span class=\"accordion__icon\" aria-hidden=\"true\"></span>",
+      "    </button>",
+      "    <div class=\"accordion__content\" id=\"\">",
+      "      <p class=\"accordion__text\"></p>",
+      "    </div>",
+      "  </li>",
+      "</ul>"
+    ],
+    "description": "Creates a code snippet for the accordion"
+  }
+}

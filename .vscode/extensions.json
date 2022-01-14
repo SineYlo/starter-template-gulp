@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "aaron-bond.better-comments",
+    "mkaufman.htmlhint",
+    "christian-kohler.path-intellisense",
+    "mrmlnc.vscode-scss",
+    "hex-ci.stylelint-plus",
+    "syler.sass-indented",
+    "rebornix.project-snippets",
+    "sibiraj-s.vscode-scss-formatter",
+    "coenraads.bracket-pair-colorizer"
+  ]
+}

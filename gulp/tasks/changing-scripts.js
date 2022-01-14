@@ -10,7 +10,7 @@ import notify from 'gulp-notify';
 import babelify from 'babelify';
 import glob from 'glob';
 import gulpIf from 'gulp-if';
-import sourcemaps from "gulp-sourcemaps";
+import sourcemaps from 'gulp-sourcemaps';
 import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
 import { sourceFolder, path } from '../config';

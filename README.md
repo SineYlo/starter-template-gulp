@@ -8,13 +8,16 @@ At first, I thought for a long time about posting this template or not, but I de
 - [How to start a build](#howstart)
 - [Folder structure](#folder)
 - [Using favicons](#fav)
+- [Typograf](#typograf)
+- [Archiving the project](#archive)
+- [Snippets](#snippets)
 - [Preparation before starting to write code](#before)
 - [Answers on questions](#faq)
 - [With the support of](#partners)
 - [Contact information](#contact)
 
 ## <a name="how"></a> 💡 How to start using the assembly
-To start using this build, you must clone this repository using one of the options below  
+To start using this build, you must clone this repository using one of the options below.  
 
 ```
 git clone https://github.com/SineYlo/starter-template.git
@@ -26,37 +29,38 @@ git clone git@github.com:SineYlo/starter-template.git
 gh repo clone SineYlo/starter-template
 ```
 ## <a name="howstart"></a> ⚙️ How to start a build
-The most important section is because if you do something wrong as it is written, you just might not earn something or, in principle, the assembly will not start  
+The most important section is because if you do something wrong as it is written, you just might not earn something or, in principle, the assembly will not start.  
 
 ### The order of running commands after cloning the repository:
-1. First delete the old folder `.git` if it is there and initialize GIT again - `git init`
-2. Then create a remote repository for your project
-3. Optionally, change the name of the branch to main using the command - `git branch -m master main`
-4. Then write the command - `git add.`
-5. Then - `git commit -m "commit name"`
-6. Then link the local repository to the remote one using the command - `git remote add origin link to the repository`
-7. Now send the changes to the remote repository - `git push -u origin branch`
-8. When Git is installed and all past actions have been performed, you can run this command - `npm i`
-9. After the packages have been installed and the husky package has been initialized, you need to write this command - `npx husky add .husky/pre-commit "npm run pre-commit"`
-10. Then run the command - `npm run clean`
+1. First delete the old folder `.git` if it is there and initialize GIT again - `git init`.
+2. Then create a remote repository for your project.
+3. Optionally, change the name of the branch to main using the command - `git branch -m master main`.
+4. Then write the command - `git add.`.
+5. Then - `git commit -m "commit name"`.
+6. Then link the local repository to the remote one using the command - `git remote add origin link to the repository`.
+7. Now send the changes to the remote repository - `git push -u origin branch`.
+8. When Git is installed and all past actions have been performed, you can run this command - `npm i`.
+9. After the packages have been installed and the husky package has been initialized, you need to write this. command - `npx husky add .husky/pre-commit "npm run pre-commit"`.
+10. Then run the command - `npm run clean`.
 11. All packages are installed, git is initialized, and the basic commands are written. Now select a team from the list below and start developing!
 
 ### Basic commands for starting the project builder:
 
-1. `npm run html-check` - starts checking all html files in the specified directory for errors using w3c-validator
-2. `npm run clean` - runs a command that clears the dist directory
-3. `npm run image-svg` - runs a command that optimizes svg images and also creates a sprite
-4. `npm run image-jpg` - runs a command that optimizes jpg images and converts them to webp and avif formats
-5. `npm run image-png` - runs a command that optimizes png images and converts them to webp and avif formats
-6. `npm run dev` - runs a command that optimizes script and style files, and also starts the server
-7. `npm run build:dev` - runs a command that optimizes script and style files, but does not start the server
-8. `npm run build:prod` - runs a command that optimizes script and style files, as well as prepares these files for production
-9. `npm run lint:editorconfig` - runs a command that checks all files for errors by .editorconfig
+1. `npm run html-check` - starts checking all html files in the specified directory for errors using w3c-validator.
+2. `npm run clean` - runs a command that clears the dist directory.
+3. `npm run image-svg` - runs a command that optimizes svg images and also creates a sprite.
+4. `npm run image-jpg` - runs a command that optimizes jpg images and converts them to webp and avif formats.
+5. `npm run image-png` - runs a command that optimizes png images and converts them to webp and avif formats.
+6. `npm run dev` - runs a command that optimizes script and style files, and also starts the server.
+7. `npm run build:dev` - runs a command that optimizes script and style files, but does not start the server.
+8. `npm run build:prod` - runs a command that optimizes script and style files, as well as prepares these files for production.
+9. `npm run lint:editorconfig` - runs a command that checks all files for errors by .editorconfig.
+10. `npm run archive` - this command creates an archive with the project, which you can then safely upload or send somewhere, for example.
 
 ### Important points:
-- If you do not have these files in the root directory src - `favicon.ico`, `favicon.svg`, `mask-desktop.svg` and you want this assembly to run, go to the file along the path - `gulp/config.js` and delete the lines numbered 17, 18, 19
-- To run the command `npm run html-check`, you may need to install Java on your computer
-- Quite an important point if you initialize `git` after installing packages, then most of the functionality of this assembly will not work
+- If you do not have these files in the root directory src - `favicon.ico`, `favicon.svg`, `mask-desktop.svg` and you want this assembly to run, go to the file along the path - `gulp/config.js` and delete the lines numbered 17, 18, 19.
+- To run the command `npm run html-check`, you may need to install Java on your computer.
+- Quite an important point if you initialize `git` after installing packages, then most of the functionality of this assembly will not work.
 
 ## <a name="folder"></a> 📁 Folder structure
 ```
@@ -186,9 +190,9 @@ The most important section is because if you do something wrong as it is written
 
 ## <a name="fav"></a> ☄️ Using favicons
 
-In my template, the connection of absolutely all possible favicons is configured, and even for the future this is done so that the template is relevant for a long time
+In my template, the connection of absolutely all possible favicons is configured, and even for the future this is done so that the template is relevant for a long time.
 
-> I want to say right away if you don't need favicons at all then delete the lines from index.htm from 24 to 39. Also remove lines 7 to 67 from main.webmanifest
+> I want to say right away if you don't need favicons at all then delete the lines from index.htm from 24 to 39. Also remove lines 7 to 67 from main.webmanifest.
 
 ### Now what sizes of favicons will we need:
 ```
@@ -197,16 +201,28 @@ In my template, the connection of absolutely all possible favicons is configured
 512x512 | 558x270 | 558x558 
 ```
 ### Now in order where what sizes to connect:
-- `16x16 32x32 48x48 64x64` - we will need to connect them to index.html, and also in main.webmanifest (also, from these 4 sizes, you need to make the .ico format through a converter)  
-- `128x128 270x270 558x270 558x558` - these sizes are needed for Windows tiles and they are connected in a file browserconfig.xml  
-- `any` - or in another way svg favicon we will need only one
-- `mask-desktop.svg` - the new favicon, which was invented by Apple, all its vectors should be black
-- all other sizes are needed for Android and Apple devices, we connect them in the main.webmanifest file
+- `16x16 32x32 48x48 64x64` - we will need to connect them to index.html, and also in main.webmanifest (also, from these 4 sizes, you need to make the .ico format through a converter).  
+- `128x128 270x270 558x270 558x558` - these sizes are needed for Windows tiles and they are connected in a file browserconfig.xml.  
+- `any` - or in another way svg favicon we will need only one.
+- `mask-desktop.svg` - the new favicon, which was invented by Apple, all its vectors should be black.
+- all other sizes are needed for Android and Apple devices, we connect them in the main.webmanifest file.
 
 ### Important points:
 
-1. The files favicon.ico, favicon.svg and mask-desktop.svg must be put in the root of the project where the file is index.html (for files .png favicons folder created)
-2. If you don't use some sizes, just don't connect them and delete them from the corresponding files
+1. The files favicon.ico, favicon.svg and mask-desktop.svg must be put in the root of the project where the file is index.html (for files .png favicons folder created).
+2. If you don't use some sizes, just don't connect them and delete them from the corresponding files.
+
+## <a name="typograf"></a> 🔮 Typograf
+
+It was decided to add a package with a typographer who will check spelling and automatically insert different characters and non-breaking spaces. So the text will be displayed correctly, beautifully and correctly everywhere!
+
+## <a name="archive"></a> 💾 Archiving the project
+
+You can archive your project if you suddenly need to send it somewhere or upload it to hosting, for example. To do this, you first need to register the command - `npm run build:prod` or `npm run build:dev`, and then `npm run archive`.
+
+## <a name="archive"></a> 🌠 Snippets
+
+So far, snippets have been written only for HTML. All snippets are on the path - `.vscode/snippets/html.json`. All you need to do is open the HTML file and use one of the commands that is specified in the - `prefix` line.
 
 ## <a name="before"></a> 🔥 Preparation before starting to write code
 
@@ -216,22 +232,22 @@ Before you start writing code, I advise you to run through the structure of the 
 
 ```
 Question: Will there be a migration to Webpack?
-Answer: Yes, it will, but I can't say exactly when it will happen
+Answer: Yes, it will, but I can't say exactly when it will happen.
 ---
 Question: Why such a large folder structure?
-Answer: This is the uniqueness of this template, and this structure helps to conveniently distribute files
+Answer: This is the uniqueness of this template, and this structure helps to conveniently distribute files.
 ---
 Question: Is it necessary to use all this?
-Answer: No, not necessarily, the template is fully configurable for your tasks
+Answer: No, not necessarily, the template is fully configurable for your tasks.
 ---
 Question: Is it possible to change the assembly?
-Answer: Yes, you can
+Answer: Yes, you can.
 ---
 Question: Is it possible to participate in the development of the template?
-Answer: Yes, you can either send a PR for this, or send the information to the mail or to issues
+Answer: Yes, you can either send a PR for this, or send the information to the mail or to issues.
 ---
 Question: Are there plans to adapt the template to the Backend?
-Answer: Yes, I'm already thinking about it
+Answer: Yes, I'm already thinking about it.
 ```
 ## <a name="partners"></a> 💎 With the support of
 

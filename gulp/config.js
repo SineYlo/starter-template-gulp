@@ -42,6 +42,7 @@ const path = {
     fonts: `${projectFolder}/fonts/`,
     pictures: `${projectFolder}/img/`,
     root: `${projectFolder}/`,
+    rootZip: `${projectFolder}/**/*.*`,
     html: `${projectFolder}/pages/`,
     styles: `${projectFolder}/css/`,
     scripts: `${projectFolder}/js/`,

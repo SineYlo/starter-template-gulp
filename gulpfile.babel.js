@@ -13,6 +13,7 @@ import changingMarkupPages from './gulp/tasks/markup-pages';
 import changingStyles from './gulp/tasks/changing-styles';
 import changingScripts from './gulp/tasks/changing-scripts';
 import svgOptimization from './gulp/tasks/svg-optimization';
+import archivingFiles from './gulp/tasks/archiving-files';
 import watchFiles from './gulp/tasks/watch-files';
 import { imageOptimizationJpg, imageOptimizationPng, imageOptimizationFav } from './gulp/tasks/image-optimization';
 import { path } from './gulp/config';
@@ -28,6 +29,9 @@ exports.svgOptimization = svgOptimization;
 exports.imageOptimizationJpg = imageOptimizationJpg;
 exports.imageOptimizationPng = imageOptimizationPng;
 exports.imageOptimizationFav = imageOptimizationFav;
+
+// |=============== SETTING UP THE START OF ARCHIVING PROJECT FILES ===============>
+exports.archivingFiles = archivingFiles;
 
 // |=============== SETTING UP THE LAUNCH OF THE PROJECT COLLECTOR WITHOUT A SERVER ===============>
 const build = series(
