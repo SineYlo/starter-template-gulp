@@ -220,7 +220,7 @@ It was decided to add a package with a typographer who will check spelling and a
 
 You can archive your project if you suddenly need to send it somewhere or upload it to hosting, for example. To do this, you first need to register the command - `npm run build:prod` or `npm run build:dev`, and then `npm run archive`.
 
-## <a name="archive"></a> 🌠 Snippets
+## <a name="snippets"></a> 🌠 Snippets
 
 So far, snippets have been written only for HTML. All snippets are on the path - `.vscode/snippets/html.json`. All you need to do is open the HTML file and use one of the commands that is specified in the - `prefix` line.
 
