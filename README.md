@@ -192,17 +192,15 @@ The most important section is because if you do something wrong as it is written
 
 In my template, the connection of absolutely all possible favicons is configured, and even for the future this is done so that the template is relevant for a long time.
 
-> I want to say right away if you don't need favicons at all then delete the lines from index.htm from 24 to 39. Also remove lines 7 to 67 from main.webmanifest.
+> I want to say right away if you don't need favicons at all then delete the lines from index.htm from 24 to 37. Also remove lines 7 to 28 from main.webmanifest.
 
 ### Now what sizes of favicons will we need:
 ```
- 16x16  |  32x32  |  36x36  |  48x48  |  57x57  |  60x60  |  64x64  |  72x72  |  76x76  |  96x96
-114x114 | 120x120 | 128x128 | 144x144 | 152x152 | 167x167 | 180x180 | 192x192 | 256x256 | 270x270
-512x512 | 558x270 | 558x558 
+ 16x16  |  32x32  |  36x36  |  48x48  |  57x57  |  60x60  |  64x64  |  72x72  |  76x76  |  96x96  |
+114x114 | 120x120 | 144x144 | 152x152 | 167x167 | 180x180 | 192x192 | 256x256 | 512x512 |
 ```
 ### Now in order where what sizes to connect:
-- `16x16 32x32 48x48 64x64` - we will need to connect them to index.html, and also in main.webmanifest (also, from these 4 sizes, you need to make the .ico format through a converter).  
-- `128x128 270x270 558x270 558x558` - these sizes are needed for Windows tiles and they are connected in a file browserconfig.xml.  
+- `16x16 32x32 48x48 64x64` - we will need to connect them to index.html, and also in main.webmanifest.  
 - `any` - or in another way svg favicon we will need only one.
 - `mask-desktop.svg` - the new favicon, which was invented by Apple, all its vectors should be black.
 - all other sizes are needed for Android and Apple devices, we connect them in the main.webmanifest file.
