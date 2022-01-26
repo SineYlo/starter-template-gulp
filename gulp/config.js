@@ -16,9 +16,7 @@ const path = {
       `${sourceFolder}/img/pages/**/*.png`,
     ],
     root: [
-      `${sourceFolder}/browserconfig.xml`,
       `${sourceFolder}/main.webmanifest`,
-      `${sourceFolder}/favicon.ico`,
       `${sourceFolder}/favicon.svg`,
       `${sourceFolder}/mask-desktop.svg`,
     ],

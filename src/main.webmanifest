@@ -24,8 +24,7 @@
     { "src": "img/global/favicons/favicon-192x192.png", "type": "image/png", "sizes": "192x192" },
     { "src": "img/global/favicons/favicon-256x256.png", "type": "image/png", "sizes": "256x256" },
     { "src": "img/global/favicons/favicon-512x512.png", "type": "image/png", "sizes": "512x512" },
-    { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" },
-    { "src": "favicon.ico", "type": "image/vnd.microsoft.icon", "sizes": "16x16 32x32 48x48 64x64" }
+    { "src": "favicon.svg", "type": "image/svg+xml", "sizes": "any" }
   ],
   "display": "fullscreen",
   "orientation": "landscape",
