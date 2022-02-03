@@ -19,6 +19,7 @@ import { sourceFolder, path } from '../config';
 const changingScripts = (done) => {
   const files = [
     `${sourceFolder}/js/main.js`,
+    ...glob.sync(`${sourceFolder}/js/modules/**/*.js`),
     ...glob.sync(`${sourceFolder}/js/pages/**/*.js`),
   ];
   const taskScripts = files.map((file) => {
