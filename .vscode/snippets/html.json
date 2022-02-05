@@ -114,9 +114,9 @@
     "scope": "html",
     "prefix": "s-modal",
     "body": [
-      "<div class=\"modal\">",
-      "  <div class=\"modal__overlay\">",
-      "    <div class=\"modal__window\" role=\"dialog\" aria-modal=\"true\"></div>",
+      "<div class=\"modals\">",
+      "  <div class=\"modals__overlay\">",
+      "    <div class=\"modals__window\" role=\"dialog\" aria-modal=\"true\"></div>",
       "  </div>",
       "</div>"
     ],

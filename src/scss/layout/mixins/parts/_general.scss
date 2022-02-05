@@ -1,6 +1,6 @@
 // |=============== SETTING UP COMMON MIXINS FOR DIFFERENT TASKS ===============>
 // |CM| Used to hide an element without breaking accessibility
-@mixin hiddenVisually {
+@mixin visuallyHidden {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -15,13 +15,13 @@
 }
 
 // |CM| Hiding the element from the screen reader
-@mixin hiddenElement {
+@mixin basicHidden {
   opacity: 0;
   visibility: hidden;
 }
 
 // |CM| Hiding scrolling in the browser when the window is open
-@mixin hiddenScroll {
+@mixin scrollHidden {
   position: fixed;
   left: 0;
   top: 0;
