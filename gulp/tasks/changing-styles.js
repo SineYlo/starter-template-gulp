@@ -51,7 +51,7 @@ const changingStyles = () => {
           '!filter',
           '!text-shadow',
         ],
-        selectorBlackList: ['html'],
+        selectorBlackList: ['page'],
         replace: true,
         mediaQuery: false,
         minPixelValue: 0,

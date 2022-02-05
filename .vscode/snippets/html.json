@@ -3,7 +3,7 @@
     "scope": "html",
     "prefix": "s-nav",
     "body": [
-      "<nav class=\"\" aria-label=\"\">",
+      "<nav class=\"\" id=\"\" aria-label=\"\">",
       "  <ul class=\"\">",
       "    <li class=\"\">",
       "      <a class=\"\" href=\"\"></a>",
@@ -27,6 +27,7 @@
       "  <span class=\"\" aria-hidden=\"true\"></span>",
       "  <span class=\"\" aria-hidden=\"true\"></span>",
       "  <span class=\"\" aria-hidden=\"true\"></span>",
+      "  <span class=\"\" aria-hidden=\"true\"></span>",
       "</button>"
     ],
     "description": "Creates a code snippet for the burger button"
@@ -37,8 +38,8 @@
     "body": [
       "<a class=\"\" href=\"\">",
       "  <picture>",
-      "    <source srcset=\"\" media=\"\" type=\"image/avif\">",
-      "    <source srcset=\"\" media=\"\" type=\"image/webp\">",
+      "    <source srcset=\"\" media=\"\">",
+      "    <source srcset=\"\" media=\"\">",
       "    <img class=\"\" src=\"\" srcset=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" alt=\"\">",
       "  </picture>",
       "</a>"
@@ -138,5 +139,23 @@
       "</ul>"
     ],
     "description": "Creates a code snippet for the accordion"
+  },
+  "swiper-box": {
+    "scope": "html",
+    "prefix": "s-swiper",
+    "body": [
+      "<div class=\"swiper\">",
+      "  <ul class=\"swiper-wrapper\">",
+      "    <li class=\"swiper-slide\"></li>",
+      "    <li class=\"swiper-slide\"></li>",
+      "    <li class=\"swiper-slide\"></li>",
+      "  </ul>",
+      "  <div class=\"swiper-pagination\"></div>",
+      "  <button class=\"swiper-button-prev\" type=\"button\"></button>",
+      "  <button class=\"swiper-button-next\" type=\"button\"></button>",
+      "  <div class=\"swiper-scrollbar\"></div>",
+      "</div>"
+    ],
+    "description": "Creates the basic structure of the swiper"
   }
 }
