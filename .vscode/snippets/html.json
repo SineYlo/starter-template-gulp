@@ -58,7 +58,7 @@
   },
   "social-network": {
     "scope": "html",
-    "prefix": "s-social",
+    "prefix": "s-socials",
     "body": [
       "<ul class=\"\">",
       "  <li class=\"\">",

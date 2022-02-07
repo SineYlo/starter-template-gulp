@@ -78,7 +78,7 @@
     "postcss-clip-path-polyfill": "^1.1.0",
     "postcss-color-rebeccapurple": "^7.0.2",
     "postcss-font-family-system-ui": "^5.0.0",
-    "postcss-lab-function": "^4.0.3",
+    "postcss-lab-function": "^4.0.4",
     "postcss-pxtorem": "^6.0.0",
     "postcss-will-change": "^4.0.1",
     "sass": "^1.49.7",

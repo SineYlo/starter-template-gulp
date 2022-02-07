@@ -2,6 +2,7 @@
 // |=============== CONNECTING ALL MODULES ===============>
 import { src, dest } from 'gulp';
 import squoosh from 'gulp-libsquoosh';
+import rename from 'gulp-rename';
 import { path } from '../config';
 
 // |=============== SETTING UP AN IMAGE OPTIMIZATION AND CONVERSION TASK - JPG ===============>
@@ -31,6 +32,9 @@ const imageOptimizationFav = () => {
   return src(path.source.convertfav)
     .pipe(squoosh({
       oxipng: {},
+    }))
+    .pipe(rename({
+      dirname: 'favicons/',
     }))
     .pipe(dest(path.build.pictures));
 };

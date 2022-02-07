@@ -5,6 +5,7 @@ import { series, parallel } from 'gulp';
 import cleanRoot from './gulp/tasks/clean-root';
 import fileTransferAudio from './gulp/tasks/transfer-audio';
 import fileTransferVideo from './gulp/tasks/transfer-video';
+import fileTransferDocs from './gulp/tasks/transfer-docs';
 import fileTransferFonts from './gulp/tasks/transfer-fonts';
 import fileTransferPictures from './gulp/tasks/transfer-pictures';
 import fileTransferOther from './gulp/tasks/transfer-other';
@@ -37,6 +38,7 @@ exports.archivingFiles = archivingFiles;
 const build = series(
   fileTransferAudio,
   fileTransferVideo,
+  fileTransferDocs,
   fileTransferFonts,
   fileTransferPictures,
   fileTransferOther,

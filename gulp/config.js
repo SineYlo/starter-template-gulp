@@ -7,6 +7,7 @@ const path = {
   source: {
     audio: `${sourceFolder}/assets/audio/**/*.{mp3,ogg,wav,flac}`,
     video: `${sourceFolder}/assets/video/**/*.{mp4,avi,webm}`,
+    docs: `${sourceFolder}/assets/docs/**/*.{pdf,docx,doc,txt,rtf,odt,xls,xlsx}`,
     fonts: `${sourceFolder}/fonts/**/*.{woff,woff2}`,
     pictures: `${sourceFolder}/img/**/*.gif`,
     convertjpg: `${sourceFolder}/img/**/*.{jpg,jpeg}`,
@@ -37,6 +38,7 @@ const path = {
   build: {
     audio: `${projectFolder}/assets/audio/`,
     video: `${projectFolder}/assets/video/`,
+    docs: `${projectFolder}/assets/docs/`,
     fonts: `${projectFolder}/fonts/`,
     pictures: `${projectFolder}/img/`,
     root: `${projectFolder}/`,

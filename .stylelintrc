@@ -23,7 +23,27 @@
 				"selector": "&::after"
 			},
 			"rules",
+      {
+				"type": "rule",
+				"selector": "&:first-child"
+			},
 			{
+				"type": "rule",
+				"selector": "&:nth-child.+"
+			},
+      {
+				"type": "rule",
+				"selector": "&:last-child"
+			},
+			{
+				"type": "rule",
+				"selector": "&\\[[^\\[\\]]+\\]"
+			},
+			{
+				"type": "rule",
+				"selector": "&_.+"
+			},
+      {
 				"type": "rule",
 				"selector": "&:link"
 			},
@@ -31,13 +51,17 @@
 				"type": "rule",
 				"selector": "&:visited"
 			},
+      {
+				"type": "rule",
+				"selector": "&:hover"
+			},
 			{
 				"type": "rule",
 				"selector": "&:focus"
 			},
-			{
+      {
 				"type": "rule",
-				"selector": "&:hover"
+				"selector": "&:focus-visible"
 			},
 			{
 				"type": "rule",
@@ -47,29 +71,9 @@
 				"type": "rule",
 				"selector": "&:disabled"
 			},
-			{
-				"type": "rule",
-				"selector": "&:first-child"
-			},
-			{
-				"type": "rule",
-				"selector": "&:last-child"
-			},
-			{
-				"type": "rule",
-				"selector": "&:nth-child.+"
-			},
-			{
-				"type": "rule",
-				"selector": "&\\[[^\\[\\]]+\\]"
-			},
-			{
+      {
 				"type": "rule",
 				"selector": "&\\..+"
-			},
-			{
-				"type": "rule",
-				"selector": "&--.+"
 			},
 			{
 				"type": "rule",
