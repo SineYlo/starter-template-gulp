@@ -13,6 +13,9 @@ const imageOptimizationJpg = () => {
       webp: {},
       avif: {},
     }))
+    .pipe(rename({
+      dirname: 'pictures/',
+    }))
     .pipe(dest(path.build.pictures));
 };
 
@@ -23,6 +26,9 @@ const imageOptimizationPng = () => {
       oxipng: {},
       webp: {},
       avif: {},
+    }))
+    .pipe(rename({
+      dirname: 'pictures/',
     }))
     .pipe(dest(path.build.pictures));
 };

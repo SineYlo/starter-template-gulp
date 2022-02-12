@@ -11,12 +11,12 @@ const svgOptimization = () => {
     .pipe(svgSprite({
       mode: {
         stack: {
-          sprite: 'sprites.svg',
+          sprite: 'sprite.svg',
         },
       },
     }))
     .pipe(rename({
-      dirname: '',
+      dirname: 'sprites/',
     }))
     .pipe(dest(path.build.pictures));
 };
