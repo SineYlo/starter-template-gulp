@@ -8,7 +8,6 @@ At first, I thought for a long time about posting this template or not, but I de
 - [How to start a build](#howstart)
 - [Folder structure](#folder)
 - [Using favicons](#fav)
-- [Typograf](#typograf)
 - [Archiving the project](#archive)
 - [Snippets](#snippets)
 - [Preparation before starting to write code](#before)
@@ -209,10 +208,6 @@ In my template, the connection of absolutely all possible favicons is configured
 
 1. The files favicon.ico, favicon.svg and mask-desktop.svg must be put in the root of the project where the file is index.html (for files .png favicons folder created).
 2. If you don't use some sizes, just don't connect them and delete them from the corresponding files.
-
-## <a name="typograf"></a> 🔮 Typograf
-
-It was decided to add a package with a typographer who will check spelling and automatically insert different characters and non-breaking spaces. So the text will be displayed correctly, beautifully and correctly everywhere!
 
 ## <a name="archive"></a> 💾 Archiving the project
 
