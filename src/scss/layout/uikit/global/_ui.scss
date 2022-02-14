@@ -1,6 +1,6 @@
 // |=============== HERE WE DESCRIBE THE STYLES FOR ELEMENTS FROM THE UI KIT ===============>
 .page {
-  font-size: 16px;
+  font-size: $text-size-base;
   scroll-behavior: smooth;
 
   &__body {
