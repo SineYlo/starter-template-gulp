@@ -6,86 +6,94 @@
 	],
 	"rules": {
 		"order/order": [
-			"custom-properties",
-			"dollar-variables",
-			{
-				"type": "at-rule",
-				"name": "include",
-				"hasBlock": false
-			},
-			"declarations",
-			{
-				"type": "rule",
-				"selector": "&::before"
-			},
-			{
-				"type": "rule",
-				"selector": "&::after"
-			},
-			"rules",
+      "custom-properties",
+      "dollar-variables",
       {
-				"type": "rule",
-				"selector": "&:first-child"
-			},
-			{
-				"type": "rule",
-				"selector": "&:nth-child.+"
-			},
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": false
+      },
+      "declarations",
       {
-				"type": "rule",
-				"selector": "&:last-child"
-			},
-			{
-				"type": "rule",
-				"selector": "&\\[[^\\[\\]]+\\]"
-			},
-			{
-				"type": "rule",
-				"selector": "&_.+"
-			},
+        "type": "rule",
+        "selector": "&::before"
+      },
       {
-				"type": "rule",
-				"selector": "&:link"
-			},
-			{
-				"type": "rule",
-				"selector": "&:visited"
-			},
+        "type": "rule",
+        "selector": "&::after"
+      },
+      "rules",
       {
-				"type": "rule",
-				"selector": "&:hover"
-			},
-			{
-				"type": "rule",
-				"selector": "&:focus"
-			},
+        "type": "rule",
+        "selector": "&:link"
+      },
       {
-				"type": "rule",
-				"selector": "&:focus-visible"
-			},
-			{
-				"type": "rule",
-				"selector": "&:active"
-			},
-			{
-				"type": "rule",
-				"selector": "&:disabled"
-			},
+        "type": "rule",
+        "selector": "&:visited"
+      },
       {
-				"type": "rule",
-				"selector": "&\\..+"
-			},
-			{
-				"type": "rule",
-				"selector": ".* &"
-			},
-			{
-				"type": "at-rule",
-				"name": "include",
-				"hasBlock": true
-			},
-			"at-rules"
-		],
+        "type": "rule",
+        "selector": "&:focus"
+      },
+      {
+        "type": "rule",
+        "selector": "&:focus-visible"
+      },
+      {
+        "type": "rule",
+        "selector": "&.focus-visible"
+      },
+      {
+        "type": "rule",
+        "selector": "&:hover"
+      },
+      {
+        "type": "at-rule",
+        "hasBlock": true
+      },
+      {
+        "type": "rule",
+        "selector": "&:active"
+      },
+      {
+        "type": "rule",
+        "selector": "&:disabled"
+      },
+      {
+        "type": "rule",
+        "selector": "&:first-child"
+      },
+      {
+        "type": "rule",
+        "selector": "&:last-child"
+      },
+      {
+        "type": "rule",
+        "selector": "&:nth-child.+"
+      },
+      {
+        "type": "rule",
+        "selector": "&\\[[^\\[\\]]+\\]"
+      },
+      {
+        "type": "rule",
+        "selector": "&\\..+"
+      },
+      {
+        "type": "rule",
+        "selector": "&--.+"
+      },
+      {
+        "type": "rule",
+        "selector": ".* &"
+      },
+      {
+        "type": "at-rule",
+        "name": "include",
+        "hasBlock": true
+      },
+      "at-rules"
+    ],
 		"order/properties-alphabetical-order": null,
 		"order/properties-order": [
 			[
