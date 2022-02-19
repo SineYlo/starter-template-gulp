@@ -56,6 +56,29 @@ const watch = series(
   watchFiles,
 );
 
+// |=============== COMPLETE PROJECT BUILD CYCLE WITHOUT STARTING THE SERVER ===============>
+const fullStart = series(
+  cleanRoot,
+  build,
+  svgOptimization,
+  imageOptimizationJpg,
+  imageOptimizationPng,
+  imageOptimizationFav,
+);
+
+// |=============== FULL PROJECT BUILD CYCLE WITH SERVER STARTUP ===============>
+const fullStartServer = series(
+  cleanRoot,
+  build,
+  svgOptimization,
+  imageOptimizationJpg,
+  imageOptimizationPng,
+  imageOptimizationFav,
+  watchFiles,
+);
+
 // |=============== SETTING UP THE LAUNCH OF THE PROJECT COLLECTOR ===============>
+exports.fullStart = fullStart;
+exports.fullStartServer = fullStartServer;
 exports.build = build;
 exports.watch = watch;

@@ -13,9 +13,11 @@
     "image-png": "gulp imageOptimizationPng",
     "image-fav": "gulp imageOptimizationFav",
     "archive": "gulp archivingFiles",
-    "dev": "gulp watch",
+    "build:watch": "gulp watch",
     "build:dev": "gulp build",
     "build:prod": "gulp build --prod",
+    "build:full-start": "gulp fullStart",
+    "build:full-server": "gulp fullStartServer",
     "lint:editorconfig": "editorconfig-checker"
   },
   "lint-staged": {
@@ -39,7 +41,7 @@
   },
   "homepage": "https://github.com/SineYlo/Starter-Template#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.4",
+    "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.0",
@@ -81,8 +83,8 @@
     "postcss-lab-function": "^4.1.1",
     "postcss-pxtorem": "^6.0.0",
     "postcss-will-change": "^4.0.1",
-    "sass": "^1.49.7",
-    "stylelint": "^14.5.0",
+    "sass": "^1.49.8",
+    "stylelint": "^14.5.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.5.0",
     "stylelint-order": "^5.0.0",
     "stylelint-scss": "^4.1.0",
