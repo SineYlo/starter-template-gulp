@@ -1,8 +1,8 @@
 {
   "lang": "en",
   "dir": "ltr",
-  "name": "Name of the site or wa",
-  "short_name": "NOFTSOW",
+  "name": "site-name",
+  "short_name": "sn",
   "description": "Something we write here",
   "icons": [
     { "src": "img/favicons/favicon-16x16.png", "type": "image/png", "sizes": "16x16" },
