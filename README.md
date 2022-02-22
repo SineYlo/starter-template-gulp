@@ -47,19 +47,21 @@ The most important section is because if you do something wrong as it is written
 
 1. `npm run html-check` - starts checking all html files in the specified directory for errors using w3c-validator.
 2. `npm run clean` - runs a command that clears the dist directory.
-3. `npm run image-svg` - runs a command that optimizes svg images and also creates a sprite.
-4. `npm run image-jpg` - runs a command that optimizes jpg images and converts them to webp and avif formats.
-5. `npm run image-png` - runs a command that optimizes png images and converts them to webp and avif formats.
+3. `npm run image:svg` - runs a command that optimizes svg images and also creates a sprite.
+4. `npm run image:jpg` - runs a command that optimizes jpg images and converts them to webp and avif formats.
+5. `npm run image:png` - runs a command that optimizes png images and converts them to webp and avif formats.
 6. `npm run lint:editorconfig` - runs a command that checks all files for errors by .editorconfig.
-7. `npm run archive` - this command creates an archive with the project, which you can then safely upload or send somewhere, for example.
+7. `npm run build:archive` - this command creates an archive with the project, which you can then safely upload or send somewhere, for example.
 8. `npm run build:watch` - runs a command that optimizes script and style files, and also starts the server.
 9. `npm run build:dev` - runs a command that optimizes script and style files, but does not start the server.
 10. `npm run build:prod` - runs a command that optimizes script and style files, as well as prepares these files for production.
-11. `npm run build:full-start` - this command allows you to run a full project build cycle together with image optimization, but without starting the server.
-12. `npm run build:full-server` - this command allows you to run a full project build cycle together with image optimization, with the launch of the server.
+11. `npm run build:full-start` - this command allows you to run a full project build cycle together with image optimization, but without starting the server (IMPORTANT! after running this command, you need to additionally go to the folder with the project, for example `dist`, then find the `sprite.svg` file there and delete it from it at the very top of the viewBox, otherwise the site may not display correctly).
+12. `npm run build:full-server` - this command allows you to run a full project build cycle together with image optimization, with the launch of the server (IMPORTANT! after running this command, you need to additionally go to the folder with the project, for example `dist`, then find the `sprite.svg` file there and delete it from it at the very top of the viewBox, otherwise the site may not display correctly).
+13. `npm run build:backend` - this command allows you to prepare the assembly for further transmission to the backend developer (IMPORTANT! after running this command, you need to additionally go to the folder with the project, for example `dist`, then find the `sprite.svg` file there and delete it from it at the very top of the viewBox, otherwise the site may not display correctly).
+14. `npm run build:cache` - this command allows you to cache files for further upload to the server (IMPORTANT! run strictly after the command - `npm run build:prod`).
 
 ### Important points:
-- If you do not have these files in the root directory src - `favicon.ico`, `favicon.svg`, `mask-desktop.svg` and you want this assembly to run, go to the file along the path - `gulp/config.js` and delete the lines numbered 17, 18, 19.
+- If you do not have these files in the root directory src - `favicon.svg`, `mask-desktop.svg` and you want this assembly to run, go to the file along the path - `gulp/config.js` and delete the lines numbered 17, 18, 19.
 - To run the command `npm run html-check`, you may need to install Java on your computer.
 - Quite an important point if you initialize `git` after installing packages, then most of the functionality of this assembly will not work.
 
