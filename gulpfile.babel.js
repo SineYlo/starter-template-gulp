@@ -11,10 +11,14 @@ import fileTransferPictures from './gulp/tasks/transfer-pictures';
 import fileTransferOther from './gulp/tasks/transfer-other';
 import changingMarkupHome from './gulp/tasks/markup-home';
 import changingMarkupPages from './gulp/tasks/markup-pages';
+import changingStylesBackend from './gulp/tasks/changing-styles-backend';
 import changingStyles from './gulp/tasks/changing-styles';
+import changingScriptsBackend from './gulp/tasks/changing-scripts-backend';
 import changingScripts from './gulp/tasks/changing-scripts';
 import svgOptimization from './gulp/tasks/svg-optimization';
 import archivingFiles from './gulp/tasks/archiving-files';
+import cacheFiles from './gulp/tasks/cache-files';
+import rewriteFiles from './gulp/tasks/rewrite-files';
 import watchFiles from './gulp/tasks/watch-files';
 import { imageOptimizationJpg, imageOptimizationPng, imageOptimizationFav } from './gulp/tasks/image-optimization';
 import { path } from './gulp/config';
@@ -77,8 +81,37 @@ const fullStartServer = series(
   watchFiles,
 );
 
+// |=============== SETTING UP THE LAUNCH OF THE PROJECT COLLECTOR WITHOUT A SERVER ===============>
+const buildBackend = series(
+  cleanRoot,
+  fileTransferAudio,
+  fileTransferVideo,
+  fileTransferDocs,
+  fileTransferFonts,
+  fileTransferPictures,
+  fileTransferOther,
+  parallel(
+    changingMarkupHome,
+    changingMarkupPages,
+    changingStylesBackend,
+    changingScriptsBackend,
+  ),
+  svgOptimization,
+  imageOptimizationJpg,
+  imageOptimizationPng,
+  imageOptimizationFav,
+);
+
+// |=============== CONFIGURING THE LAUNCH OF THE PROJECT COLLECTOR WITH FILE CACHING ===============>
+const buildCache = series(
+  cacheFiles,
+  rewriteFiles,
+);
+
 // |=============== SETTING UP THE LAUNCH OF THE PROJECT COLLECTOR ===============>
+exports.buildCache = buildCache;
 exports.fullStart = fullStart;
 exports.fullStartServer = fullStartServer;
+exports.buildBackend = buildBackend;
 exports.build = build;
 exports.watch = watch;

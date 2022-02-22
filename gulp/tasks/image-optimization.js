@@ -8,6 +8,9 @@ import { path } from '../config';
 // |=============== SETTING UP AN IMAGE OPTIMIZATION AND CONVERSION TASK - JPG ===============>
 const imageOptimizationJpg = () => {
   return src(path.source.convertjpg)
+    .pipe(rename({
+      extname: '.jpg',
+    }))
     .pipe(squoosh({
       mozjpeg: {},
       webp: {},

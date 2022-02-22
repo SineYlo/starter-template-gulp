@@ -3,15 +3,44 @@
   "parser": "@babel/eslint-parser",
   "env": {
     "browser": true,
-    "jquery": true
+    "jquery": true,
+    "es2021": true
   },
   "rules": {
+    "semi": [
+      "error",
+      "always"
+    ],
     "import/no-extraneous-dependencies": [
       "error", {
         "devDependencies": [
           "gulpfile.babel.js",
           "gulp/**/*.js"
         ]
+      }
+    ],
+    "max-len": [
+      "warn", {
+        "code": 200,
+        "ignoreComments": true,
+        "ignoreTrailingComments": true,
+        "ignoreUrls": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
+    "no-unused-vars": [
+      "warn", {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "quotes": [
+      "error",
+      "single", {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
       }
     ]
   }

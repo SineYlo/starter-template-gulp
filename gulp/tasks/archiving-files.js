@@ -11,7 +11,7 @@ const archivingFiles = () => {
   return src(path.build.rootZip)
     .pipe(plumber(
       notify.onError({
-        title: 'ARC',
+        title: 'ZIP',
         message: 'Error: <%= error.message %>',
       }),
     ))

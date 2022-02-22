@@ -34,6 +34,11 @@ const path = {
       `${sourceFolder}/js/pages/**/*.js`,
     ],
     sprites: `${sourceFolder}/img/global/sprites/*.svg`,
+    cache: `${projectFolder}/**/*.{css,js,woff,woff2,png,jpg,jpeg,webp,avif,gif,svg}`,
+    cacheHtml: `${projectFolder}/index.html`,
+    cachePages: `${projectFolder}/pages/**/*.html`,
+    cacheStyles: `${projectFolder}/styles/**/*.css`,
+    cacheManifest: `${projectFolder}/main.webmanifest`,
   },
   build: {
     audio: `${projectFolder}/assets/audio/`,
