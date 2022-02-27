@@ -10,7 +10,9 @@ import { path } from '../config';
 // |=============== SETTING UP THE TASK OF OPTIMIZING THE REMAINING HTML PAGES ===============>
 const changingMarkupPages = () => {
   return src(path.source.htmlPages)
-    .pipe(fileinclude())
+    .pipe(fileinclude({
+      prefix: '@',
+    }))
     .pipe(gulpIf(path.isProd, htmlmin({
       collapseWhitespace: true,
       removeComments: true,

@@ -22,7 +22,7 @@ const path = {
       `${sourceFolder}/mask-desktop.svg`,
     ],
     htmlHome: `${sourceFolder}/index.html`,
-    htmlPages: `${sourceFolder}/kit/pages/**/*.html`,
+    htmlPages: `${sourceFolder}/html/pages/**/*.html`,
     styles: [
       `${sourceFolder}/scss/styles.scss`,
       `${sourceFolder}/scss/pages/**/*.scss`,
@@ -55,13 +55,13 @@ const path = {
   watch: {
     htmlHome: [
       `${sourceFolder}/index.html`,
-      `${sourceFolder}/kit/components/home/**/*.html`,
-      `${sourceFolder}/kit/templates/**/*.html`,
+      `${sourceFolder}/html/components/home/**/*.html`,
+      `${sourceFolder}/html/templates/**/*.html`,
     ],
     htmlPages: [
-      `${sourceFolder}/kit/pages/**/*.html`,
-      `${sourceFolder}/kit/components/pages/**/*.html`,
-      `${sourceFolder}/kit/templates/**/*.html`,
+      `${sourceFolder}/html/pages/**/*.html`,
+      `${sourceFolder}/html/components/pages/**/*.html`,
+      `${sourceFolder}/html/templates/**/*.html`,
     ],
     styles: `${sourceFolder}/scss/**/*.scss`,
     scripts: [

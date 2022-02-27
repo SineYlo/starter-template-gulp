@@ -81,6 +81,9 @@
       "<picture>",
       "  <source srcset=\"\" media=\"\" type=\"image/avif\">",
       "  <source srcset=\"\" media=\"\" type=\"image/webp\">",
+      "  <source srcset=\"\" media=\"\">",
+      "  <source srcset=\"\" media=\"\" type=\"image/avif\">",
+      "  <source srcset=\"\" media=\"\" type=\"image/webp\">",
       "  <img class=\"\" src=\"\" srcset=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" alt=\"\">",
       "</picture>"
     ],
@@ -90,7 +93,7 @@
     "scope": "html",
     "prefix": "s-sprite",
     "body": [
-      "<svg class=\"\" width=\"\" height=\"\" viewBox=\"\" aria-hidden=\"true\">",
+      "<svg class=\"\" width=\"\" height=\"\" aria-hidden=\"true\">",
       "  <use xlink:href=\"\" />",
       "</svg>"
     ],

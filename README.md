@@ -104,7 +104,7 @@ The most important section is because if you do something wrong as it is written
 |     |     ├── global                                     # in this folder put the script files that are used on all pages
 |     |     ├── pages                                      # in this folder, create a subfolder with the name of the page and put the main script files for this page there
 |     |     └── main.js                                    # the main script file for the main page
-|     ├── kit                                              # main folder for html files
+|     ├── html                                             # main folder for html files
 |     |     ├── components                                 # in this folder we put the individual parts of the pages
 |     |     |     ├── home                                 # in this folder we put the parts only for the main page
 |     |     |     └── pages                                # in this folder, create a subfolder with the name of the page and put the parts for this page there
