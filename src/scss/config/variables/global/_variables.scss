@@ -40,27 +40,6 @@ $twenty-seventh-color: null;
 $twenty-eighth-color: null;
 $twenty-ninth-color: null;
 $thirtieth-color: null;
-// |CM| Colors for effects
-$primary-color-effects: null;
-$second-color-effects: null;
-$third-color-effects: null;
-$fourth-color-effects: null;
-$fifth-color-effects: null;
-$sixth-color-effects: null;
-$seventh-color-effects: null;
-$eighth-color-effects: null;
-$ninth-color-effects: null;
-$tenth-color-effects: null;
-$eleventh-color-effects: null;
-$twelfth-color-effects: null;
-$thirteenth-color-effects: null;
-$fourteenth-color-effects: null;
-$fifteenth-color-effects: null;
-$sixteenth-color-effects: null;
-$seventeenth-color-effects: null;
-$eighteenth-color-effects: null;
-$nineteenth-color-effects: null;
-$twentieth-color-effects: null;
 // |CM| Universal colors
 $white-color: null;
 $black-color: null;
@@ -176,17 +155,18 @@ $very-slow-animation-duration: 0.5s;
 
 // |=============== Z-INDEX ===============>
 // |CM| Different z-index values for ease of selection
-$primary-z: 0;
-$second-z: 1;
-$third-z: 2;
-$fourth-z: 3;
-$fifth-z: 4;
-$sixth-z: 5;
-$seventh-z: 6;
-$eighth-z: 7;
-$ninth-z: 8;
-$tenth-z: 9;
-$eleventh-z: 10;
+$primary-z: -1;
+$second-z: 0;
+$third-z: 1;
+$fourth-z: 2;
+$fifth-z: 3;
+$sixth-z: 4;
+$seventh-z: 5;
+$eighth-z: 6;
+$ninth-z: 7;
+$tenth-z: 8;
+$eleventh-z: 9;
+$twelfth-z: 10;
 // |CM| Ready z-index values for different components
 $z-tooltip: 20;
 $z-fixed: 100;

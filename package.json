@@ -6,8 +6,7 @@
   "scripts": {
     "prepare": "husky install",
     "pre-commit": "lint-staged",
-    "html-check": "node-w3c-validator -i src/**/*.html -f lint -b 2048",
-    "clean": "gulp cleanRoot",
+    "root:clean": "gulp cleanRoot",
     "image:svg": "gulp svgOptimization",
     "image:jpg": "gulp imageOptimizationJpg",
     "image:png": "gulp imageOptimizationPng",
@@ -20,6 +19,7 @@
     "build:archive": "gulp archivingFiles",
     "build:backend": "gulp buildBackend",
     "build:cache": "gulp buildCache",
+    "lint:html": "node-w3c-validator -i src/**/*.html -f lint -b 2048",
     "lint:editorconfig": "editorconfig-checker"
   },
   "lint-staged": {
