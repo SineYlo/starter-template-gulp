@@ -94,7 +94,7 @@
     "prefix": "s-sprite",
     "body": [
       "<svg class=\"\" width=\"\" height=\"\" aria-hidden=\"true\">",
-      "  <use xlink:href=\"\" />",
+      "  <use xlink:href=\"img/sprites/sprite.svg#$2\" />",
       "</svg>"
     ],
     "description": "Creates a code snippet for an svg sprite"

@@ -80,7 +80,7 @@
     "gulp-zip": "^5.1.0",
     "htmlhint": "^1.1.2",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.4",
+    "lint-staged": "^12.3.5",
     "node-w3c-validator": "^2.0.2",
     "postcss-clip-path-polyfill": "^1.1.0",
     "postcss-color-rebeccapurple": "^7.0.2",

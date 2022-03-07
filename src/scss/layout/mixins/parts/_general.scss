@@ -33,6 +33,16 @@
   overscroll-behavior: none;
 }
 
+// |CM| Knocks the block out of the container
+@mixin knockBlock {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-right: -50vw;
+  margin-left: -50vw;
+  width: 100vw;
+}
+
 // |CM| Used to trim part of a single line of text
 @mixin oneLineOverflow {
   overflow: hidden;
@@ -50,4 +60,9 @@
   box-orient: vertical;
   -webkit-line-clamp: #{$numberOfLines};
   line-clamp: #{$numberOfLines};
+}
+
+// |CM| Alignment of the block extending beyond the container
+@mixin blockBeyond($content-width: $content-width, $container-offset: $container-offset) {
+  padding-left: max(#{$container-offset}, (100% - #{$content-width}) / 2);
 }

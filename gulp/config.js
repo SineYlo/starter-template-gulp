@@ -37,7 +37,7 @@ const path = {
     cache: `${projectFolder}/**/*.{css,js,woff,woff2,png,jpg,jpeg,webp,avif,gif,svg}`,
     cacheHtml: `${projectFolder}/index.html`,
     cachePages: `${projectFolder}/pages/**/*.html`,
-    cacheStyles: `${projectFolder}/styles/**/*.css`,
+    cacheStyles: `${projectFolder}/css/**/*.css`,
     cacheManifest: `${projectFolder}/main.webmanifest`,
   },
   build: {

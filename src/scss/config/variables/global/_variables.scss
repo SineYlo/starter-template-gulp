@@ -1,3 +1,12 @@
+// |=============== CONTAINER ===============>
+// |CM| Width and indents of the container
+$content-width: null;
+$content-fluid-width: null;
+$container-offset: null;
+$container-fluid-offset: null;
+$container-width: $content-width + ($container-offset * 2);
+$container-fluid-width: $content-width + ($container-fluid-offset * 2);
+
 // |=============== FONT-FAMILY ===============>
 // |CM| Main font-family
 $primary-font-family: null;
@@ -41,8 +50,8 @@ $twenty-eighth-color: null;
 $twenty-ninth-color: null;
 $thirtieth-color: null;
 // |CM| Universal colors
-$white-color: null;
-$black-color: null;
+$white-color: hsl(0 0% 100%);
+$black-color: hsl(0 0% 0%);
 
 // |=============== FONT-WEIGHT ===============>
 // |CM| Main font-weight
@@ -104,29 +113,6 @@ $eighth-br: null;
 $ninth-br: null;
 $tenth-br: null;
 
-// |=============== BACKGROUND-COLOR ===============>
-// |CM| Specifying a fallback color for background images
-$primary-fb-color: null;
-$second-fb-color: null;
-$third-fb-color: null;
-$fourth-fb-color: null;
-$fifth-fb-color: null;
-$sixth-fb-color: null;
-$seventh-fb-color: null;
-$eighth-fb-color: null;
-$ninth-fb-color: null;
-$tenth-fb-color: null;
-$eleventh-fb-color: null;
-$twelfth-fb-color: null;
-$thirteenth-fb-color: null;
-$fourteenth-fb-color: null;
-$fifteenth-fb-color: null;
-$sixteenth-fb-color: null;
-$seventeenth-fb-color: null;
-$eighteenth-fb-color: null;
-$nineteenth-fb-color: null;
-$twentieth-fb-color: null;
-
 // |=============== GAP ===============>
 // |CM| Specifying a fallback color for background images
 $primary-gap: null;
@@ -154,20 +140,7 @@ $slow-animation-duration: 0.4s;
 $very-slow-animation-duration: 0.5s;
 
 // |=============== Z-INDEX ===============>
-// |CM| Different z-index values for ease of selection
-$primary-z: -1;
-$second-z: 0;
-$third-z: 1;
-$fourth-z: 2;
-$fifth-z: 3;
-$sixth-z: 4;
-$seventh-z: 5;
-$eighth-z: 6;
-$ninth-z: 7;
-$tenth-z: 8;
-$eleventh-z: 9;
-$twelfth-z: 10;
 // |CM| Ready z-index values for different components
-$z-tooltip: 20;
+$z-tooltip: 10;
 $z-fixed: 100;
 $z-modal: 1000;
