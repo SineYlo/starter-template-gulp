@@ -1,0 +1,15 @@
+// |=============== SETTING UP MIXINS TO CONVERT UNITS OF MEASUREMENT ===============>
+// |CM| Converting px to rem
+@function pxToRem($ourUnitSize, $basicUnit: 16px) {
+  @return calc($ourUnitSize / $basicUnit) * 1rem;
+}
+
+// |CM| Finding percentages of a number from a number
+@function percentageOfNumber($childSize, $parentSize) {
+  @return calc(($childSize * 100) / $parentSize) * 1%;
+}
+
+// |CM| Calculating the numeric value of the line height
+@function lhNumeric($fontSize, $lineHeight) {
+  @return calc($lineHeight / $fontSize) * 1;
+}
