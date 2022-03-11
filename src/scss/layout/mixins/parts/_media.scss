@@ -1,0 +1,7 @@
+// |=============== SETTING UP MIXINS WITH MEDIA QUERIES ===============>
+// |CM| Allows you to enable hover effects only on certain devices
+@mixin hover {
+  @media screen and (any-hover: hover) {
+    @content;
+  }
+}
