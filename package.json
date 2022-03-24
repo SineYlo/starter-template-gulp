@@ -43,7 +43,7 @@
   },
   "homepage": "https://github.com/SineYlo/Starter-Template#readme",
   "devDependencies": {
-    "@babel/core": "^7.17.7",
+    "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
     "@babel/register": "^7.17.7",
@@ -80,7 +80,7 @@
     "gulp-zip": "^5.1.0",
     "htmlhint": "^1.1.2",
     "husky": "^7.0.4",
-    "lint-staged": "^12.3.6",
+    "lint-staged": "^12.3.7",
     "node-w3c-validator": "^2.0.2",
     "postcss-clip-path-polyfill": "^1.1.0",
     "postcss-color-rebeccapurple": "^7.0.2",
