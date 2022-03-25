@@ -5,19 +5,19 @@ import fileinclude from 'gulp-file-include';
 import htmlmin from 'gulp-htmlmin';
 import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
-import { path } from '../config';
+import { config } from '../config';
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING THE REMAINING HTML PAGES ===============>
 const changingMarkupPages = () => {
-  return src(path.source.htmlPages)
+  return src(config.source.htmlPages)
     .pipe(fileinclude({
       prefix: '@',
     }))
-    .pipe(gulpIf(path.isProd, htmlmin({
+    .pipe(gulpIf(config.isProd, htmlmin({
       collapseWhitespace: true,
       removeComments: true,
     })))
-    .pipe(dest(path.build.html))
+    .pipe(dest(config.build.html))
     .pipe(browserSync.stream());
 };
 

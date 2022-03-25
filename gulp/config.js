@@ -3,7 +3,7 @@ const projectFolder = 'dist';
 const sourceFolder = 'src';
 
 // |=============== SETTING UP THE MAIN PATHS TO ALL FOLDERS ===============>
-const path = {
+const config = {
   source: {
     audio: `${sourceFolder}/assets/audio/**/*.{mp3,ogg,wav,flac}`,
     video: `${sourceFolder}/assets/video/**/*.{mp4,avi,webm}`,
@@ -81,4 +81,4 @@ const path = {
 };
 
 // |=============== EXPORTING THE MAIN VARIABLES FOR USE ===============>
-export { projectFolder, sourceFolder, path };
+export { projectFolder, sourceFolder, config };

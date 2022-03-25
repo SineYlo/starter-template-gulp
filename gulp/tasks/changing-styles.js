@@ -12,25 +12,26 @@ import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
+import shorthand from 'gulp-shorthand';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
-import { path } from '../config';
+import { config } from '../config';
 
 // |=============== COMBINING TWO MODULES ===============>
 const sass = gulpSass(baseSass);
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING STYLE FILES ===============>
 const changingStyles = () => {
-  return src(path.source.styles)
-    .pipe(gulpIf(path.isDev, sourcemaps.init({
+  return src(config.source.styles)
+    .pipe(gulpIf(config.isDev, sourcemaps.init({
       loadMaps: true,
     })))
     .pipe(sass.sync({
       outputStyle: 'expanded',
     }).on('error', sass.logError))
-    .pipe(gulpIf(path.isProd, postcss([
+    .pipe(gulpIf(config.isProd, postcss([
       postcssRebeccapurple({
         preserve: true,
       }),
@@ -57,25 +58,27 @@ const changingStyles = () => {
         minPixelValue: 0,
       }),
       postcssSystemUiFont({
+        // eslint-disable-next-line max-len
         family: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", Ubuntu, Cantarell, sans-serif',
       }),
     ])))
-    .pipe(gulpIf(path.isProd, autoprefixer({
+    .pipe(gulpIf(config.isProd, autoprefixer({
       overrideBrowserslist: ['last 5 versions'],
     })))
+    .pipe(gulpIf(config.isProd, shorthand()))
     .pipe(rename({
       dirname: '',
     }))
-    .pipe(gulpIf(path.isDev, sourcemaps.write()))
-    .pipe(dest(path.build.styles))
-    .pipe(gulpIf(path.isProd, cleanCSS({
+    .pipe(gulpIf(config.isDev, sourcemaps.write()))
+    .pipe(dest(config.build.styles))
+    .pipe(gulpIf(config.isProd, cleanCSS({
       level: 2,
     })))
     .pipe(rename({
       extname: '.min.css',
       dirname: '',
     }))
-    .pipe(dest(path.build.styles))
+    .pipe(dest(config.build.styles))
     .pipe(browserSync.stream());
 };
 

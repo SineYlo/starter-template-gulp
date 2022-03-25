@@ -2,17 +2,17 @@
 import { src, dest } from 'gulp';
 import rev from 'gulp-rev';
 import revDelete from 'gulp-rev-delete-original';
-import { path, projectFolder } from '../config';
+import { config, projectFolder } from '../config';
 
 const cacheFiles = () => {
-  return src(path.source.cache, {
+  return src(config.source.cache, {
     base: projectFolder,
   })
     .pipe(rev())
     .pipe(revDelete())
-    .pipe(dest(path.build.root))
+    .pipe(dest(config.build.root))
     .pipe(rev.manifest('rev.json'))
-    .pipe(dest(path.build.root));
+    .pipe(dest(config.build.root));
 };
 
 export default cacheFiles;

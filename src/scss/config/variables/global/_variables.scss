@@ -1,9 +1,9 @@
 // |=============== CONTAINER ===============>
 // |CM| Width and indents of the container
-$content-width: null;
-$content-fluid-width: null;
-$container-offset: null;
-$container-fluid-offset: null;
+$content-width: 0;
+$content-fluid-width: 0;
+$container-offset: 0;
+$container-fluid-offset: 0;
 $container-width: $content-width + ($container-offset * 2);
 $container-fluid-width: $content-width + ($container-fluid-offset * 2);
 

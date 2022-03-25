@@ -3,11 +3,11 @@
 import { src, dest } from 'gulp';
 import squoosh from 'gulp-libsquoosh';
 import rename from 'gulp-rename';
-import { path } from '../config';
+import { config } from '../config';
 
 // |=============== SETTING UP AN IMAGE OPTIMIZATION AND CONVERSION TASK - JPG ===============>
 const imageOptimizationJpg = () => {
-  return src(path.source.convertjpg)
+  return src(config.source.convertjpg)
     .pipe(rename({
       extname: '.jpg',
     }))
@@ -19,12 +19,12 @@ const imageOptimizationJpg = () => {
     .pipe(rename({
       dirname: 'pictures/',
     }))
-    .pipe(dest(path.build.pictures));
+    .pipe(dest(config.build.pictures));
 };
 
 // |=============== SETTING UP AN IMAGE OPTIMIZATION AND CONVERSION TASK - PNG ===============>
 const imageOptimizationPng = () => {
-  return src(path.source.convertpng)
+  return src(config.source.convertpng)
     .pipe(squoosh({
       oxipng: {},
       webp: {},
@@ -33,19 +33,19 @@ const imageOptimizationPng = () => {
     .pipe(rename({
       dirname: 'pictures/',
     }))
-    .pipe(dest(path.build.pictures));
+    .pipe(dest(config.build.pictures));
 };
 
 // |=============== SETTING UP AN IMAGE OPTIMIZATION AND CONVERSION TASK - FAVICONS ===============>
 const imageOptimizationFav = () => {
-  return src(path.source.convertfav)
+  return src(config.source.convertfav)
     .pipe(squoosh({
       oxipng: {},
     }))
     .pipe(rename({
       dirname: 'favicons/',
     }))
-    .pipe(dest(path.build.pictures));
+    .pipe(dest(config.build.pictures));
 };
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>

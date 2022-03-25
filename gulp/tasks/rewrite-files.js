@@ -2,30 +2,30 @@
 import { src, dest } from 'gulp';
 import { readFileSync } from 'fs';
 import revRewrite from 'gulp-rev-rewrite';
-import { path, projectFolder } from '../config';
+import { config, projectFolder } from '../config';
 
 const rewriteFiles = () => {
   const manifest = readFileSync(`${projectFolder}/rev.json`);
-  src(path.source.cacheStyles)
+  src(config.source.cacheStyles)
     .pipe(revRewrite({
       manifest,
     }))
-    .pipe(dest(path.build.styles));
-  src(path.source.cacheHtml)
+    .pipe(dest(config.build.styles));
+  src(config.source.cacheHtml)
     .pipe(revRewrite({
       manifest,
     }))
-    .pipe(dest(path.build.root));
-  src(path.source.cachePages)
+    .pipe(dest(config.build.root));
+  src(config.source.cachePages)
     .pipe(revRewrite({
       manifest,
     }))
-    .pipe(dest(path.build.html));
-  return src(path.source.cacheManifest)
+    .pipe(dest(config.build.html));
+  return src(config.source.cacheManifest)
     .pipe(revRewrite({
       manifest,
     }))
-    .pipe(dest(path.build.root));
+    .pipe(dest(config.build.root));
 };
 
 export default rewriteFiles;

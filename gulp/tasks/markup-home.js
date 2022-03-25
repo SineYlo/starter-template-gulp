@@ -5,19 +5,19 @@ import fileinclude from 'gulp-file-include';
 import htmlmin from 'gulp-htmlmin';
 import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
-import { path } from '../config';
+import { config } from '../config';
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING THE MAIN HTML FILE ===============>
 const changingMarkupHome = () => {
-  return src(path.source.htmlHome)
+  return src(config.source.htmlHome)
     .pipe(fileinclude({
       prefix: '@',
     }))
-    .pipe(gulpIf(path.isProd, htmlmin({
+    .pipe(gulpIf(config.isProd, htmlmin({
       collapseWhitespace: true,
       removeComments: true,
     })))
-    .pipe(dest(path.build.root))
+    .pipe(dest(config.build.root))
     .pipe(browserSync.stream());
 };
 

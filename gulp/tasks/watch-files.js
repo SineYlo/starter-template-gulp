@@ -8,7 +8,7 @@ import changingStyles from './changing-styles';
 import changingScripts from './changing-scripts';
 import fileTransferPictures from './transfer-pictures';
 import svgOptimization from './svg-optimization';
-import { path, projectFolder } from '../config';
+import { config, projectFolder } from '../config';
 
 // |=============== CREATING A TASK AND ALSO SETTING UP A LOCAL SERVER ===============>
 const watchFiles = (callback) => {
@@ -24,12 +24,12 @@ const watchFiles = (callback) => {
 };
 
 // |=============== WE RUN THE TASK WITH EACH CHANGE IN ONE OF THE FILES ===============>
-watch(path.watch.htmlHome, changingMarkupHome);
-watch(path.watch.htmlPages, changingMarkupPages);
-watch(path.watch.styles, changingStyles);
-watch(path.watch.scripts, changingScripts);
-watch(path.watch.pictures, fileTransferPictures);
-watch(path.watch.sprites, svgOptimization);
+watch(config.watch.htmlHome, changingMarkupHome);
+watch(config.watch.htmlPages, changingMarkupPages);
+watch(config.watch.styles, changingStyles);
+watch(config.watch.scripts, changingScripts);
+watch(config.watch.pictures, fileTransferPictures);
+watch(config.watch.sprites, svgOptimization);
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
 export default watchFiles;

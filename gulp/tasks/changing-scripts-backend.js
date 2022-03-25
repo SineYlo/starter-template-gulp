@@ -9,7 +9,7 @@ import babelify from 'babelify';
 import glob from 'glob';
 import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
-import { sourceFolder, path } from '../config';
+import { sourceFolder, config } from '../config';
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING SCRIPT FILES ===============>
 const changingScriptsBackend = (done) => {
@@ -34,12 +34,12 @@ const changingScriptsBackend = (done) => {
         .pipe(rename({
           dirname: '',
         }))
-        .pipe(dest(path.build.scripts))
+        .pipe(dest(config.build.scripts))
         .pipe(rename({
           extname: '.min.js',
           dirname: '',
         }))
-        .pipe(dest(path.build.scripts))
+        .pipe(dest(config.build.scripts))
         .pipe(browserSync.stream())
     );
   });

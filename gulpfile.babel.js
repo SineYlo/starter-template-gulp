@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable import/no-import-module-exports */
 /* eslint-disable arrow-body-style */
 // |=============== CONNECTING ALL MODULES ===============>
@@ -21,10 +22,10 @@ import cacheFiles from './gulp/tasks/cache-files';
 import rewriteFiles from './gulp/tasks/rewrite-files';
 import watchFiles from './gulp/tasks/watch-files';
 import { imageOptimizationJpg, imageOptimizationPng, imageOptimizationFav } from './gulp/tasks/image-optimization';
-import { path } from './gulp/config';
+import { config } from './gulp/config';
 
 // |=============== INITIALIZE THE SETUP THAT SEPARATES THE ASSEMBLY ===============>
-path.setEnv();
+config.setEnv();
 
 // |=============== CONFIGURING THE LAUNCH OF A TASK THAT DELETES THE MAIN FOLDER ===============>
 exports.cleanRoot = cleanRoot;

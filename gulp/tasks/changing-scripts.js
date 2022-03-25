@@ -13,7 +13,7 @@ import gulpIf from 'gulp-if';
 import sourcemaps from 'gulp-sourcemaps';
 import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
-import { sourceFolder, path } from '../config';
+import { sourceFolder, config } from '../config';
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING SCRIPT FILES ===============>
 const changingScripts = (done) => {
@@ -35,22 +35,22 @@ const changingScripts = (done) => {
         .bundle()
         .pipe(vinylStream(file))
         .pipe(vinylBuffer())
-        .pipe(gulpIf(path.isDev, sourcemaps.init({
+        .pipe(gulpIf(config.isDev, sourcemaps.init({
           loadMaps: true,
         })))
         .pipe(rename({
           dirname: '',
         }))
-        .pipe(gulpIf(path.isDev, sourcemaps.write()))
-        .pipe(dest(path.build.scripts))
-        .pipe(gulpIf(path.isProd, uglify({
+        .pipe(gulpIf(config.isDev, sourcemaps.write()))
+        .pipe(dest(config.build.scripts))
+        .pipe(gulpIf(config.isProd, uglify({
           toplevel: true,
         }).on('error', notify.onError())))
         .pipe(rename({
           extname: '.min.js',
           dirname: '',
         }))
-        .pipe(dest(path.build.scripts))
+        .pipe(dest(config.build.scripts))
         .pipe(browserSync.stream())
     );
   });

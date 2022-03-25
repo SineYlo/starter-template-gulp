@@ -11,16 +11,17 @@ import postcssClipPath from 'postcss-clip-path-polyfill';
 import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
+import shorthand from 'gulp-shorthand';
 import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
-import { path } from '../config';
+import { config } from '../config';
 
 // |=============== COMBINING TWO MODULES ===============>
 const sass = gulpSass(baseSass);
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING STYLE FILES ===============>
 const changingStylesBackend = () => {
-  return src(path.source.styles)
+  return src(config.source.styles)
     .pipe(sass.sync({
       outputStyle: 'expanded',
     }).on('error', sass.logError))
@@ -51,6 +52,7 @@ const changingStylesBackend = () => {
         minPixelValue: 0,
       }),
       postcssSystemUiFont({
+        // eslint-disable-next-line max-len
         family: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", Ubuntu, Cantarell, sans-serif',
       }),
     ]))
@@ -58,15 +60,16 @@ const changingStylesBackend = () => {
       grid: 'autoplace',
       overrideBrowserslist: ['last 5 versions'],
     }))
+    .pipe(shorthand())
     .pipe(rename({
       dirname: '',
     }))
-    .pipe(dest(path.build.styles))
+    .pipe(dest(config.build.styles))
     .pipe(rename({
       extname: '.min.css',
       dirname: '',
     }))
-    .pipe(dest(path.build.styles))
+    .pipe(dest(config.build.styles))
     .pipe(browserSync.stream());
 };
 

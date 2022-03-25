@@ -3,11 +3,11 @@
 import { src, dest } from 'gulp';
 import svgSprite from 'gulp-svg-sprite';
 import rename from 'gulp-rename';
-import { path } from '../config';
+import { config } from '../config';
 
 // |=============== SETTING UP THE TASK OF CREATING A SPRITE FROM SVG IMAGES ===============>
 const svgOptimization = () => {
-  return src(path.source.sprites)
+  return src(config.source.sprites)
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -18,7 +18,7 @@ const svgOptimization = () => {
     .pipe(rename({
       dirname: 'sprites/',
     }))
-    .pipe(dest(path.build.pictures));
+    .pipe(dest(config.build.pictures));
 };
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
