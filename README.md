@@ -1,7 +1,7 @@
 # Starter Template ⚔️
 
 ## 📖 A little about the template:
-At first, I thought for a long time about posting this template or not, but I decided anyway. I don't know why, but still. Maybe someone will like this template and will use it. This template is quite non-standard and I don't think that something like this is walking around somewhere on the network. I like to create something of my own and the template is no exception. Maybe you already know or not, but I still have a formula for creating a responsive website. So this is my second creation that has seen the light
+At first, I thought for a long time about posting this template or not, but I decided anyway. I don't know why, but still. Maybe someone will like this template and will use it. This template is quite non-standard and I don't think that something like this is walking around somewhere on the network. I like to create something of my own and the template is no exception. Maybe you already know or not, but I still have a formula for creating a responsive website. So this is my second creation that has seen the light.
 
 ## 🔗 Navigating through this manual
 - [How to start using the assembly](#how)
