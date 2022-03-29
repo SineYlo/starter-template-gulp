@@ -141,6 +141,8 @@ $very-slow-animation-duration: 0.5s;
 
 // |=============== Z-INDEX ===============>
 // |CM| Ready z-index values for different components
-$z-tooltip: 10;
-$z-fixed: 100;
-$z-modal: 1000;
+$primary-z: -1;
+$second-z: 0;
+$third-z: 1;
+$fourth-z: 2;
+$fifth-z: 3;
