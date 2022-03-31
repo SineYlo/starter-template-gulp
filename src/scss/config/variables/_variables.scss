@@ -1,148 +1,148 @@
 // |=============== CONTAINER ===============>
 // |CM| Width and indents of the container
-$content-width: 0;
-$content-fluid-width: 0;
-$container-offset: 0;
-$container-fluid-offset: 0;
-$container-width: $content-width + ($container-offset * 2);
-$container-fluid-width: $content-width + ($container-fluid-offset * 2);
+$contentWidth: 0;
+$contentFluidWidth: 0;
+$containerOffset: 0;
+$containerFluidOffset: 0;
+$containerWidth: $contentWidth + ($containerOffset * 2);
+$containerFluidWidth: $contentFluidWidth + ($containerFluidOffset * 2);
 
 // |=============== FONT-FAMILY ===============>
 // |CM| Main font-family
-$primary-font-family: null;
+$primaryFontFamily: null;
 // |CM| Additional font-families
-$second-font-family: null;
-$third-font-family: null;
-$fourth-font-family: null;
+$secondFontFamily: null;
+$thirdFontFamily: null;
+$fourthFontFamily: null;
 
 // |=============== COLOR ===============>
 // |CM| Change favorite color (Color name - )
-$hue-color: null;
+$hueColor: null;
 // |CM| HSL color mode
-$primary-color: null;
-$second-color: null;
-$third-color: null;
-$fourth-color: null;
-$fifth-color: null;
-$sixth-color: null;
-$seventh-color: null;
-$eighth-color: null;
-$ninth-color: null;
-$tenth-color: null;
-$eleventh-color: null;
-$twelfth-color: null;
-$thirteenth-color: null;
-$fourteenth-color: null;
-$fifteenth-color: null;
-$sixteenth-color: null;
-$seventeenth-color: null;
-$eighteenth-color: null;
-$nineteenth-color: null;
-$twentieth-color: null;
-$twenty-first-color: null;
-$twenty-second-color: null;
-$twenty-third-color: null;
-$twenty-fourth-color: null;
-$twenty-fifth-color: null;
-$twenty-sixth-color: null;
-$twenty-seventh-color: null;
-$twenty-eighth-color: null;
-$twenty-ninth-color: null;
-$thirtieth-color: null;
+$primaryColor: null;
+$secondColor: null;
+$thirdColor: null;
+$fourthColor: null;
+$fifthColor: null;
+$sixthColor: null;
+$seventhColor: null;
+$eighthColor: null;
+$ninthColor: null;
+$tenthColor: null;
+$eleventhColor: null;
+$twelfthColor: null;
+$thirteenthColor: null;
+$fourteenthColor: null;
+$fifteenthColor: null;
+$sixteenthColor: null;
+$seventeenthColor: null;
+$eighteenthColor: null;
+$nineteenthColor: null;
+$twentiethColor: null;
+$twentyFirstColor: null;
+$twentySecondColor: null;
+$twentyThirdColor: null;
+$twentyFourthColor: null;
+$twentyFifthColor: null;
+$twentySixthColor: null;
+$twentySeventhColor: null;
+$twentyEighthColor: null;
+$twentyNinthColor: null;
+$thirtiethColor: null;
 // |CM| Universal colors
-$white-color: hsl(0 0% 100%);
-$black-color: hsl(0 0% 0%);
+$whiteColor: hsl(0 0% 100%);
+$blackColor: hsl(0 0% 0%);
 
 // |=============== FONT-WEIGHT ===============>
 // |CM| Main font-weight
-$primary-font-weight: null;
+$primaryFontWeight: null;
 // |CM| Additional font-weights
-$second-font-weight: null;
-$third-font-weight: null;
-$fourth-font-weight: null;
-$fifth-font-weight: null;
+$secondFontWeight: null;
+$thirdFontWeight: null;
+$fourthFontWeight: null;
+$fifthFontWeight: null;
 
 // |=============== FONT-SIZE ===============>
 // |CM| Base font-size ( .5rem = 8px, 1rem = 16px, 1.5rem = 24px ...)
-$text-size-base: null;
+$textSizeBase: null;
 // |CM| Different font-size options
-$text-size-min-tiny: $text-size-base - null;
-$text-size-min-small: $text-size-base - null;
-$text-size-min-medium: $text-size-base - null;
-$text-size-min-big: $text-size-base - null;
-$text-size-min-large: $text-size-base - null;
-$text-size-min-huge: $text-size-base - null;
-$text-size-tiny: $text-size-base - null;
-$text-size-small: $text-size-base - null;
-$text-size-medium: $text-size-base + null;
-$text-size-big: $text-size-base + null;
-$text-size-large: $text-size-base + null;
-$text-size-huge: $text-size-base + null;
-$text-size-max-tiny: $text-size-base + null;
-$text-size-max-small: $text-size-base + null;
-$text-size-max-medium: $text-size-base + null;
-$text-size-max-big: $text-size-base + null;
-$text-size-max-large: $text-size-base + null;
-$text-size-max-huge: $text-size-base + null;
+$textSizeMinTiny: $textSizeBase - null;
+$textSizeMinSmall: $textSizeBase - null;
+$textSizeMinMedium: $textSizeBase - null;
+$textSizeMinBig: $textSizeBase - null;
+$textSizeMinLarge: $textSizeBase - null;
+$textSizeMinHuge: $textSizeBase - null;
+$textSizeTiny: $textSizeBase - null;
+$textSizeSmall: $textSizeBase - null;
+$textSizeMedium: $textSizeBase + null;
+$textSizeBig: $textSizeBase + null;
+$textSizeLarge: $textSizeBase + null;
+$textSizeHuge: $textSizeBase + null;
+$textSizeMaxTiny: $textSizeBase + null;
+$textSizeMaxSmall: $textSizeBase + null;
+$textSizeMaxMedium: $textSizeBase + null;
+$textSizeMaxBig: $textSizeBase + null;
+$textSizeMaxLarge: $textSizeBase + null;
+$textSizeMaxHuge: $textSizeBase + null;
 
 // |=============== LINE-HEIGHT ===============>
 // |CM| Main line-height
-$primary-lh: null;
+$primaryLh: null;
 // |CM| Additional lines-heights
-$second-lh: null;
-$third-lh: null;
-$fourth-lh: null;
-$fifth-lh: null;
-$sixth-lh: null;
-$seventh-lh: null;
-$eighth-lh: null;
-$ninth-lh: null;
-$tenth-lh: null;
+$secondLh: null;
+$thirdLh: null;
+$fourthLh: null;
+$fifthLh: null;
+$sixthLh: null;
+$seventhLh: null;
+$eighthLh: null;
+$ninthLh: null;
+$tenthLh: null;
 
 // |=============== BORDER-RADIUS ===============>
 // |CM| Main border-radius
-$primary-br: null;
+$primaryBr: null;
 // |CM| Additional border-radiuses
-$second-br: null;
-$third-br: null;
-$fourth-br: null;
-$fifth-br: null;
-$sixth-br: null;
-$seventh-br: null;
-$eighth-br: null;
-$ninth-br: null;
-$tenth-br: null;
+$secondBr: null;
+$thirdBr: null;
+$fourthBr: null;
+$fifthBr: null;
+$sixthBr: null;
+$seventhBr: null;
+$eighthBr: null;
+$ninthBr: null;
+$tenthBr: null;
 
 // |=============== GAP ===============>
 // |CM| Specifying a fallback color for background images
-$primary-gap: null;
-$second-gap: null;
-$third-gap: null;
-$fourth-gap: null;
-$fifth-gap: null;
-$sixth-gap: null;
-$seventh-gap: null;
-$eighth-gap: null;
-$ninth-gap: null;
-$tenth-gap: null;
+$primaryGap: null;
+$secondGap: null;
+$thirdGap: null;
+$fourthGap: null;
+$fifthGap: null;
+$sixthGap: null;
+$seventhGap: null;
+$eighthGap: null;
+$ninthGap: null;
+$tenthGap: null;
 
 // |=============== TRANSITION ===============>
 // |CM| Duration of effects (most effective 0.2 to 0.4s)
-$fast-transition-duration: 0.2s;
-$medium-transition-duration: 0.3s;
-$slow-transition-duration: 0.4s;
+$fastTransitionDuration: 0.2s;
+$mediumTransitionDuration: 0.3s;
+$slowTransitionDuration: 0.4s;
 
 // |=============== ANIMATIONS ===============>
 // |CM| Duration of animations (most effective 0.2 to 0.5s)
-$fast-animation-duration: 0.2s;
-$medium-animation-duration: 0.3s;
-$slow-animation-duration: 0.4s;
-$very-slow-animation-duration: 0.5s;
+$fastAnimationDuration: 0.2s;
+$mediumAnimationDuration: 0.3s;
+$slowAnimationDuration: 0.4s;
+$verySlowAnimationDuration: 0.5s;
 
 // |=============== Z-INDEX ===============>
 // |CM| Ready z-index values for different components
-$primary-z: -1;
-$second-z: 0;
-$third-z: 1;
-$fourth-z: 2;
-$fifth-z: 3;
+$primaryZ: -1;
+$secondZ: 0;
+$thirdZ: 1;
+$fourthZ: 2;
+$fifthZ: 3;
