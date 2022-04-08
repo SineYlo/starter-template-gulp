@@ -9,7 +9,7 @@ const config = {
     video: `${sourceFolder}/assets/video/**/*.{mp4,avi,webm}`,
     docs: `${sourceFolder}/assets/docs/**/*.{pdf,docx,doc,txt,rtf,odt,xls,xlsx}`,
     fonts: `${sourceFolder}/fonts/**/*.{woff,woff2}`,
-    pictures: `${sourceFolder}/img/**/*.gif`,
+    vector: `${sourceFolder}/img/global/svg/**/*.svg`,
     convertjpg: `${sourceFolder}/img/**/*.{jpg,jpeg}`,
     convertfav: `${sourceFolder}/img/global/favicons/**/*.png`,
     convertpng: [

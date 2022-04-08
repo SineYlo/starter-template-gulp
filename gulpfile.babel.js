@@ -8,7 +8,7 @@ import fileTransferAudio from './gulp/tasks/_transfer-audio';
 import fileTransferVideo from './gulp/tasks/_transfer-video';
 import fileTransferDocs from './gulp/tasks/_transfer-docs';
 import fileTransferFonts from './gulp/tasks/_transfer-fonts';
-import fileTransferPictures from './gulp/tasks/_transfer-pictures';
+import fileTransferVector from './gulp/tasks/_transfer-vector';
 import fileTransferOther from './gulp/tasks/_transfer-other';
 import changingMarkupHome from './gulp/tasks/_markup-home';
 import changingMarkupPages from './gulp/tasks/_markup-pages';
@@ -47,7 +47,7 @@ const build = series(
   fileTransferVideo,
   fileTransferDocs,
   fileTransferFonts,
-  fileTransferPictures,
+  fileTransferVector,
   fileTransferOther,
   parallel(
     changingMarkupHome,
@@ -91,7 +91,7 @@ const buildBackend = series(
   fileTransferVideo,
   fileTransferDocs,
   fileTransferFonts,
-  fileTransferPictures,
+  fileTransferVector,
   fileTransferOther,
   parallel(
     changingMarkupHome,
@@ -111,7 +111,7 @@ const buildPreCode = series(
   fileTransferVideo,
   fileTransferDocs,
   fileTransferFonts,
-  fileTransferPictures,
+  fileTransferVector,
   fileTransferOther,
   parallel(
     changingMarkupPreCodeHome,
