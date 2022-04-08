@@ -4,22 +4,24 @@ import { src, dest } from 'gulp';
 import fileinclude from 'gulp-file-include';
 import htmlmin from 'gulp-htmlmin';
 import browserSync from 'browser-sync';
-import gulpIf from 'gulp-if';
 import { config } from '../config';
 
-// |=============== SETTING UP THE TASK OF OPTIMIZING THE REMAINING HTML PAGES ===============>
-const changingMarkupPages = () => {
-  return src(config.source.htmlPages)
+// |=============== SETTING UP THE TASK OF OPTIMIZING THE MAIN HTML FILE ===============>
+const changingMarkupPreCodeHome = () => {
+  return src(config.source.htmlHome)
     .pipe(fileinclude({
       prefix: '@',
     }))
-    .pipe(gulpIf(config.isProd, htmlmin({
-      collapseWhitespace: true,
+    .pipe(htmlmin({
+      removeEmptyAttributes: true,
+      useShortDoctype: true,
       removeComments: true,
-    })))
-    .pipe(dest(config.build.html))
+      collapseBooleanAttributes: true,
+      removeRedundantAttributes: true,
+    }))
+    .pipe(dest(config.build.root))
     .pipe(browserSync.stream());
 };
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
-export default changingMarkupPages;
+export default changingMarkupPreCodeHome;

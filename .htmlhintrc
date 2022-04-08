@@ -26,5 +26,5 @@
   "tagname-lowercase": false,
   "title-require": true,
   "html-lang-require": true,
-  "input-requires-label": true
+  "input-requires-label": false
 }

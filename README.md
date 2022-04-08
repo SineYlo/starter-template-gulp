@@ -60,6 +60,7 @@ The most important section is because if you do something wrong as it is written
 13. `npm run build:full-server` - this command allows you to run a full project build cycle together with image optimization, with the launch of the server (IMPORTANT! after running this command, you need to additionally go to the folder with the project, for example `dist`, then find the `sprite.svg` file there and delete it from it at the very top of the viewBox, otherwise the site may not display correctly).
 14. `npm run build:backend` - this command allows you to prepare the assembly for further transmission to the backend developer (IMPORTANT! after running this command, you need to additionally go to the folder with the project, for example `dist`, then find the `sprite.svg` file there and delete it from it at the very top of the viewBox, otherwise the site may not display correctly).
 15. `npm run build:cache` - this command allows you to cache files for further upload to the server (IMPORTANT! run strictly after the command - `npm run build:prod`).
+16. `npm run build:code` - this command also runs the production version only without `html` minification.
 
 ### Important points:
 - If you do not have these files in the root directory src - `favicon.svg`, `mask-desktop.svg` and you want this assembly to run, go to the file along the path - `gulp/config.js` and delete the lines numbered 17, 18, 19.

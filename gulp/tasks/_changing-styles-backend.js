@@ -11,27 +11,20 @@ import postcssClipPath from 'postcss-clip-path-polyfill';
 import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
-import cleanCSS from 'gulp-clean-css';
-import shorthand from 'gulp-shorthand';
 import rename from 'gulp-rename';
-import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
-import gulpIf from 'gulp-if';
 import { config } from '../config';
 
 // |=============== COMBINING TWO MODULES ===============>
 const sass = gulpSass(baseSass);
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING STYLE FILES ===============>
-const changingStyles = () => {
+const changingStylesBackend = () => {
   return src(config.source.styles)
-    .pipe(gulpIf(config.isDev, sourcemaps.init({
-      loadMaps: true,
-    })))
     .pipe(sass.sync({
       outputStyle: 'expanded',
     }).on('error', sass.logError))
-    .pipe(gulpIf(config.isProd, postcss([
+    .pipe(postcss([
       postcssRebeccapurple({
         preserve: true,
       }),
@@ -61,19 +54,15 @@ const changingStyles = () => {
         // eslint-disable-next-line max-len
         family: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", Ubuntu, Cantarell, sans-serif',
       }),
-    ])))
-    .pipe(gulpIf(config.isProd, autoprefixer({
+    ]))
+    .pipe(autoprefixer({
+      grid: 'autoplace',
       overrideBrowserslist: ['last 5 versions'],
-    })))
-    .pipe(gulpIf(config.isProd, shorthand()))
+    }))
     .pipe(rename({
       dirname: '',
     }))
-    .pipe(gulpIf(config.isDev, sourcemaps.write()))
     .pipe(dest(config.build.styles))
-    .pipe(gulpIf(config.isProd, cleanCSS({
-      level: 2,
-    })))
     .pipe(rename({
       extname: '.min.css',
       dirname: '',
@@ -83,4 +72,4 @@ const changingStyles = () => {
 };
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
-export default changingStyles;
+export default changingStylesBackend;

@@ -3,25 +3,27 @@
 /* eslint-disable arrow-body-style */
 // |=============== CONNECTING ALL MODULES ===============>
 import { series, parallel } from 'gulp';
-import cleanRoot from './gulp/tasks/clean-root';
-import fileTransferAudio from './gulp/tasks/transfer-audio';
-import fileTransferVideo from './gulp/tasks/transfer-video';
-import fileTransferDocs from './gulp/tasks/transfer-docs';
-import fileTransferFonts from './gulp/tasks/transfer-fonts';
-import fileTransferPictures from './gulp/tasks/transfer-pictures';
-import fileTransferOther from './gulp/tasks/transfer-other';
-import changingMarkupHome from './gulp/tasks/markup-home';
-import changingMarkupPages from './gulp/tasks/markup-pages';
-import changingStylesBackend from './gulp/tasks/changing-styles-backend';
-import changingStyles from './gulp/tasks/changing-styles';
-import changingScriptsBackend from './gulp/tasks/changing-scripts-backend';
-import changingScripts from './gulp/tasks/changing-scripts';
-import svgOptimization from './gulp/tasks/svg-optimization';
-import archivingFiles from './gulp/tasks/archiving-files';
-import cacheFiles from './gulp/tasks/cache-files';
-import rewriteFiles from './gulp/tasks/rewrite-files';
-import watchFiles from './gulp/tasks/watch-files';
-import { imageOptimizationJpg, imageOptimizationPng, imageOptimizationFav } from './gulp/tasks/image-optimization';
+import cleanRoot from './gulp/tasks/_clean-root';
+import fileTransferAudio from './gulp/tasks/_transfer-audio';
+import fileTransferVideo from './gulp/tasks/_transfer-video';
+import fileTransferDocs from './gulp/tasks/_transfer-docs';
+import fileTransferFonts from './gulp/tasks/_transfer-fonts';
+import fileTransferPictures from './gulp/tasks/_transfer-pictures';
+import fileTransferOther from './gulp/tasks/_transfer-other';
+import changingMarkupHome from './gulp/tasks/_markup-home';
+import changingMarkupPages from './gulp/tasks/_markup-pages';
+import changingMarkupPreCodeHome from './gulp/tasks/_markup-precode-home';
+import changingMarkupPreCodePages from './gulp/tasks/_markup-precode-pages';
+import changingStylesBackend from './gulp/tasks/_changing-styles-backend';
+import changingStyles from './gulp/tasks/_changing-styles';
+import changingScriptsBackend from './gulp/tasks/_changing-scripts-backend';
+import changingScripts from './gulp/tasks/_changing-scripts';
+import svgOptimization from './gulp/tasks/_svg-optimization';
+import archivingFiles from './gulp/tasks/_archiving-files';
+import cacheFiles from './gulp/tasks/_cache-files';
+import rewriteFiles from './gulp/tasks/_rewrite-files';
+import watchFiles from './gulp/tasks/_watch-files';
+import { imageOptimizationJpg, imageOptimizationPng, imageOptimizationFav } from './gulp/tasks/_image-optimization';
 import { config } from './gulp/config';
 
 // |=============== INITIALIZE THE SETUP THAT SEPARATES THE ASSEMBLY ===============>
@@ -103,6 +105,22 @@ const buildBackend = series(
   imageOptimizationFav,
 );
 
+// |=============== CONFIGURING THE LAUNCH OF THE PROJECT BUILDER WITHOUT HTML MINIFICATION ===============>
+const buildPreCode = series(
+  fileTransferAudio,
+  fileTransferVideo,
+  fileTransferDocs,
+  fileTransferFonts,
+  fileTransferPictures,
+  fileTransferOther,
+  parallel(
+    changingMarkupPreCodeHome,
+    changingMarkupPreCodePages,
+    changingStyles,
+    changingScripts,
+  ),
+);
+
 // |=============== CONFIGURING THE LAUNCH OF THE PROJECT COLLECTOR WITH FILE CACHING ===============>
 const buildCache = series(
   cacheFiles,
@@ -110,6 +128,7 @@ const buildCache = series(
 );
 
 // |=============== SETTING UP THE LAUNCH OF THE PROJECT COLLECTOR ===============>
+exports.buildPreCode = buildPreCode;
 exports.buildCache = buildCache;
 exports.fullStart = fullStart;
 exports.fullStartServer = fullStartServer;

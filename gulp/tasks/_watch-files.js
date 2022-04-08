@@ -2,12 +2,12 @@
 // |=============== CONNECTING ALL MODULES ===============>
 import { watch } from 'gulp';
 import browserSync from 'browser-sync';
-import changingMarkupHome from './markup-home';
-import changingMarkupPages from './markup-pages';
-import changingStyles from './changing-styles';
-import changingScripts from './changing-scripts';
-import fileTransferPictures from './transfer-pictures';
-import svgOptimization from './svg-optimization';
+import changingMarkupHome from './_markup-home';
+import changingMarkupPages from './_markup-pages';
+import changingStyles from './_changing-styles';
+import changingScripts from './_changing-scripts';
+import fileTransferPictures from './_transfer-pictures';
+import svgOptimization from './_svg-optimization';
 import { config, projectFolder } from '../config';
 
 // |=============== CREATING A TASK AND ALSO SETTING UP A LOCAL SERVER ===============>

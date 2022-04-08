@@ -175,5 +175,21 @@
       "</span>"
     ],
     "description": "Creates the basic markup for the tooltip"
+  },
+  "img-visible": {
+    "scope": "html",
+    "prefix": "s-img-visible",
+    "body": [
+      "<img class=\"\" src=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" alt=\"\">"
+    ],
+    "description": "Creates an img tag with all the main attributes"
+  },
+  "img-hidden": {
+    "scope": "html",
+    "prefix": "s-img-hidden",
+    "body": [
+      "<img class=\"\" src=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" aria-hidden=\"true\" alt=\"\">"
+    ],
+    "description": "Creates an img tag hidden from screen readers with all the main attributes"
   }
 }
