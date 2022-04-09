@@ -17,7 +17,6 @@ const changingMarkupPreCodeHome = () => {
       useShortDoctype: true,
       removeComments: true,
       collapseBooleanAttributes: true,
-      removeRedundantAttributes: true,
     }))
     .pipe(dest(config.build.root))
     .pipe(browserSync.stream());

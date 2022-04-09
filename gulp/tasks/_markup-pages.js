@@ -19,7 +19,6 @@ const changingMarkupPages = () => {
       useShortDoctype: true,
       removeComments: true,
       collapseBooleanAttributes: true,
-      removeRedundantAttributes: true,
     })))
     .pipe(dest(config.build.html))
     .pipe(browserSync.stream());
