@@ -6,3 +6,11 @@
     position: relative;
   }
 }
+
+.body {
+  text-rendering: optimizeLegibility;
+
+  @media screen and (any-pointer: coarse) {
+    text-rendering: optimizeSpeed;
+  }
+}

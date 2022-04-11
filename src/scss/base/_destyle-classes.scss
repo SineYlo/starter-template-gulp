@@ -16,7 +16,7 @@
 // |NOTE| 1. Correct the line height in all browsers.
 // |NOTE| 2. Prevent adjustments of font size after orientation changes in iOS.
 // |NOTE| 3. Remove gray overlay on links for iOS.
-html {
+.html-dereset {
   line-height: 1.15; // 1
   -webkit-text-size-adjust: 100%; // 2
   -webkit-tap-highlight-color: transparent; // 3
@@ -24,38 +24,30 @@ html {
 
 // #---> SECTIONS
 // ==================================================
-// |NOTE| Remove the margin in all browsers.
-body {
-  margin: 0;
-}
-
 // |NOTE| Render the 'main' element consistently in IE.
-main {
+.main-dereset {
   display: block;
 }
 
 // #---> VERTICAL RHYTHM
 // ==================================================
-p,
-table,
-blockquote,
-address,
-pre,
-iframe,
-form,
-figure,
-dl {
-  margin: 0;
+// |NOTE| 1. body
+// |NOTE| 2. p
+// |NOTE| 3. table
+// |NOTE| 4. blockquote
+// |NOTE| 5. address
+// |NOTE| 6. pre
+// |NOTE| 7. iframe
+// |NOTE| 8. form
+// |NOTE| 9. figure
+// |NOTE| 10. dl
+.margin-dereset {
+  margin: 0; // 1 - 10
 }
 
 // #---> HEADINGS
 // ==================================================
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+.heading-dereset {
   margin: 0;
   font-weight: inherit;
   font-size: inherit;
@@ -63,8 +55,7 @@ h6 {
 
 // #---> LISTS (ENUMERATION)
 // ==================================================
-ul,
-ol {
+.list-enum-dereset {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -72,11 +63,11 @@ ol {
 
 // #---> LISTS (DEFINITION)
 // ==================================================
-dt {
+.dt-dereset {
   font-weight: bold;
 }
 
-dd {
+.dd-dereset {
   margin-left: 0;
 }
 
@@ -84,7 +75,7 @@ dd {
 // ==================================================
 // |NOTE| 1. Add the correct box sizing in Firefox.
 // |NOTE| 2. Show the overflow in Edge and IE.
-hr {
+.hr-dereset {
   clear: both;
   overflow: visible; // 2
   margin: 0;
@@ -96,79 +87,79 @@ hr {
 
 // |NOTE| 1. Correct the inheritance and scaling of font size in all browsers.
 // |NOTE| 2. Correct the odd 'em' font sizing in all browsers.
-pre {
+.pre-dereset {
   font-family: monospace, monospace; // 1
   font-size: inherit; // 2
 }
 
-address {
+.address-dereset {
   font-style: inherit;
 }
 
 // #---> TEXT-LEVEL SEMANTICS
 // ==================================================
 // |NOTE| Remove the gray background on active links in IE 10.
-a {
+.link-dereset {
   text-decoration: none;
   color: inherit;
   background-color: transparent;
 }
 
 // |NOTE| Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-abbr[title] {
+.abbr-dereset[title] {
   text-decoration: underline dotted;
 }
 
 // |NOTE| Add the correct font weight in Chrome, Edge, and Safari.
-b,
-strong {
+.b-dereset,
+.strong-dereset {
   font-weight: bolder;
 }
 
 // |NOTE| 1. Correct the inheritance and scaling of font size in all browsers.
 // |NOTE| 2. Correct the odd 'em' font sizing in all browsers.
-code,
-kbd,
-samp {
+.code-dereset,
+.kbd-dereset,
+.samp-dereset {
   font-family: monospace, monospace; // 1
   font-size: inherit; // 2
 }
 
 // |NOTE| Add the correct font size in all browsers.
-small {
+.small-dereset {
   font-size: 80%;
 }
 
 // |NOTE| Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
-sub,
-sup {
+.sub-dereset,
+.sup-dereset {
   position: relative;
   vertical-align: baseline;
   font-size: 75%;
   line-height: 0;
 }
 
-sub {
+.sub-dereset {
   bottom: -0.25em;
 }
 
-sup {
+.sup-dereset {
   top: -0.5em;
 }
 
 // #---> EMBEDDED CONTENT
 // ==================================================
 // |NOTE| Prevent vertical alignment issues.
-svg,
-img,
-embed,
-object,
-iframe {
+.svg-dereset,
+.img-dereset,
+.embed-dereset,
+.object-dereset,
+.iframe-dereset {
   vertical-align: bottom;
 }
 
 // |NOTE| These properties will proportionally change the image, and also will not allow it to be larger than its parent.
-img {
+.img-dereset {
   height: auto;
   max-width: 100%;
 }
@@ -176,11 +167,11 @@ img {
 // #---> FORMS
 // ==================================================
 // |NOTE| Reset form fields to make them styleable.
-button,
-input,
-optgroup,
-select,
-textarea {
+.button-dereset,
+.input-dereset,
+.optgroup-dereset,
+.select-dereset,
+.textarea-dereset {
   -webkit-appearance: none;
   appearance: none;
   vertical-align: middle;
@@ -206,14 +197,14 @@ textarea {
 }
 
 // |NOTE| Correct cursors for clickable elements.
-button,
+.button-dereset,
 [type="button"],
 [type="reset"],
 [type="submit"] {
   cursor: pointer;
 }
 
-button:disabled,
+.button-dereset:disabled,
 [type="button"]:disabled,
 [type="reset"]:disabled,
 [type="submit"]:disabled {
@@ -225,34 +216,34 @@ button:disabled,
   outline: auto;
 }
 
-select:disabled {
+.select-dereset:disabled {
   opacity: inherit;
 }
 
 // |NOTE| Remove padding.
-option {
+.option-dereset {
   padding: 0;
 }
 
 // |NOTE| Reset to invisible.
-fieldset {
+.fieldset-dereset {
   margin: 0;
   padding: 0;
   min-width: 0;
 }
 
-legend {
+.legend-dereset {
   padding: 0;
 }
 
 // |NOTE| Add the correct vertical alignment in Chrome, Firefox, and Opera.
-progress {
+.progress-dereset {
   vertical-align: baseline;
 }
 
 // |NOTE| 1. Remove the default vertical scrollbar in IE 10+.
 // |NOTE| 2. Returns the 'white-space' property for the textarea element in the Safari browser.
-textarea {
+.textarea-dereset {
   overflow: auto; // 1
   white-space: revert; // 2
 }
@@ -281,7 +272,7 @@ textarea {
 }
 
 // |NOTE| Clickable labels.
-label[for] {
+.label-dereset[for] {
   cursor: pointer;
 }
 
@@ -314,12 +305,12 @@ label[for] {
 // #---> INTERACTIVE
 // ==================================================
 // |NOTE| Add the correct display in Edge, IE 10+, and Firefox.
-details {
+.details-dereset {
   display: block;
 }
 
 // |NOTE| Add the correct display in all browsers.
-summary {
+.summary-dereset {
   display: list-item;
 }
 
@@ -330,22 +321,22 @@ summary {
 
 // #---> TABLE
 // ==================================================
-table {
+.table-dereset {
   border-color: inherit;
   border-collapse: collapse;
 }
 
-caption {
+.caption-dereset {
   text-align: left;
 }
 
-td,
-th {
+.td-dereset,
+.th-dereset {
   vertical-align: top;
   padding: 0;
 }
 
-th {
+.th-dereset {
   font-weight: bold;
   text-align: left;
 }

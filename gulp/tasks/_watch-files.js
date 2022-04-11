@@ -6,7 +6,7 @@ import changingMarkupHome from './_markup-home';
 import changingMarkupPages from './_markup-pages';
 import changingStyles from './_changing-styles';
 import changingScripts from './_changing-scripts';
-import fileTransferPictures from './_transfer-pictures';
+import fileTransferVector from './_transfer-vector';
 import svgOptimization from './_svg-optimization';
 import { config, projectFolder } from '../config';
 
@@ -28,7 +28,7 @@ watch(config.watch.htmlHome, changingMarkupHome);
 watch(config.watch.htmlPages, changingMarkupPages);
 watch(config.watch.styles, changingStyles);
 watch(config.watch.scripts, changingScripts);
-watch(config.watch.pictures, fileTransferPictures);
+watch(config.watch.pictures, fileTransferVector);
 watch(config.watch.sprites, svgOptimization);
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>

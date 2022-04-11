@@ -56,18 +56,17 @@ const config = {
     htmlHome: [
       `${sourceFolder}/index.html`,
       `${sourceFolder}/html/components/home/**/*.html`,
-      `${sourceFolder}/html/templates/**/*.html`,
+      `${sourceFolder}/html/global/**/*.html`,
     ],
     htmlPages: [
       `${sourceFolder}/html/pages/**/*.html`,
       `${sourceFolder}/html/components/pages/**/*.html`,
-      `${sourceFolder}/html/templates/**/*.html`,
+      `${sourceFolder}/html/global/**/*.html`,
     ],
     styles: `${sourceFolder}/scss/**/*.scss`,
     scripts: [
       `${sourceFolder}/js/components/**/*.js`,
       `${sourceFolder}/js/global/**/*.js`,
-      `${sourceFolder}/js/home/**/*.js`,
       `${sourceFolder}/js/pages/**/*.js`,
       `${sourceFolder}/js/main.js`,
     ],

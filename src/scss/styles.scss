@@ -1,41 +1,28 @@
-// |=============== CONNECTING RESET ===============>
+// |=============== CONNECTING FILES WITH BASIC SETTINGS ===============>
 @import "base/destyle";
-// |=============== CONNECTING VARIABLES ===============>
 @import "config/variables/variables";
-// |=============== CONNECTING MIXINS ===============>
 @import "layout/mixins/global/mixins";
-// |=============== CONNECTING FONTS ===============>
 @import "config/fonts/global/fonts";
-// |=============== CONNECTING UI ===============>
 @import "layout/ui/global/ui";
-// |=============== CONNECTING PLUGIN SETTINGS ===============>
 @import "config/settings/global/settings";
-// |=============== CONNECTING THE GLOBAL SITE HEADER ===============>
+
+
+// |=============== CONNECTING THE COMPONENTS ===============>
 @import "components/global/header";
-// |----->
-// |=============== CONNECTING THE SECTION | ===============>
-// |=============== CONNECTING THE SECTION | ===============>
-// |=============== CONNECTING THE SECTION | ===============>
-// |----->
-// |=============== CONNECTING THE GLOBAL FOOTER SITE ===============>
 @import "components/global/footer";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 1920 ===============>
+
+
+// |=============== CONNECTING THE MAIN MEDIA-QUERIES FOR ADAPTIVE ===============>
 @import "media/home/query-1920";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 1720 ===============>
 @import "media/home/query-1720";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 1520 ===============>
 @import "media/home/query-1520";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 1520 ===============>
 @import "media/home/query-1320";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 1120 ===============>
 @import "media/home/query-1120";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 920 ===============>
 @import "media/home/query-920";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 720 ===============>
 @import "media/home/query-720";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 572 ===============>
 @import "media/home/query-572";
-// |=============== CONNECTING MEDIA-QUERIES FOR BREAKPOINT - 320 ===============>
 @import "media/home/query-320";
-// |=============== CONNECTING A GLOBAL MEDIA-QUERIES TO DISABLE ANIMATIONS AND EFFECTS ===============>
+
+
+// |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>
 @import "media/global/query-reduced";
