@@ -8,6 +8,7 @@ import changingStyles from './_changing-styles';
 import changingScripts from './_changing-scripts';
 import fileTransferVector from './_transfer-vector';
 import svgOptimization from './_svg-optimization';
+import { imageOptimizationJpg, imageOptimizationPng } from './_image-optimization';
 import { config, projectFolder } from '../config';
 
 // |=============== CREATING A TASK AND ALSO SETTING UP A LOCAL SERVER ===============>
@@ -28,8 +29,10 @@ watch(config.watch.htmlHome, changingMarkupHome);
 watch(config.watch.htmlPages, changingMarkupPages);
 watch(config.watch.styles, changingStyles);
 watch(config.watch.scripts, changingScripts);
-watch(config.watch.pictures, fileTransferVector);
+watch(config.watch.vector, fileTransferVector);
 watch(config.watch.sprites, svgOptimization);
+watch(config.watch.picturesJpg, imageOptimizationJpg);
+watch(config.watch.picturesPng, imageOptimizationPng);
 
 // |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
 export default watchFiles;

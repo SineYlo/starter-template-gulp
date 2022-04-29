@@ -13,14 +13,14 @@ import gulpIf from 'gulp-if';
 import sourcemaps from 'gulp-sourcemaps';
 import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
-import { sourceFolder, config } from '../config';
+import { config } from '../config';
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING SCRIPT FILES ===============>
 const changingScripts = (done) => {
   const files = [
-    `${sourceFolder}/js/main.js`,
-    ...glob.sync(`${sourceFolder}/js/modules/**/*.js`),
-    ...glob.sync(`${sourceFolder}/js/pages/**/*.js`),
+    config.source.scriptsHome,
+    ...glob.sync(config.source.scriptsModules),
+    ...glob.sync(config.source.scriptsPages),
   ];
   const taskScripts = files.map((file) => {
     return (

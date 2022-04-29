@@ -26,14 +26,12 @@ const config = {
     styles: [
       `${sourceFolder}/scss/styles.scss`,
       `${sourceFolder}/scss/pages/**/*.scss`,
-      `${sourceFolder}/scss/theme/**/*.scss`,
       `${sourceFolder}/scss/modules/**/*.scss`,
     ],
-    scripts: [
-      `${sourceFolder}/js/main.js`,
-      `${sourceFolder}/js/pages/**/*.js`,
-    ],
-    sprites: `${sourceFolder}/img/global/sprites/*.svg`,
+    scriptsHome: `${sourceFolder}/js/main.js`,
+    scriptsModules: `${sourceFolder}/js/modules/**/*.js`,
+    scriptsPages: `${sourceFolder}/js/pages/**/*.js`,
+    sprites: `${sourceFolder}/img/global/sprites/**/*.svg`,
     cache: `${projectFolder}/**/*.{css,js,woff,woff2,png,jpg,jpeg,webp,avif,gif,svg}`,
     cacheHtml: `${projectFolder}/index.html`,
     cachePages: `${projectFolder}/pages/**/*.html`,
@@ -64,14 +62,17 @@ const config = {
       `${sourceFolder}/html/global/**/*.html`,
     ],
     styles: `${sourceFolder}/scss/**/*.scss`,
-    scripts: [
-      `${sourceFolder}/js/components/**/*.js`,
-      `${sourceFolder}/js/global/**/*.js`,
-      `${sourceFolder}/js/pages/**/*.js`,
-      `${sourceFolder}/js/main.js`,
+    scripts: `${sourceFolder}/js/**/*.js`,
+    vector: `${sourceFolder}/img/global/svg/**/*.svg`,
+    sprites: `${sourceFolder}/img/global/sprites/**/*.svg`,
+    picturesJpg: [
+      `${sourceFolder}/img/home/**/*.{jpg,jpeg}`,
+      `${sourceFolder}/img/pages/**/*.{jpg,jpeg}`,
     ],
-    pictures: `${sourceFolder}/img/**/*.{jpg,jpeg,png,webp,avif,gif}`,
-    sprites: `${sourceFolder}/img/global/sprites/*.svg`,
+    picturesPng: [
+      `${sourceFolder}/img/home/**/*.png`,
+      `${sourceFolder}/img/pages/**/*.png`,
+    ],
   },
   setEnv() {
     this.isProd = process.argv.includes('--prod');

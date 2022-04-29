@@ -1,0 +1,153 @@
+:root {
+  // |=============== CONTAINER ===============>
+  // |CM| Width and indents of the base container
+  --content-width: 0;
+  --container-offset: 0;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  // |CM| Width and indents of the fluid container
+  --content-fluid-width: 0;
+  --container-fluid-offset: 0;
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-fluid-offset) * 2));
+
+  // |=============== FONT-FAMILY ===============>
+  // |CM| Main font family
+  --first-font-family: null;
+  // |CM| Additional font families
+  --second-font-family: null;
+  --third-font-family: null;
+  --fourth-font-family: null;
+
+  // |=============== COLOR ===============>
+  // |CM| Change favorite color (Color name - )
+  --hue-color: null;
+  // |CM| HSL color mode
+  --first-color-mode: hsl(var(--hue-color));
+  --second-color-mode: hsl(var(--hue-color));
+  --third-color-mode: hsl(var(--hue-color));
+  --fourth-color-mode: hsl(var(--hue-color));
+  --fifth-color-mode: hsl(var(--hue-color));
+  --sixth-color-mode: hsl(var(--hue-color));
+  --seventh-color-mode: hsl(var(--hue-color));
+  --eighth-color-mode: hsl(var(--hue-color));
+  --ninth-color-mode: hsl(var(--hue-color));
+  --tenth-color-mode: hsl(var(--hue-color));
+  // |CM| Other colors
+  --first-other-color: null;
+  --second-other-color: null;
+  --third-other-color: null;
+  --fourth-other-color: null;
+  --fifth-other-color: null;
+  --sixth-other-color: null;
+  --seventh-other-color: null;
+  --eighth-other-color: null;
+  --ninth-other-color: null;
+  --tenth-other-color: null;
+  --eleventh-other-color: null;
+  --twelfth-other-color: null;
+  --thirteenth-other-color: null;
+  --fourteenth-other-color: null;
+  --fifteenth-other-color: null;
+  --sixteenth-other-color: null;
+  --seventeenth-other-color: null;
+  --eighteenth-other-color: null;
+  --nineteenth-other-color: null;
+  --twentieth-other-color: null;
+  --twenty-first-other-color: null;
+  --twenty-second-other-color: null;
+  --twenty-third-other-color: null;
+  --twenty-fourth-other-color: null;
+  --twenty-fifth-other-color: null;
+  --twenty-sixth-other-color: null;
+  --twenty-seventh-other-color: null;
+  --twenty-eighth-other-color: null;
+  --twenty-ninth-other-color: null;
+  --thirtieth-other-color: null;
+
+  // |=============== FONT-WEIGHT ===============>
+  // |CM| Different font weight options
+  --first-font-weight: null;
+  --second-font-weight: null;
+  --third-font-weight: null;
+  --fourth-font-weight: null;
+  --fifth-font-weight: null;
+  --sixth-font-weight: null;
+  --seventh-font-weight: null;
+  --eighth-font-weight: null;
+  --ninth-font-weight: null;
+  --tenth-font-weight: null;
+
+  // |=============== FONT-SIZE ===============>
+  // |CM| Base font-size ( 0.5rem = 8px, 1rem = 16px, 1.5rem = 24px ...)
+  --text-size-base: null;
+  // |CM| Different font size options
+  --text-size-min-tiny: calc(var(--text-size-base) - null);
+  --text-size-min-small: calc(var(--text-size-base) - null);
+  --text-size-min-medium: calc(var(--text-size-base) - null);
+  --text-size-min-big: calc(var(--text-size-base) - null);
+  --text-size-min-large: calc(var(--text-size-base) - null);
+  --text-size-min-huge: calc(var(--text-size-base) - null);
+  --text-size-tiny: calc(var(--text-size-base) - null);
+  --text-size-small: calc(var(--text-size-base) - null);
+  --text-size-medium: calc(var(--text-size-base) + null);
+  --text-size-big: calc(var(--text-size-base) + null);
+  --text-size-large: calc(var(--text-size-base) + null);
+  --text-size-huge: calc(var(--text-size-base) + null);
+  --text-size-max-tiny: calc(var(--text-size-base) + null);
+  --text-size-max-small: calc(var(--text-size-base) + null);
+  --text-size-max-medium: calc(var(--text-size-base) + null);
+  --text-size-max-big: calc(var(--text-size-base) + null);
+  --text-size-max-large: calc(var(--text-size-base) + null);
+  --text-size-max-huge: calc(var(--text-size-base) + null);
+
+  // |=============== LINE-HEIGHT ===============>
+  // |CM| Various line spacing options
+  --first-lh: null;
+  --second-lh: null;
+  --third-lh: null;
+  --fourth-lh: null;
+  --fifth-lh: null;
+  --sixth-lh: null;
+  --seventh-lh: null;
+  --eighth-lh: null;
+  --ninth-lh: null;
+  --tenth-lh: null;
+
+  // |=============== BORDER-RADIUS ===============>
+  // |CM| Various options for the border radius
+  --first-br: null;
+  --second-br: null;
+  --third-br: null;
+  --fourth-br: null;
+  --fifth-br: null;
+  --sixth-br: null;
+  --seventh-br: null;
+  --eighth-br: null;
+  --ninth-br: null;
+  --tenth-br: null;
+
+  // |=============== GAP ===============>
+  // |CM| Different indentation options between elements
+  --first-gap: null;
+  --second-gap: null;
+  --third-gap: null;
+  --fourth-gap: null;
+  --fifth-gap: null;
+  --sixth-gap: null;
+  --seventh-gap: null;
+  --eighth-gap: null;
+  --ninth-gap: null;
+  --tenth-gap: null;
+
+  // |=============== TRANSITION ===============>
+  // |CM| Duration of effects (most effective 0.2 to 0.4s)
+  --fast-transition-duration: 0.2s;
+  --medium-transition-duration: 0.3s;
+  --slow-transition-duration: 0.4s;
+
+  // |=============== ANIMATIONS ===============>
+  // |CM| Duration of animations (most effective 0.2 to 0.5s)
+  --fast-animation-duration: 0.2s;
+  --medium-animation-duration: 0.3s;
+  --slow-animation-duration: 0.4s;
+  --very-slow-animation-duration: 0.5s;
+}

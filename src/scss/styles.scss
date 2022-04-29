@@ -1,16 +1,13 @@
 // |=============== CONNECTING FILES WITH BASIC SETTINGS ===============>
 @import "base/destyle";
-@import "config/variables/variables";
+@import "config/variables/global/variables";
 @import "layout/mixins/global/mixins";
 @import "config/fonts/global/fonts";
 @import "layout/ui/global/ui";
-@import "config/settings/global/settings";
-
 
 // |=============== CONNECTING THE COMPONENTS ===============>
 @import "components/global/header";
 @import "components/global/footer";
-
 
 // |=============== CONNECTING THE MAIN MEDIA-QUERIES FOR ADAPTIVE ===============>
 @import "media/home/query-1920";
@@ -22,7 +19,6 @@
 @import "media/home/query-720";
 @import "media/home/query-572";
 @import "media/home/query-320";
-
 
 // |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>
 @import "media/global/query-reduced";

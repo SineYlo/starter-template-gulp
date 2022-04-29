@@ -1,6 +1,6 @@
 // |=============== SETTING UP COMMON MIXINS FOR DIFFERENT TASKS ===============>
 // |CM| Used to hide an element without breaking accessibility
-@mixin visuallyHidden {
+@mixin visually-hidden {
   position: absolute;
   -webkit-clip-path: inset(100%);
   clip-path: inset(100%);
@@ -15,13 +15,13 @@
 }
 
 // |CM| Hiding the element from the screen reader
-@mixin basicHidden {
+@mixin basic-hidden {
   opacity: 0;
   visibility: hidden;
 }
 
 // |CM| Hiding scrolling in the browser when the window is open
-@mixin scrollHidden {
+@mixin scroll-hidden {
   position: fixed;
   left: 0;
   top: 0;
@@ -34,7 +34,7 @@
 }
 
 // |CM| Knocks the block out of the container
-@mixin knockBlock {
+@mixin knock-block {
   position: relative;
   left: 50%;
   right: 50%;
@@ -44,7 +44,7 @@
 }
 
 // |CM| Used to trim part of a single line of text
-@mixin oneLineOverflow {
+@mixin one-line-overflow {
   overflow: hidden;
   white-space: nowrap;
   -o-text-overflow: ellipsis;
@@ -52,17 +52,17 @@
 }
 
 // |CM| Used to cut off a portion of multiline text
-@mixin multilineOverflow($numberOfLines: 2) {
+@mixin multiline-overflow($number-of-lines: 2) {
   display: -webkit-box;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -moz-box-orient: vertical;
   box-orient: vertical;
-  -webkit-line-clamp: #{$numberOfLines};
-  line-clamp: #{$numberOfLines};
+  -webkit-line-clamp: #{$number-of-lines};
+  line-clamp: #{$number-of-lines};
 }
 
 // |CM| Alignment of the block extending beyond the container
-@mixin blockBeyond($content-width: $content-width, $container-offset: $container-offset) {
+@mixin block-beyond($content-width: var(--content-width), $container-offset: var(--container-offset)) {
   padding-left: max(#{$container-offset}, (100% - #{$content-width}) / 2);
 }

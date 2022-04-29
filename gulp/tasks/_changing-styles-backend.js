@@ -1,8 +1,8 @@
 /* eslint-disable arrow-body-style */
 // |=============== CONNECTING ALL MODULES ===============>
 import { src, dest } from 'gulp';
+import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
-import baseSass from 'sass';
 import postcss from 'gulp-postcss';
 import postcssRebeccapurple from 'postcss-color-rebeccapurple';
 import postcssLabFunction from 'postcss-lab-function';
@@ -11,12 +11,13 @@ import postcssClipPath from 'postcss-clip-path-polyfill';
 import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
+import groupMedia from 'gulp-group-css-media-queries';
 import rename from 'gulp-rename';
 import browserSync from 'browser-sync';
 import { config } from '../config';
 
 // |=============== COMBINING TWO MODULES ===============>
-const sass = gulpSass(baseSass);
+const sass = gulpSass(dartSass);
 
 // |=============== SETTING UP THE TASK OF OPTIMIZING STYLE FILES ===============>
 const changingStylesBackend = () => {
@@ -59,6 +60,7 @@ const changingStylesBackend = () => {
       grid: 'autoplace',
       overrideBrowserslist: ['last 5 versions'],
     }))
+    .pipe(groupMedia())
     .pipe(rename({
       dirname: '',
     }))

@@ -5,3 +5,10 @@
     @content;
   }
 }
+
+// |CM| Checking whether the device is touch-sensitive
+@mixin pointer {
+  @media screen and (any-pointer: coarse) {
+    @content;
+  }
+}
