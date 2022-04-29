@@ -44,3 +44,20 @@ gh repo clone SineYlo/starter-template-gulp
 10. Осталось прописать команду - `npm run root:clean` и можно в целом начинать работать со сборкой.
 
 ## <a name="commands"></a> 📋 Команды для запуска
+
+1. `npm run root:clean` -
+2. `npm run image:svg` - 
+3. `npm run image:jpg` -
+4. `npm run image:png` -
+5. `npm run image:fav` -
+6. `npm run build:dev` -
+7. `npm run build:prod` -
+8. `npm run build:code` -
+9. `npm run build:watch` -
+10. `npm run build:full-start` -
+11. `npm run build:full-server` -
+12. `npm run build:archive` -
+13. `npm run build:backend` -
+14. `npm run build:cache` -
+15. `npm run lint:html` -
+16. `npm run lint:editorconfig` -
