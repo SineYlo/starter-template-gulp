@@ -10,6 +10,7 @@
     "image:jpg": "gulp imageOptimizationJpg",
     "image:png": "gulp imageOptimizationPng",
     "image:fav": "gulp imageOptimizationFav",
+    "image:all": "gulp imageOptimizationAll",
     "build:dev": "gulp build",
     "build:prod": "gulp build --prod",
     "build:code": "gulp buildPreCode --prod",

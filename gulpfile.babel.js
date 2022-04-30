@@ -84,6 +84,14 @@ const fullStartServer = series(
   watchFiles,
 );
 
+// |=============== STARTS OPTIMIZATION OF ALL IMAGES COMPLETELY ===============>
+const imageOptimizationAll = series(
+  svgOptimization,
+  imageOptimizationJpg,
+  imageOptimizationPng,
+  imageOptimizationFav,
+);
+
 // |=============== SETTING UP THE LAUNCH OF THE PROJECT COLLECTOR WITHOUT A SERVER ===============>
 const buildBackend = series(
   cleanRoot,
@@ -133,5 +141,6 @@ exports.buildCache = buildCache;
 exports.fullStart = fullStart;
 exports.fullStartServer = fullStartServer;
 exports.buildBackend = buildBackend;
+exports.imageOptimizationAll = imageOptimizationAll;
 exports.build = build;
 exports.watch = watch;
