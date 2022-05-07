@@ -54,12 +54,12 @@ const config = {
     htmlHome: [
       `${sourceFolder}/index.html`,
       `${sourceFolder}/html/components/home/**/*.html`,
-      `${sourceFolder}/html/global/**/*.html`,
+      `${sourceFolder}/html/components/global/**/*.html`,
     ],
     htmlPages: [
       `${sourceFolder}/html/pages/**/*.html`,
       `${sourceFolder}/html/components/pages/**/*.html`,
-      `${sourceFolder}/html/global/**/*.html`,
+      `${sourceFolder}/html/components/global/**/*.html`,
     ],
     styles: `${sourceFolder}/scss/**/*.scss`,
     scripts: `${sourceFolder}/js/**/*.js`,

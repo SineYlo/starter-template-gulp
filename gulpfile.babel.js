@@ -87,6 +87,7 @@ const fullStartServer = series(
 // |=============== STARTS OPTIMIZATION OF ALL IMAGES COMPLETELY ===============>
 const imageOptimizationAll = series(
   svgOptimization,
+  fileTransferVector,
   imageOptimizationJpg,
   imageOptimizationPng,
   imageOptimizationFav,
