@@ -74,7 +74,7 @@
     "gulp-uglify-es": "^3.0.0",
     "gulp-zip": "^5.1.0",
     "htmlhint": "^1.1.4",
-    "husky": "^7.0.4",
+    "husky": "^8.0.1",
     "lint-staged": "^12.4.1",
     "node-w3c-validator": "^2.0.2",
     "postcss": "^8.4.13",
