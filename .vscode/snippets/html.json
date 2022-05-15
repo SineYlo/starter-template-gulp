@@ -103,11 +103,8 @@
     "prefix": "s-form",
     "body": [
       "<form class=\"\" name=\"\" action=\"\" method=\"\" enctype=\"\">",
-      "  <div class=\"\">",
-      "    <label class=\"\" for=\"\"></label>",
-      "    <input class=\"\" id=\"\" type=\"\" name=\"\">",
-      "  </div>",
-      "  <button class=\"\"></button>",
+      "  <input class=\"\" type=\"\" name=\"\" placeholder=\"\" translate=\"\" autocapitalize=\"\" autocorrect=\"\" autocomplete=\"\" spellcheck=\"\" enterkeyhint=\"\" aria-label=\"\" required>",
+      "  <button class=\"\" type=\"submit\"></button>",
       "</form>"
     ],
     "description": "Creates a code snippet for the form"
@@ -116,9 +113,12 @@
     "scope": "html",
     "prefix": "s-modal",
     "body": [
-      "<div class=\"modals\">",
-      "  <div class=\"modals__overlay\">",
-      "    <div class=\"modals__window\" role=\"dialog\" aria-modal=\"true\"></div>",
+      "<div class=\"dialog-wrapper\" id=\"dialog-wrapper\" role=\"dialog\" tabindex=\"-1\" aria-labelledby=\"dialog-title\" aria-describedby=\"dialog-description\" aria-modal=\"true\" aria-hidden=\"true\">",
+      "  <div class=\"dialog-wrapper__overlay\"></div>",
+      "  <div class=\"content-dialog dialog-wrapper__content\" role=\"document\">",
+      "    <button class=\"content-dialog__close\" type=\"button\" aria-label=\"Close this dialog window\"></button>",
+      "    <h2 class=\"content-dialog__title\" id=\"dialog-title\"></h2>",
+      "    <p class=\"content-dialog__description\" id=\"dialog-description\"></p>",
       "  </div>",
       "</div>"
     ],
@@ -169,7 +169,7 @@
       "<span class=\"\">",
       "  <button class=\"\" aria-describedby=\"$1\">$2</button>",
       "  <span class=\"\" id=\"$1\" role=\"tooltip\">",
-      "    <span class=\"sr-only\">Тултип: </span>",
+      "    <span class=\"visually-hidden\">Тултип: </span>",
       "    $3",
       "  </span>",
       "</span>"
@@ -191,5 +191,53 @@
       "<img class=\"\" src=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" aria-hidden=\"true\" alt=\"\">"
     ],
     "description": "Creates an img tag hidden from screen readers with all the main attributes"
+  },
+  "field-search": {
+    "scope": "html",
+    "prefix": "s-field-search",
+    "body": [
+      "<input class=\"\" type=\"search\" name=\"\" placeholder=\"\" translate=\"no\" autocapitalize=\"off\" autocorrect=\"false\" autocomplete=\"off\" spellcheck=\"false\" enterkeyhint=\"search\" aria-label=\"\" required>"
+    ],
+    "description": "Creates a ready-made search field with already configured attributes"
+  },
+  "field-name": {
+    "scope": "html",
+    "prefix": "s-field-name",
+    "body": [
+      "<input class=\"\" type=\"text\" name=\"\" placeholder=\"\" translate=\"no\" autocapitalize=\"on\" autocorrect=\"false\" autocomplete=\"name\" spellcheck=\"false\" enterkeyhint=\"\" aria-label=\"\" required>"
+    ],
+    "description": "Creates a ready-made name field with already configured attributes"
+  },
+  "field-phone": {
+    "scope": "html",
+    "prefix": "s-field-phone",
+    "body": [
+      "<input class=\"\" type=\"tel\" name=\"\" placeholder=\"\" translate=\"no\" autocapitalize=\"off\" autocorrect=\"false\" autocomplete=\"tel\" spellcheck=\"false\" enterkeyhint=\"\" aria-label=\"\" required>"
+    ],
+    "description": "Creates a ready-made phone field with already configured attributes"
+  },
+  "field-email": {
+    "scope": "html",
+    "prefix": "s-field-email",
+    "body": [
+      "<input class=\"\" type=\"email\" name=\"\" placeholder=\"\" translate=\"no\" autocapitalize=\"off\" autocorrect=\"false\" autocomplete=\"email\" spellcheck=\"false\" enterkeyhint=\"\" aria-label=\"\" required>"
+    ],
+    "description": "Creates a ready-made email field with already configured attributes"
+  },
+  "field-password": {
+    "scope": "html",
+    "prefix": "s-field-password",
+    "body": [
+      "<input class=\"\" type=\"password\" name=\"\" placeholder=\"\" translate=\"no\" autocapitalize=\"off\" autocorrect=\"false\" autocomplete=\"new-password\" spellcheck=\"false\" enterkeyhint=\"\" aria-label=\"\" required>"
+    ],
+    "description": "Creates a ready-made password field with already configured attributes"
+  },
+  "field-message": {
+    "scope": "html",
+    "prefix": "s-field-message",
+    "body": [
+      "<textarea class=\"\" name=\"\" placeholder=\"\" translate=\"no\" autocapitalize=\"on\" autocorrect=\"true\" autocomplete=\"off\" spellcheck=\"true\" enterkeyhint=\"\" aria-label=\"\" required></textarea>"
+    ],
+    "description": "Creates a ready-made message field with already configured attributes"
   }
 }

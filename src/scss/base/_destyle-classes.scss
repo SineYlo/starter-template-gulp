@@ -1,5 +1,5 @@
 // ! destyle.css v3.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css
-// ! Some improvements made by SineYlo v3.1.1 | MIT License | https://github.com/SineYlo/destyle
+// ! Some improvements made by SineYlo v3.2.0 | MIT License | https://github.com/SineYlo/destyle
 
 // #---> RESET BOX-MODEL AND SET BORDERS
 // ==================================================
@@ -106,8 +106,10 @@
 }
 
 // |NOTE| Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
-.abbr-dereset[title] {
-  text-decoration: underline dotted;
+.abbr-dereset {
+  &[title] {
+    text-decoration: underline dotted;
+  }
 }
 
 // |NOTE| Add the correct font weight in Chrome, Edge, and Safari.
@@ -185,30 +187,53 @@
   background: transparent;
 }
 
-// |NOTE| Reset radio and checkbox appearance to preserve their look in iOS.
-[type="checkbox"] {
-  -webkit-appearance: checkbox;
-  appearance: checkbox;
-}
+.input-dereset {
+  // |NOTE| Reset radio and checkbox appearance to preserve their look in iOS.
+  &[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    appearance: checkbox;
+  }
 
-[type="radio"] {
-  -webkit-appearance: radio;
-  appearance: radio;
+  &[type="radio"] {
+    -webkit-appearance: radio;
+    appearance: radio;
+  }
+
+  // |NOTE| 1. Correct the cursor style of increment and decrement buttons in Chrome.
+  // |NOTE| 2. Shows up/down arrows for a field with the number type in WebKit-based browsers.
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    height: auto; // 1
+    opacity: 1; // 2
+  }
+
+  // |NOTE| Removes all default styles from the search field in browsers on the WebKit engine.
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
+
+  // |NOTE| Correct cursors for clickable elements.
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
 }
 
 // |NOTE| Correct cursors for clickable elements.
-.button-dereset,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+.button-dereset {
   cursor: pointer;
-}
 
-.button-dereset:disabled,
-[type="button"]:disabled,
-[type="reset"]:disabled,
-[type="submit"]:disabled {
-  cursor: default;
+  &:disabled {
+    cursor: default;
+  }
 }
 
 // |NOTE| Improve outlines for Firefox and unify style with input elements & buttons.
@@ -216,8 +241,10 @@
   outline: auto;
 }
 
-.select-dereset:disabled {
-  opacity: inherit;
+.select-dereset {
+  &:disabled {
+    opacity: inherit;
+  }
 }
 
 // |NOTE| Remove padding.
@@ -248,22 +275,6 @@
   white-space: revert; // 2
 }
 
-// |NOTE| 1. Correct the cursor style of increment and decrement buttons in Chrome.
-// |NOTE| 2. Shows up/down arrows for a field with the number type in WebKit-based browsers.
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; // 1
-  opacity: 1; // 2
-}
-
-// |NOTE| Removes all default styles from the search field in browsers on the WebKit engine.
-[type="search"]::-webkit-search-decoration,
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-results-button,
-[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-}
-
 // |NOTE| 1. Correct the inability to style clickable types in iOS and Safari.
 // |NOTE| 2. Change font properties to 'inherit' in Safari.
 ::-webkit-file-upload-button {
@@ -272,8 +283,10 @@
 }
 
 // |NOTE| Clickable labels.
-.label-dereset[for] {
-  cursor: pointer;
+.label-dereset {
+  &[for] {
+    cursor: pointer;
+  }
 }
 
 // |NOTE| Fix placeholder color in Firefox.

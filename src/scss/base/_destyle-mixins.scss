@@ -1,5 +1,5 @@
 // ! destyle.css v3.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css
-// ! Some improvements made by SineYlo v3.1.1 | MIT License | https://github.com/SineYlo/destyle
+// ! Some improvements made by SineYlo v3.2.0 | MIT License | https://github.com/SineYlo/destyle
 
 // #---> RESET BOX-MODEL AND SET BORDERS
 // ==================================================
@@ -209,7 +209,7 @@
   }
 }
 
-@mixin input-dereset {
+@mixin field-dereset {
   -webkit-appearance: none;
   appearance: none;
   vertical-align: middle;
@@ -224,27 +224,78 @@
 }
 
 // |NOTE| Reset radio and checkbox appearance to preserve their look in iOS.
-[type="checkbox"] {
-  -webkit-appearance: checkbox;
-  appearance: checkbox;
+@mixin field-checkbox-dereset {
+  &[type="checkbox"] {
+    -webkit-appearance: checkbox;
+    appearance: checkbox;
+  }
 }
 
-[type="radio"] {
-  -webkit-appearance: radio;
-  appearance: radio;
+@mixin field-radio-dereset {
+  &[type="radio"] {
+    -webkit-appearance: radio;
+    appearance: radio;
+  }
+}
+
+// |NOTE| 1. Correct the cursor style of increment and decrement buttons in Chrome.
+// |NOTE| 2. Shows up/down arrows for a field with the number type in WebKit-based browsers.
+@mixin field-number-dereset {
+  &[type="number"]::-webkit-inner-spin-button,
+  &[type="number"]::-webkit-outer-spin-button {
+    height: auto; // 1
+    opacity: 1; // 2
+  }
+}
+
+// |NOTE| Removes all default styles from the search field in browsers on the WebKit engine.
+@mixin field-search-dereset {
+  &[type="search"]::-webkit-search-decoration,
+  &[type="search"]::-webkit-search-cancel-button,
+  &[type="search"]::-webkit-search-results-button,
+  &[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+  }
 }
 
 // |NOTE| Correct cursors for clickable elements.
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  cursor: pointer;
+@mixin field-clickable-dereset {
+  &[type="button"],
+  &[type="reset"],
+  &[type="submit"] {
+    cursor: pointer;
+
+    &:disabled {
+      cursor: default;
+    }
+  }
 }
 
-[type="button"]:disabled,
-[type="reset"]:disabled,
-[type="submit"]:disabled {
-  cursor: default;
+// |NOTE| Use it if the textarea matches the input fields by styles (by appearance)
+// |NOTE| 1. Remove the default vertical scrollbar in IE 10+.
+// |NOTE| 2. Returns the 'white-space' property for the textarea element in the Safari browser.
+@mixin field-textarea-dereset {
+  overflow: auto; // 1
+  white-space: revert; // 2
+}
+
+// |NOTE| Use it if the textarea is completely different in styles from the input fields (by appearance)
+// |NOTE| 1. Remove the default vertical scrollbar in IE 10+.
+// |NOTE| 2. Returns the 'white-space' property for the textarea element in the Safari browser.
+@mixin textarea-dereset {
+  -webkit-appearance: none;
+  appearance: none;
+  vertical-align: middle;
+  overflow: auto; // 1
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  font: inherit;
+  white-space: revert; // 2
+  text-align: inherit;
+  text-transform: inherit;
+  color: inherit;
+  background: transparent;
 }
 
 @mixin optgroup-dereset {
@@ -279,29 +330,6 @@
   }
 }
 
-// |NOTE| 1. Remove the default vertical scrollbar in IE 10+.
-// |NOTE| 2. Returns the 'white-space' property for the textarea element in the Safari browser.
-@mixin textarea-dereset {
-  -webkit-appearance: none;
-  appearance: none;
-  vertical-align: middle;
-  overflow: auto; // 1
-  margin: 0;
-  border-radius: 0;
-  padding: 0;
-  font: inherit;
-  white-space: revert; // 2
-  text-align: inherit;
-  text-transform: inherit;
-  color: inherit;
-  background: transparent;
-}
-
-// |NOTE| Improve outlines for Firefox and unify style with input elements & buttons.
-:-moz-focusring {
-  outline: auto;
-}
-
 // |NOTE| Remove padding.
 @mixin option-dereset {
   padding: 0;
@@ -323,20 +351,9 @@
   vertical-align: baseline;
 }
 
-// |NOTE| 1. Correct the cursor style of increment and decrement buttons in Chrome.
-// |NOTE| 2. Shows up/down arrows for a field with the number type in WebKit-based browsers.
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-  height: auto; // 1
-  opacity: 1; // 2
-}
-
-// |NOTE| Removes all default styles from the search field in browsers on the WebKit engine.
-[type="search"]::-webkit-search-decoration,
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-results-button,
-[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
+// |NOTE| Improve outlines for Firefox and unify style with input elements & buttons.
+:-moz-focusring {
+  outline: auto;
 }
 
 // |NOTE| 1. Correct the inability to style clickable types in iOS and Safari.
