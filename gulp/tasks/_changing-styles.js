@@ -1,5 +1,4 @@
 /* eslint-disable arrow-body-style */
-// |=============== CONNECTING ALL MODULES ===============>
 import { src, dest } from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -12,17 +11,14 @@ import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
-import groupMedia from 'gulp-group-css-media-queries';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
 import { config } from '../config';
 
-// |=============== COMBINING TWO MODULES ===============>
 const sass = gulpSass(dartSass);
 
-// |=============== SETTING UP THE TASK OF OPTIMIZING STYLE FILES ===============>
 const changingStyles = () => {
   return src(config.source.styles)
     .pipe(gulpIf(config.isDev, sourcemaps.init({
@@ -65,7 +61,6 @@ const changingStyles = () => {
     .pipe(gulpIf(config.isProd, autoprefixer({
       overrideBrowserslist: ['last 5 versions'],
     })))
-    .pipe(groupMedia())
     .pipe(rename({
       dirname: '',
     }))
@@ -82,5 +77,4 @@ const changingStyles = () => {
     .pipe(browserSync.stream());
 };
 
-// |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
 export default changingStyles;

@@ -1,5 +1,4 @@
 /* eslint-disable arrow-body-style */
-// |=============== CONNECTING ALL MODULES ===============>
 import { dest } from 'gulp';
 import rename from 'gulp-rename';
 import browserify from 'browserify';
@@ -11,7 +10,6 @@ import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
 import { config } from '../config';
 
-// |=============== SETTING UP THE TASK OF OPTIMIZING SCRIPT FILES ===============>
 const changingScriptsBackend = (done) => {
   const files = [
     config.source.scriptsHome,
@@ -46,5 +44,4 @@ const changingScriptsBackend = (done) => {
   return eventStream.merge(taskScripts).on('end', done);
 };
 
-// |=============== EXPORTING THE MAIN VARIABLE FOR USE ===============>
 export default changingScriptsBackend;

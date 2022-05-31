@@ -1,8 +1,6 @@
-// |=============== DECLARING VARIABLES FOR THE MAIN PROJECT FOLDERS ===============>
 const projectFolder = 'dist';
 const sourceFolder = 'src';
 
-// |=============== SETTING UP THE MAIN PATHS TO ALL FOLDERS ===============>
 const config = {
   source: {
     audio: `${sourceFolder}/assets/audio/**/*.{mp3,ogg,wav,flac}`,
@@ -17,18 +15,18 @@ const config = {
       `${sourceFolder}/img/pages/**/*.png`,
     ],
     root: [
-      `${sourceFolder}/main.webmanifest`,
+      `${sourceFolder}/site.webmanifest`,
       `${sourceFolder}/favicon.svg`,
-      `${sourceFolder}/mask-desktop.svg`,
+      `${sourceFolder}/mask-icon.svg`,
     ],
     htmlHome: `${sourceFolder}/index.html`,
     htmlPages: `${sourceFolder}/html/pages/**/*.html`,
     styles: [
-      `${sourceFolder}/scss/styles.scss`,
+      `${sourceFolder}/scss/home-styles.scss`,
       `${sourceFolder}/scss/pages/**/*.scss`,
       `${sourceFolder}/scss/modules/**/*.scss`,
     ],
-    scriptsHome: `${sourceFolder}/js/main.js`,
+    scriptsHome: `${sourceFolder}/js/home-scripts.js`,
     scriptsModules: `${sourceFolder}/js/modules/**/*.js`,
     scriptsPages: `${sourceFolder}/js/pages/**/*.js`,
     sprites: `${sourceFolder}/img/global/sprites/**/*.svg`,
@@ -36,7 +34,7 @@ const config = {
     cacheHtml: `${projectFolder}/index.html`,
     cachePages: `${projectFolder}/pages/**/*.html`,
     cacheStyles: `${projectFolder}/css/**/*.css`,
-    cacheManifest: `${projectFolder}/main.webmanifest`,
+    cacheManifest: `${projectFolder}/site.webmanifest`,
   },
   build: {
     audio: `${projectFolder}/assets/audio/`,
@@ -61,10 +59,15 @@ const config = {
       `${sourceFolder}/html/components/pages/**/*.html`,
       `${sourceFolder}/html/components/global/**/*.html`,
     ],
+    audio: `${sourceFolder}/assets/audio/**/*.{mp3,ogg,wav,flac}`,
+    video: `${sourceFolder}/assets/video/**/*.{mp4,avi,webm}`,
+    docs: `${sourceFolder}/assets/docs/**/*.{pdf,docx,doc,txt,rtf,odt,xls,xlsx}`,
+    fonts: `${sourceFolder}/fonts/**/*.{woff,woff2}`,
     styles: `${sourceFolder}/scss/**/*.scss`,
     scripts: `${sourceFolder}/js/**/*.js`,
     vector: `${sourceFolder}/img/global/svg/**/*.svg`,
     sprites: `${sourceFolder}/img/global/sprites/**/*.svg`,
+    favicons: `${sourceFolder}/img/global/favicons/**/*.png`,
     picturesJpg: [
       `${sourceFolder}/img/home/**/*.{jpg,jpeg}`,
       `${sourceFolder}/img/pages/**/*.{jpg,jpeg}`,
@@ -80,5 +83,8 @@ const config = {
   },
 };
 
-// |=============== EXPORTING THE MAIN VARIABLES FOR USE ===============>
-export { projectFolder, sourceFolder, config };
+export {
+  projectFolder,
+  sourceFolder,
+  config,
+};
