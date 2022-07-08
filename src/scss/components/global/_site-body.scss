@@ -1,0 +1,8 @@
+.site-body {
+  min-width: 320px;
+  text-rendering: optimizeLegibility;
+
+  @include pointer {
+    text-rendering: optimizeSpeed;
+  }
+}

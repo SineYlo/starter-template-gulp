@@ -1,0 +1,7 @@
+.site-page {
+  @include html-dereset;
+
+  &__site-body {
+    @include margin-dereset;
+  }
+}

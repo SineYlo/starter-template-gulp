@@ -81,8 +81,8 @@
       "  <source srcset=\"\" media=\"\" type=\"image/avif\">",
       "  <source srcset=\"\" media=\"\" type=\"image/webp\">",
       "  <source srcset=\"\" media=\"\">",
-      "  <source srcset=\"\" media=\"\" type=\"image/avif\">",
-      "  <source srcset=\"\" media=\"\" type=\"image/webp\">",
+      "  <source srcset=\"\" type=\"image/avif\">",
+      "  <source srcset=\"\" type=\"image/webp\">",
       "  <img class=\"\" src=\"\" srcset=\"\" width=\"\" height=\"\" decoding=\"async\" loading=\"lazy\" alt=\"\">",
       "</picture>"
     ],
@@ -93,7 +93,7 @@
     "prefix": "s-sprite",
     "body": [
       "<svg class=\"\" width=\"\" height=\"\" aria-hidden=\"true\">",
-      "  <use xlink:href=\"img/sprites/sprite.svg#$2\" />",
+      "  <use xlink:href=\"\" />",
       "</svg>"
     ],
     "description": "Creates a code snippet for an svg sprite"
@@ -111,18 +111,18 @@
   },
   "modal-box": {
     "scope": "html",
-    "prefix": "s-modal",
+    "prefix": "s-modal-dialog",
     "body": [
-      "<div class=\"dialog-wrapper\" id=\"dialog-wrapper\" role=\"dialog\" tabindex=\"-1\" aria-labelledby=\"dialog-title\" aria-describedby=\"dialog-description\" aria-modal=\"true\" aria-hidden=\"true\">",
-      "  <div class=\"dialog-wrapper__overlay\"></div>",
-      "  <div class=\"content-dialog dialog-wrapper__content\" role=\"document\">",
-      "    <button class=\"content-dialog__close\" type=\"button\" aria-label=\"Close this dialog window\"></button>",
-      "    <h2 class=\"content-dialog__title\" id=\"dialog-title\"></h2>",
-      "    <p class=\"content-dialog__description\" id=\"dialog-description\"></p>",
+      "<div class=\"modal-dialog\" id=\"modal-dialog\" role=\"dialog\" tabindex=\"-1\" aria-labelledby=\"modal-dialog-title\" aria-describedby=\"modal-dialog-description\" aria-modal=\"true\" aria-hidden=\"true\">",
+      "  <div class=\"modal-dialog__overlay\"></div>",
+      "  <div class=\"modal-dialog-content modal-dialog__content\" role=\"document\">",
+      "    <button class=\"modal-dialog-content__close\" type=\"button\" aria-label=\"Close this modal dialog window\"></button>",
+      "    <h2 class=\"modal-dialog-content__title\" id=\"modal-dialog-title\"></h2>",
+      "    <p class=\"modal-dialog-content__description\" id=\"modal-dialog-description\"></p>",
       "  </div>",
       "</div>"
     ],
-    "description": "Creates a code snippet for a modal window"
+    "description": "Creates a code snippet for a modal dialog window"
   },
   "accordion-box": {
     "scope": "html",

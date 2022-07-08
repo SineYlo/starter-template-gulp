@@ -6,15 +6,16 @@ import vinylStream from 'vinyl-source-stream';
 import vinylBuffer from 'vinyl-buffer';
 import babelify from 'babelify';
 import glob from 'glob';
+import notify from 'gulp-notify';
 import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
 import { config } from '../config';
 
 const changingScriptsBackend = (done) => {
   const files = [
-    config.source.scriptsHome,
-    ...glob.sync(config.source.scriptsModules),
-    ...glob.sync(config.source.scriptsPages),
+    config.source.homeScripts,
+    ...glob.sync(config.source.notDeferScripts),
+    ...glob.sync(config.source.pagesScripts),
   ];
   const taskScripts = files.map((file) => {
     return (
@@ -26,7 +27,11 @@ const changingScriptsBackend = (done) => {
           }),
         ],
       })
-        .bundle()
+        .bundle().on('error', notify.onError({
+          title: 'Transpilation error',
+          message: 'Error: <%= error.message %>',
+          sound: true,
+        }))
         .pipe(vinylStream(file))
         .pipe(vinylBuffer())
         .pipe(rename({

@@ -1,5 +1,6 @@
 /* eslint-disable arrow-body-style */
 import { src, dest } from 'gulp';
+import rename from 'gulp-rename';
 import { config } from '../config';
 
 const fileTransferAudio = () => {
@@ -13,13 +14,21 @@ const fileTransferVideo = () => {
 };
 
 const fileTransferDocs = () => {
-  return src(config.source.docs)
-    .pipe(dest(config.build.docs));
+  return src(config.source.documents)
+    .pipe(dest(config.build.documents));
 };
 
 const fileTransferFonts = () => {
   return src(config.source.fonts)
+    .pipe(rename({
+      dirname: './',
+    }))
     .pipe(dest(config.build.fonts));
+};
+
+const fileTransferPhp = () => {
+  return src(config.source.php)
+    .pipe(dest(config.build.root));
 };
 
 const fileTransferOther = () => {
@@ -32,5 +41,6 @@ export {
   fileTransferVideo,
   fileTransferDocs,
   fileTransferFonts,
+  fileTransferPhp,
   fileTransferOther,
 };

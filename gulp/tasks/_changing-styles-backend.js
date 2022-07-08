@@ -1,4 +1,5 @@
 /* eslint-disable arrow-body-style */
+/* eslint-disable max-len */
 import { src, dest } from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -11,6 +12,7 @@ import postcssPxToRem from 'postcss-pxtorem';
 import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
 import rename from 'gulp-rename';
+import notify from 'gulp-notify';
 import browserSync from 'browser-sync';
 import { config } from '../config';
 
@@ -20,7 +22,11 @@ const changingStylesBackend = () => {
   return src(config.source.styles)
     .pipe(sass.sync({
       outputStyle: 'expanded',
-    }).on('error', sass.logError))
+    }).on('error', notify.onError({
+      title: 'Error in the code, need to be fixed',
+      message: 'Error: <%= error.message %>',
+      sound: true,
+    })))
     .pipe(postcss([
       postcssRebeccapurple({
         preserve: true,
@@ -42,13 +48,12 @@ const changingStylesBackend = () => {
           '!filter',
           '!text-shadow',
         ],
-        selectorBlackList: ['page'],
+        selectorBlackList: ['site-page'],
         replace: true,
         mediaQuery: false,
         minPixelValue: 0,
       }),
       postcssSystemUiFont({
-        // eslint-disable-next-line max-len
         family: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", Ubuntu, Cantarell, sans-serif',
       }),
     ]))

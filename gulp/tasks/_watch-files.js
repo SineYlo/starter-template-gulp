@@ -1,8 +1,7 @@
 /* eslint-disable arrow-body-style */
 import { watch } from 'gulp';
 import browserSync from 'browser-sync';
-import changingMarkupHome from './_markup-home';
-import changingMarkupPages from './_markup-pages';
+import changingMarkup from './_changing-markup';
 import changingStyles from './_changing-styles';
 import changingScripts from './_changing-scripts';
 import {
@@ -10,6 +9,7 @@ import {
   fileTransferVideo,
   fileTransferDocs,
   fileTransferFonts,
+  fileTransferPhp,
 } from './_file-transfer';
 import {
   graphicsOptimizationJpg,
@@ -32,18 +32,18 @@ const watchFiles = (callback) => {
   callback();
 };
 
-watch(config.watch.htmlHome, changingMarkupHome);
-watch(config.watch.htmlPages, changingMarkupPages);
+watch(config.watch.html, changingMarkup);
 watch(config.watch.styles, changingStyles);
 watch(config.watch.scripts, changingScripts);
-watch(config.watch.picturesJpg, graphicsOptimizationJpg);
-watch(config.watch.picturesPng, graphicsOptimizationPng);
-watch(config.watch.favicons, graphicsOptimizationFav);
-watch(config.watch.vector, graphicsOptimizationSvg);
-watch(config.watch.sprites, creatingSprite);
+watch(config.watch.jpgImages, graphicsOptimizationJpg);
+watch(config.watch.pngImages, graphicsOptimizationPng);
+watch(config.watch.faviconsImages, graphicsOptimizationFav);
+watch(config.watch.svgImages, graphicsOptimizationSvg);
+watch(config.watch.spritesImages, creatingSprite);
 watch(config.watch.audio, fileTransferAudio);
 watch(config.watch.video, fileTransferVideo);
-watch(config.watch.docs, fileTransferDocs);
+watch(config.watch.documents, fileTransferDocs);
 watch(config.watch.fonts, fileTransferFonts);
+watch(config.watch.php, fileTransferPhp);
 
 export default watchFiles;

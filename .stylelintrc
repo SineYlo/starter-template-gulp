@@ -22,10 +22,38 @@
         "type": "rule",
         "selector": "&::after"
       },
+      {
+        "type": "rule",
+        "selector": "&::first-letter"
+      },
+      {
+        "type": "rule",
+        "selector": "&::first-line"
+      },
+      {
+        "type": "rule",
+        "selector": "&::placeholder"
+      },
+      {
+        "type": "rule",
+        "selector": "&::selection"
+      },
       "rules",
       {
         "type": "rule",
+        "selector": "&:only-child"
+      },
+      {
+        "type": "rule",
+        "selector": "&:only-of-type"
+      },
+      {
+        "type": "rule",
         "selector": "&:first-child"
+      },
+      {
+        "type": "rule",
+        "selector": "&:first-of-type"
       },
       {
         "type": "rule",
@@ -33,7 +61,119 @@
       },
       {
         "type": "rule",
+        "selector": "&:last-of-type"
+      },
+      {
+        "type": "rule",
         "selector": "&:nth-child.+"
+      },
+      {
+        "type": "rule",
+        "selector": "&:nth-of-type.+"
+      },
+      {
+        "type": "rule",
+        "selector": "&:nth-last-child.+"
+      },
+      {
+        "type": "rule",
+        "selector": "&:nth-last-of-type.+"
+      },
+      {
+        "type": "rule",
+        "selector": "&\\[[^\\[\\]]+\\]"
+      },
+      {
+        "type": "rule",
+        "selector": "&_.+"
+      },
+      {
+        "type": "rule",
+        "selector": "&--.+"
+      },
+      {
+        "type": "rule",
+        "selector": "&\\..+"
+      },
+      {
+        "type": "rule",
+        "selector": ".* &"
+      },
+      {
+        "type": "rule",
+        "selector": "&:horizontal"
+      },
+      {
+        "type": "rule",
+        "selector": "&:vertical"
+      },
+      {
+        "type": "rule",
+        "selector": "&:decrement"
+      },
+      {
+        "type": "rule",
+        "selector": "&:increment"
+      },
+      {
+        "type": "rule",
+        "selector": "&:start"
+      },
+      {
+        "type": "rule",
+        "selector": "&:end"
+      },
+      {
+        "type": "rule",
+        "selector": "&:double-button"
+      },
+      {
+        "type": "rule",
+        "selector": "&:single-button"
+      },
+      {
+        "type": "rule",
+        "selector": "&:no-button"
+      },
+      {
+        "type": "rule",
+        "selector": "&:corner-present"
+      },
+      {
+        "type": "rule",
+        "selector": "&:window-inactive"
+      },
+      {
+        "type": "rule",
+        "selector": "&:read-write"
+      },
+      {
+        "type": "rule",
+        "selector": "&:required"
+      },
+      {
+        "type": "rule",
+        "selector": "&:placeholder-shown"
+      },
+      {
+        "type": "rule",
+        "selector": "&:invalid"
+      },
+      {
+        "type": "rule",
+        "selector": "&:valid"
+      },
+      {
+        "type": "rule",
+        "selector": "&:out-of-range"
+      },
+      {
+        "type": "rule",
+        "selector": "&:in-range"
+      },
+      {
+        "type": "rule",
+        "selector": "&:checked"
       },
       {
         "type": "rule",
@@ -53,16 +193,11 @@
       },
       {
         "type": "rule",
-        "selector": "&.focus-visible"
+        "selector": "&:focus-within"
       },
       {
         "type": "rule",
         "selector": "&:hover"
-      },
-      {
-        "type": "at-rule",
-        "name": "include",
-        "hasBlock": true
       },
       {
         "type": "rule",
@@ -70,27 +205,11 @@
       },
       {
         "type": "rule",
+        "selector": "&:read-only"
+      },
+      {
+        "type": "rule",
         "selector": "&:disabled"
-      },
-      {
-        "type": "rule",
-        "selector": "&\\[[^\\[\\]]+\\]"
-      },
-      {
-        "type": "rule",
-        "selector": "&\\..+"
-      },
-      {
-        "type": "rule",
-        "selector": "&--.+"
-      },
-      {
-        "type": "rule",
-        "selector": "&_.+"
-      },
-      {
-        "type": "rule",
-        "selector": ".* &"
       },
       {
         "type": "at-rule",
@@ -113,6 +232,7 @@
 				"right",
 				"top",
 				"bottom",
+				"inset",
 				"z-index",
 				"display",
 				"columns",
@@ -202,6 +322,7 @@
 				"overflow-y",
 				"overflow-anchor",
 				"overflow-wrap",
+				"overscroll-behavior",
 				"margin",
 				"margin-top",
 				"margin-right",
@@ -328,10 +449,12 @@
 				"text-align-last",
 				"text-combine-upright",
 				"text-decoration",
+				"text-decoration-thickness",
 				"text-decoration-style",
 				"text-decoration-line",
 				"text-decoration-color",
 				"text-decoration-skip",
+				"text-decoration-skip-ink",
 				"text-emphasis",
 				"text-emphasis-style",
 				"text-emphasis-color",
@@ -350,6 +473,7 @@
 				"text-stroke-color",
 				"text-transform",
 				"text-underline-position",
+				"text-underline-offset",
 				"direction",
 				"writing-mode",
 				"ruby-align",

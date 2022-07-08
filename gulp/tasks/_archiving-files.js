@@ -9,8 +9,9 @@ const archivingFiles = () => {
   return src(config.build.rootZip)
     .pipe(plumber(
       notify.onError({
-        title: 'ZIP',
+        title: 'Error during archiving',
         message: 'Error: <%= error.message %>',
+        sound: true,
       }),
     ))
     .pipe(zip('project.zip'))

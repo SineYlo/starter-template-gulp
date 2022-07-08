@@ -1,4 +1,5 @@
 /* eslint-disable arrow-body-style */
+/* eslint-disable max-len */
 import { src, dest } from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -12,6 +13,7 @@ import postcssSystemUiFont from 'postcss-font-family-system-ui';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import rename from 'gulp-rename';
+import notify from 'gulp-notify';
 import sourcemaps from 'gulp-sourcemaps';
 import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
@@ -26,7 +28,11 @@ const changingStyles = () => {
     })))
     .pipe(sass.sync({
       outputStyle: 'expanded',
-    }).on('error', sass.logError))
+    }).on('error', notify.onError({
+      title: 'Error in the code, need to be fixed',
+      message: 'Error: <%= error.message %>',
+      sound: true,
+    })))
     .pipe(gulpIf(config.isProd, postcss([
       postcssRebeccapurple({
         preserve: true,
@@ -48,13 +54,12 @@ const changingStyles = () => {
           '!filter',
           '!text-shadow',
         ],
-        selectorBlackList: ['page'],
+        selectorBlackList: ['site-page'],
         replace: true,
         mediaQuery: false,
         minPixelValue: 0,
       }),
       postcssSystemUiFont({
-        // eslint-disable-next-line max-len
         family: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", Ubuntu, Cantarell, sans-serif',
       }),
     ])))
@@ -68,6 +73,10 @@ const changingStyles = () => {
     .pipe(dest(config.build.styles))
     .pipe(gulpIf(config.isProd, cleanCSS({
       level: 1,
+    })).on('error', notify.onError({
+      title: 'Minification error',
+      message: 'Error: <%= error.message %>',
+      sound: true,
     })))
     .pipe(rename({
       extname: '.min.css',

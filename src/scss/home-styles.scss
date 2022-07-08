@@ -1,25 +1,59 @@
-// |=============== CONNECTING FILES WITH BASIC SETTINGS ===============>
-@import "base/destyle-mixins";
-@import "config/variables/global/variables";
-@import "config/settings/global/settings";
-@import "layout/mixins/global/mixins";
-@import "config/fonts/global/fonts";
-@import "layout/ui/global/ui";
+// => CONNECTING FILES WITH BASIC SETTINGS
+// ===================================================================================================>
+@import "config/resets/destyle-mixins";
+@import "config/variables/global-variables";
+@import "config/mixins/mixins";
+@import "config/fonts/home-fonts";
 
-// |=============== CONNECTING THE COMPONENTS ===============>
-@import "components/global/header";
-@import "components/global/footer";
+// => CONNECTING THE COMPONENTS | BASIC
+// ===================================================================================================>
+@import "components/global/site-page";
+@import "components/global/site-body";
 
-// |=============== CONNECTING THE MAIN MEDIA-QUERIES FOR ADAPTIVE ===============>
-@import "media/home/query-1920";
-@import "media/home/query-1720";
-@import "media/home/query-1520";
-@import "media/home/query-1320";
-@import "media/home/query-1120";
-@import "media/home/query-920";
-@import "media/home/query-720";
-@import "media/home/query-572";
-@import "media/home/query-320";
+// => CONNECTING THE COMPONENTS | LIBRARIES
+// ===================================================================================================>
+// @import "components/common";
 
-// |=============== CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS ===============>
-@import "media/global/query-reduced";
+// => CONNECTING THE COMPONENTS | CONTAINER
+// ===================================================================================================>
+// @import "components/common";
+
+// => CONNECTING THE COMPONENTS | PRELOADER
+// ===================================================================================================>
+// @import "components/common";
+
+// => CONNECTING THE COMPONENTS | SITE HEADER - SMALL
+// ===================================================================================================>
+// @import "components/common";
+
+// => CONNECTING THE COMPONENTS | SITE HEADER - LARGE
+// ===================================================================================================>
+@import "components/global/site-header";
+
+// => CONNECTING THE COMPONENTS | SITE MAIN - SMALL
+// ===================================================================================================>
+// @import "components/common";
+
+// => CONNECTING THE COMPONENTS | SITE MAIN - LARGE
+// ===================================================================================================>
+@import "components/global/site-main";
+
+// => CONNECTING THE COMPONENTS | SITE FOOTER - SMALL
+// ===================================================================================================>
+// @import "components/common";
+
+// => CONNECTING THE COMPONENTS | SITE FOOTER - LARGE
+// ===================================================================================================>
+@import "components/global/site-footer";
+
+// => CONNECTING THE COMPONENTS | MODAL DIALOG WINDOW - SMALL
+// ===================================================================================================>
+// @import "components/common";
+
+// => CONNECTING THE COMPONENTS | MODAL DIALOG WINDOW - TITLE
+// ===================================================================================================>
+// @import "components/common";
+
+// => CONNECTING A GLOBAL MEDIA-QUERY THAT DISABLES ANIMATIONS AND EFFECTS
+// ===================================================================================================>
+@import "media/query-reduced";

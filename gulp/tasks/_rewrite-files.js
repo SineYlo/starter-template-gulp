@@ -16,11 +16,16 @@ const rewriteFiles = () => {
       manifest,
     }))
     .pipe(dest(config.build.root));
-  src(config.source.cachePages)
+  src(config.source.cacheScripts)
     .pipe(revRewrite({
       manifest,
     }))
-    .pipe(dest(config.build.html));
+    .pipe(dest(config.build.scripts));
+  src(config.source.cachePhp)
+    .pipe(revRewrite({
+      manifest,
+    }))
+    .pipe(dest(config.build.root));
   return src(config.source.cacheManifest)
     .pipe(revRewrite({
       manifest,

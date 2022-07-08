@@ -1,0 +1,33 @@
+// => SETTING UP A MIXIN TO CONNECT BACKGROUND IMAGES
+// ===================================================================================================>
+// [CM] Without a picture
+@mixin bg-control($position-x, $position-y, $size, $repeat) {
+  background-position: #{$position-x} #{$position-y};
+  background-size: #{$size};
+  background-repeat: #{$repeat};
+}
+
+// [CM] Without a picture, but with a fallback color
+@mixin bg-color($position-x, $position-y, $size, $repeat, $color) {
+  background-position: #{$position-x} #{$position-y};
+  background-size: #{$size};
+  background-repeat: #{$repeat};
+  background-color: #{$color};
+}
+
+// [CM] With a picture
+@mixin bg-image($path, $position-x, $position-y, $size, $repeat) {
+  background-image: url(#{$path});
+  background-position: #{$position-x} #{$position-y};
+  background-size: #{$size};
+  background-repeat: #{$repeat};
+}
+
+// [CM] With a picture and fallback color
+@mixin bg-full($path, $position-x, $position-y, $size, $repeat, $color) {
+  background-image: url(#{$path});
+  background-position: #{$position-x} #{$position-y};
+  background-size: #{$size};
+  background-repeat: #{$repeat};
+  background-color: #{$color};
+}

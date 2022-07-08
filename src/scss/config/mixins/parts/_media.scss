@@ -1,0 +1,15 @@
+// => SETTING UP MIXINS WITH MEDIA QUERIES
+// ===================================================================================================>
+// [CM] Allows you to enable hover effects only on certain devices
+@mixin hover {
+  @media screen and (any-hover: hover) {
+    @content;
+  }
+}
+
+// [CM] Checking whether the device is touch-sensitive
+@mixin pointer {
+  @media screen and (any-pointer: coarse) {
+    @content;
+  }
+}

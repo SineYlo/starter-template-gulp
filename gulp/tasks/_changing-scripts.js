@@ -16,9 +16,9 @@ import { config } from '../config';
 
 const changingScripts = (done) => {
   const files = [
-    config.source.scriptsHome,
-    ...glob.sync(config.source.scriptsModules),
-    ...glob.sync(config.source.scriptsPages),
+    config.source.homeScripts,
+    ...glob.sync(config.source.notDeferScripts),
+    ...glob.sync(config.source.pagesScripts),
   ];
   const taskScripts = files.map((file) => {
     return (
@@ -30,7 +30,11 @@ const changingScripts = (done) => {
           }),
         ],
       })
-        .bundle()
+        .bundle().on('error', notify.onError({
+          title: 'Transpilation error',
+          message: 'Error: <%= error.message %>',
+          sound: true,
+        }))
         .pipe(vinylStream(file))
         .pipe(vinylBuffer())
         .pipe(gulpIf(config.isDev, sourcemaps.init({
@@ -43,7 +47,11 @@ const changingScripts = (done) => {
         .pipe(dest(config.build.scripts))
         .pipe(gulpIf(config.isProd, uglify({
           toplevel: true,
-        }).on('error', notify.onError())))
+        }).on('error', notify.onError({
+          title: 'Minification error',
+          message: 'Error: <%= error.message %>',
+          sound: true,
+        }))))
         .pipe(rename({
           extname: '.min.js',
           dirname: '',

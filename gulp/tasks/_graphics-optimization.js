@@ -7,54 +7,56 @@ import rename from 'gulp-rename';
 import { config } from '../config';
 
 const graphicsOptimizationJpg = () => {
-  return src(config.source.convertjpg)
+  return src(config.source.jpgImages)
+    .pipe(rename({
+      extname: '.jpg',
+    }))
     .pipe(squoosh({
       mozjpeg: {},
       webp: {},
       avif: {},
     }))
     .pipe(rename({
-      extname: '.jpg',
-      dirname: 'pictures/',
+      dirname: './',
     }))
-    .pipe(dest(config.build.pictures));
+    .pipe(dest(config.build.images));
 };
 
 const graphicsOptimizationPng = () => {
-  return src(config.source.convertpng)
+  return src(config.source.pngImages)
     .pipe(squoosh({
       oxipng: {},
       webp: {},
       avif: {},
     }))
     .pipe(rename({
-      dirname: 'pictures/',
+      dirname: './',
     }))
-    .pipe(dest(config.build.pictures));
+    .pipe(dest(config.build.images));
 };
 
 const graphicsOptimizationFav = () => {
-  return src(config.source.convertfav)
+  return src(config.source.faviconsImages)
     .pipe(squoosh({
       oxipng: {},
     }))
     .pipe(rename({
-      dirname: 'favicons/',
+      dirname: './',
     }))
-    .pipe(dest(config.build.pictures));
+    .pipe(dest(config.build.images));
 };
 
 const graphicsOptimizationSvg = () => {
-  return src(config.source.vector)
+  return src(config.source.svgImages)
     .pipe(svgMin())
     .pipe(rename({
-      dirname: 'svg/',
+      dirname: './',
     }))
-    .pipe(dest(config.build.pictures));
+    .pipe(dest(config.build.images));
 };
 
 const creatingSprite = () => {
-  return src(config.source.sprites)
+  return src(config.source.spritesImages)
     .pipe(svgSprite({
       mode: {
         stack: {
@@ -63,9 +65,9 @@ const creatingSprite = () => {
       },
     }))
     .pipe(rename({
-      dirname: 'sprites/',
+      dirname: './',
     }))
-    .pipe(dest(config.build.pictures));
+    .pipe(dest(config.build.images));
 };
 
 export {

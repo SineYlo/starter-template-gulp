@@ -1,0 +1,18 @@
+// => CONFIGURING A MIXIN TO CONNECT A CONTAINER
+// ===================================================================================================>
+// [CM] Setting up a mixin for the main container
+@mixin container-base($width-container, $indents-container) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: #{$indents-container};
+  padding-left: #{$indents-container};
+  max-width: #{$width-container};
+}
+
+// [CM] Setting up a full-width container mixin
+@mixin container-fluid($indents-container) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: #{$indents-container};
+  padding-left: #{$indents-container};
+}
