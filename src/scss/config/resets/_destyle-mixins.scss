@@ -1,14 +1,15 @@
 // ! destyle.css v3.0.0 | MIT License | https://github.com/nicolas-cusan/destyle.css
-// ! Some improvements made by SineYlo v3.2.1 | MIT License | https://github.com/SineYlo/destyle
+// ! Some improvements made by SineYlo v3.3.0 | MIT License | https://github.com/SineYlo/destyle
 
 // => RESET BOX-MODEL AND SET BORDERS
 // ===================================================================================================>
-*,
-::before,
-::after {
+@mixin box-sizing-dereset {
+  box-sizing: border-box;
+}
+
+@mixin borders-dereset {
   border-style: solid;
   border-width: 0;
-  box-sizing: border-box;
 }
 
 // => DOCUMENT
@@ -343,15 +344,19 @@
 }
 
 // [CM] Improve outlines for Firefox and unify style with input elements & buttons.
-:-moz-focusring {
-  outline: auto;
+@mixin moz-focusring-dereset {
+  &:-moz-focusring {
+    outline: auto;
+  }
 }
 
 // [CM] 1. Correct the inability to style clickable types in iOS and Safari.
 // [CM] 2. Change font properties to 'inherit' in Safari.
-::-webkit-file-upload-button {
-  -webkit-appearance: button; // 1
-  font: inherit; // 2
+@mixin webkit-file-upload-button-dereset {
+  &::-webkit-file-upload-button {
+    -webkit-appearance: button; // 1
+    font: inherit; // 2
+  }
 }
 
 // [CM] Clickable labels.
@@ -362,9 +367,11 @@
 }
 
 // [CM] Fix placeholder color in Firefox.
-::-moz-placeholder,
-:-moz-placeholder {
-  opacity: 1;
+@mixin moz-placeholder-dereset {
+  &::-moz-placeholder,
+  &:-moz-placeholder {
+    opacity: 1;
+  }
 }
 
 // => INTERACTIVE
@@ -380,8 +387,10 @@
 }
 
 // [CM] Remove outline for editable content.
-[contenteditable]:focus {
-  outline: none;
+@mixin contenteditable-dereset {
+  &[contenteditable]:focus {
+    outline: none;
+  }
 }
 
 // => TABLE
