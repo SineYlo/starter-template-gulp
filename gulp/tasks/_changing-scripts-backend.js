@@ -1,4 +1,6 @@
-/* eslint-disable arrow-body-style */
+// eslint-disable arrow-body-style
+// => IMPORTING EXTERNAL MODULES AND THE BASIC ASSEMBLY CONFIGURATION
+// ===================================================================================================>
 import { dest } from 'gulp';
 import rename from 'gulp-rename';
 import browserify from 'browserify';
@@ -11,6 +13,8 @@ import eventStream from 'event-stream';
 import browserSync from 'browser-sync';
 import { config } from '../config';
 
+// => SETTING UP A TASK FOR WORKING WITH SCRIPTS FILES | FOR THE BACKEND
+// ===================================================================================================>
 const changingScriptsBackend = (done) => {
   const files = [
     config.source.homeScripts,
@@ -49,4 +53,6 @@ const changingScriptsBackend = (done) => {
   return eventStream.merge(taskScripts).on('end', done);
 };
 
+// => EXPORTING A TASK
+// ===================================================================================================>
 export default changingScriptsBackend;

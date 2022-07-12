@@ -1,7 +1,11 @@
-/* eslint-disable max-len */
+// eslint-disable max-len
+// => DECLARING A VARIABLE WITH A SOURCE AND DESTINATION FOLDER
+// ===================================================================================================>
 const projectFolder = 'dist';
 const sourceFolder = 'src';
 
+// => BASIC ASSEMBLY CONFIGURATION
+// ===================================================================================================>
 const config = {
   source: {
     audio: `${sourceFolder}/assets/audio/**/*.{mp3,ogg,wav,flac}`,
@@ -66,6 +70,8 @@ const config = {
   },
 };
 
+// => EXPORTING THE MAIN VARIABLES
+// ===================================================================================================>
 export {
   projectFolder,
   sourceFolder,

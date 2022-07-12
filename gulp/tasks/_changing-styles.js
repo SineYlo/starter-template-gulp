@@ -1,5 +1,7 @@
-/* eslint-disable arrow-body-style */
-/* eslint-disable max-len */
+// eslint-disable arrow-body-style
+// eslint-disable max-len
+// => IMPORTING EXTERNAL MODULES AND THE BASIC ASSEMBLY CONFIGURATION
+// ===================================================================================================>
 import { src, dest } from 'gulp';
 import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
@@ -19,8 +21,12 @@ import browserSync from 'browser-sync';
 import gulpIf from 'gulp-if';
 import { config } from '../config';
 
+// => COMBINING TWO MODULES
+// ===================================================================================================>
 const sass = gulpSass(dartSass);
 
+// => SETTING UP A TASK FOR WORKING WITH STYLE FILES
+// ===================================================================================================>
 const changingStyles = () => {
   return src(config.source.styles)
     .pipe(gulpIf(config.isDev, sourcemaps.init({
@@ -86,4 +92,6 @@ const changingStyles = () => {
     .pipe(browserSync.stream());
 };
 
+// => EXPORTING A TASK
+// ===================================================================================================>
 export default changingStyles;

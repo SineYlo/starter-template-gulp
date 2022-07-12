@@ -1,4 +1,6 @@
-/* eslint-disable arrow-body-style */
+// eslint-disable arrow-body-style
+// => IMPORTING EXTERNAL MODULES AND THE BASIC ASSEMBLY CONFIGURATION
+// ===================================================================================================>
 import { watch } from 'gulp';
 import browserSync from 'browser-sync';
 import changingMarkup from './_changing-markup';
@@ -20,6 +22,8 @@ import {
 } from './_graphics-optimization';
 import { config, projectFolder } from '../config';
 
+// => SETTING UP A SERVER CREATION TASK
+// ===================================================================================================>
 const watchFiles = (callback) => {
   browserSync.init({
     server: {
@@ -32,6 +36,8 @@ const watchFiles = (callback) => {
   callback();
 };
 
+// => TRACKING CHANGES IN FILES AND FOLDERS
+// ===================================================================================================>
 watch(config.watch.html, changingMarkup);
 watch(config.watch.styles, changingStyles);
 watch(config.watch.scripts, changingScripts);
@@ -46,4 +52,6 @@ watch(config.watch.documents, fileTransferDocs);
 watch(config.watch.fonts, fileTransferFonts);
 watch(config.watch.php, fileTransferPhp);
 
+// => EXPORTING A TASK
+// ===================================================================================================>
 export default watchFiles;

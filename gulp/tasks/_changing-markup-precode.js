@@ -1,4 +1,6 @@
-/* eslint-disable arrow-body-style */
+// eslint-disable arrow-body-style
+// => IMPORTING EXTERNAL MODULES AND THE BASIC ASSEMBLY CONFIGURATION
+// ===================================================================================================>
 import { src, dest } from 'gulp';
 import fileinclude from 'gulp-file-include';
 import htmlmin from 'gulp-htmlmin';
@@ -6,6 +8,8 @@ import browserSync from 'browser-sync';
 import notify from 'gulp-notify';
 import { config } from '../config';
 
+// => SETTING UP A TASK FOR WORKING WITH HTML FILES WITHOUT COLLAPSING SPACES
+// ===================================================================================================>
 const changingMarkupPreCode = () => {
   return src(config.source.html)
     .pipe(fileinclude({
@@ -29,4 +33,6 @@ const changingMarkupPreCode = () => {
     .pipe(browserSync.stream());
 };
 
+// => EXPORTING A TASK
+// ===================================================================================================>
 export default changingMarkupPreCode;
