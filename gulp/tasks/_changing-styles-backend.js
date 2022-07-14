@@ -53,6 +53,8 @@ const changingStylesBackend = () => {
           '!backdrop-filter',
           '!filter',
           '!text-shadow',
+          '!*gap',
+          '!*br',
         ],
         selectorBlackList: ['site-page'],
         replace: true,
