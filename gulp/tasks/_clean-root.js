@@ -1,4 +1,4 @@
-// eslint-disable arrow-body-style
+/* eslint-disable arrow-body-style */
 // => IMPORTING EXTERNAL MODULES AND THE BASIC ASSEMBLY CONFIGURATION
 // ===================================================================================================>
 import del from 'del';

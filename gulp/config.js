@@ -1,4 +1,4 @@
-// eslint-disable max-len
+/* eslint-disable max-len */
 // => DECLARING A VARIABLE WITH A SOURCE AND DESTINATION FOLDER
 // ===================================================================================================>
 const projectFolder = 'dist';

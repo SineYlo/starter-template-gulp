@@ -1,5 +1,5 @@
-// eslint-disable arrow-body-style
-// eslint-disable max-len
+/* eslint-disable arrow-body-style */
+/* eslint-disable max-len */
 // => IMPORTING EXTERNAL MODULES AND THE BASIC ASSEMBLY CONFIGURATION
 // ===================================================================================================>
 import { src, dest } from 'gulp';
